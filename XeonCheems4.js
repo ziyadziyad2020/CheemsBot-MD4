@@ -2755,7 +2755,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\أنت لست مسؤولاً ، لا ترسل رابط قناة يوتيوب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\اذا أنت لست مسؤولاً ، لا ترسل رابط قناة يوتيوب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkYoutubeChannel) return replay('Already deactivated')
 let off = ntilinkytch.indexOf(from)
@@ -2786,7 +2786,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nأنت لست مسؤولاً ، لا ترسل رابط انستجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nاذا أنت لست مسؤولاً ، لا ترسل رابط انستجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkInstagram) return replay('Already deactivated')
 let off = ntilinkig.indexOf(from)
@@ -2817,7 +2817,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nأنت لست مسؤولاً ، لا ترسل رابط فيسبوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nاذا أنت لست مسؤولاً ، لا ترسل رابط فيسبوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkFacebook) return replay('Already deactivated')
 let off = ntilinkfb.indexOf(from)
@@ -2848,7 +2848,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nأنت لست مسؤولاً ، لا ترسل رابط قناة تليجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nاذا أنت لست مسؤولاً ، لا ترسل رابط قناة تليجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkTelegram) return replay('Already deactivated')
 let off = ntilinkig.indexOf(from)
@@ -2879,7 +2879,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nأنت لست مسؤولاً ، لا ترسل رابط قناة تيكتوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nاذا أنت لست مسؤولاً ، لا ترسل رابط قناة تيكتوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkTiktok) return replay('Already deactivated')
 let off = ntilinktt.indexOf(from)
@@ -2910,7 +2910,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nأنت لست مسؤولاً ، لا ترسل رابط تويتر في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nاذا أنت لست مسؤولاً ، لا ترسل رابط تويتر في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkTwitter) return replay('Already deactivated')
 let off = ntilinktwt.indexOf(from)
@@ -2941,7 +2941,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nأنت لست مسؤولاً ، لا ترسل رابط جروب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nاذا أنت لست مسؤولاً ، لا ترسل رابط جروب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkAll) return replay('Already deactivated')
 let off = ntilinkall.indexOf(from)
@@ -8832,146 +8832,146 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
-                    buttonText: "Menu",
+                    description: `الرجاء اختيار القائمة\n\n`,
+                    buttonText: "القائمه",
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Initial Features Of Bot 🦄",
+								"title": "الميزات الأولية للبوت 🦄",
 								"rows": [
 									{
-										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
+										"title": "اخر ☕",
+										"description": "يعرض قائمة الميزات الأخرى",
 										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "Bot Features ❤️",
+								"title": "ميزات البوت ❤️",
 								"rows": [
 									{
-										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
+										"title": "كل القائمه 🥀",
+										"description": "يعرض قائمة بجميع الميزات!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Owner Menu 💠",
-										"description": "Displays The List Of Owner Features",
+										"title": "قائمة المالك 💠",
+										"description": "يعرض قائمة ميزات المالك",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu ✨",
-										"description": "Displays The List Of Main Features",
+										"title": "قائمه الجروب ✨",
+										"description": "يعرض قائمة ميزات الجروب",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "Maker Menu 🌈",
-										"description": "Displays The List Of Logo Making Features",
+										"title": "قائمه صانع لوجو 🌈",
+										"description": "يعرض قائمة ميزات صنع الشعار",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Sound Menu 🎵",
-										"description": "Displays The List Of Sound Features",
+										"title": "قائمه الصوتيات 🎵",
+										"description": "يعرض قائمة ميزات الصوت",
 										"rowId": `${prefix}soundmenu`
 									},
 									{
-										"title": "Download Menu ↘️",
-										"description": "Displays The List Of Download Features",
+										"title": "قائمه التنزيل ↘️",
+										"description": "يعرض قائمة ميزات التنزيل",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Sticker Menu 🃏",
-										"description": "Displays The List Of Sticker Features",
+										"title": "قائمه استيكر 🃏",
+										"description": "يعرض قائمة ميزات الاستيكر",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Search Menu 🔎",
-										"description": "Displays The List Of Searching Features",
+										"title": "قائمه البحث 🔎",
+										"description": "يعرض قائمة ميزات البحث",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-										"title": "Tool Menu ⚙️",
-										"description": "Displays The List Of Tool Features",
+										"title": "قائمه ادوات ⚙️",
+										"description": "يعرض قائمة ميزات الأداة",
 										"rowId": `${prefix}toolmenu`
 									},
 									{
-										"title": "Random Image Menu 🌆",
-										"description": "Displays The List Of Random Image Features",
+										"title": "قائمه صور عشوائيه 🌆",
+										"description": "يعرض قائمة ميزات الصورة العشوائية",
 										"rowId": `${prefix}randomimagemenu`
 									},
 									{
-										"title": "Image Effect Menu 🖼️",
-										"description": "Displays The List Of Image Effect Features",
+										"title": "قائمه افكتات الصور 🖼️",
+										"description": "يعرض قائمة ميزات افكتات الصور ",
 										"rowId": `${prefix}imageeffectmenu`
 									},
 										{
-											"title": "Anime Menu 😘",
-										"description": "Displays The List Of Random Anime Features",
+											"title": "قائمه انمي عشوائيه 😘",
+										"description": "يعرض قائمة ميزات الأنمي العشوائية",
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "Emote Menu 😀",
-										"description": "Displays The List Of Emote Features",
+											"title": "Emote قائمه 😀",
+										"description": "يعرض قائمة ميزات التعبيرات",
 										"rowId": `${prefix}emotemenu`
 										},
 										{
-										"title": "Anime Sticker Menu ☺️",
-										"description": "Displays The List Of Anime Sticker Features",
+										"title": "قائمه استيكر انمي ☺️",
+										"description": "يعرض قائمة ميزات ملصقات الرسوم المتحركة",
 										"rowId": `${prefix}animestickermenu`
 									     },
 									{
-										"title": "Nsfw Menu 🤓",
-										"description": "Displays The List Of Nsfe Features",
+										"title": "Nsfw قائمه 🤓",
+										"description": "يعرض قائمة ميزات Nsfe",
 										"rowId": `${prefix}nsfwmenu`
 									     },
 										{
-											"title": "Fun Menu 🕺",
-										"description": "Displays The List Of Fun Features",
+											"title": "قائمه مرح 🕺",
+										"description": "يعرض قائمة ميزات المرح",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-										"title": "Game Menu 🎮",
-										"description": "Displays The List Of Game Features",
+										"title": "قائمه الالعاب 🎮",
+										"description": "يعرض قائمة ميزات الالعاب",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "Convert Menu ⚒️",
-										"description": "Displays The List Of Convert Features",
+											"title": "قائمه التحويل ⚒️",
+										"description": "يعرض قائمة ميزات التحويل",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "Database Menu ♻️",
-										"description": "Displays The List Of Database Features",
+											"title": "قائمه قاعده البيانات ♻️",
+										"description": "يعرض قائمة ميزات قاعده البيانات",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": "Indo Menu  🦜",
-										"description": "Displays The List Of Indo Features",
+										"title": " قائمه هنديه  🦜",
+										"description": "يعرض قائمة الميزات الهندية",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "Horoscope Menu 🕊️",
-										"description": "Displays The List Of Horoscope Features",
+											"title": "قائمة الأبراج 🕊️",
+										"description": "يعرض قائمة ميزات الأبراج",
 										"rowId": `${prefix}indohoroscopemenu`
 										}
 								]
 							},
 							{
-								"title": "Chat With Fellow Users 🌝",
+								"title": "الدردشة مع زملائك المستخدمين 🌝",
 								"rows": [
 									{
-										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
-										"description": "Displays The List Of Anonymous Chat Features",
+										"title": "قائمة الدردشة المجهولة 🙎🏻‍♂️",
+										"description": "يعرض قائمة ميزات الدردشة المجهولة",
 										"rowId": `${prefix}anonymousmenu`
 									}
 								]
 							},
 							{
-								"title": "Credit ©️",
+								"title": "تنسب إليه ©️",
 								"rows": [
 									{
-										"title": "Thanks To ❤️",
-										"description": "Displays The List Of Credit Of The Bot !!",
+										"title": "شكرا لك ❤️",
+										"description": "يعرض قائمة ائتمان الروبوت !!",
 										"rowId": `${prefix}tqtt`
 									}
 								]
@@ -8987,7 +8987,7 @@ case 'allmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'All Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه المالك 」	
 ╠ ${prefix}self
 ╠ ${prefix}public
 ╠ ${prefix}antitag
@@ -9009,7 +9009,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}block [tag/number]
 ╠ ${prefix}unblock [tag/number]
 ╠ ${prefix}coowner [add/del]
-╠═══════✪「 GROUP 」	        
+╠═══════✪「 قائمه الجروب 」	        
 ╠${prefix}grousetting
 ╠${prefix}grouplink
 ╠${prefix}ephemeral [option]
@@ -9045,7 +9045,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
-╠═══════✪「 MAKER 」
+╠═══════✪「 قائمه صنع لوجو 」
 ╠${prefix}candy
 ╠${prefix}blackpinkneon
 ╠${prefix}deepsea
@@ -9149,7 +9149,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╠═════✪「 DOWNLOAD 」	
+╠═════✪「 قائمه التنزيل 」	
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
 ╠${prefix}igstory [username]
@@ -9168,7 +9168,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}gitclone [repo link]
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
-╠═══════✪「 SEARCH 」	
+╠═══════✪「 قائمه البحث 」	
 ╠${prefix}play [query]
 ╠${prefix}song [query]
 ╠${prefix}yts [query]
@@ -9195,7 +9195,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}wattpad [query]
 ╠ ${prefix}mcserver [ip|port]
 ╠ ${prefix}drakor [query]
-╠═══════✪「 CONVERT 」
+╠═══════✪「 قائمه التحويل 」
 ╠ ${prefix}toimage [reply stick]
 ╠ ${prefix}sticker [reply img|gif]
 ╠ ${prefix}take [reply img|gif|stik]
@@ -9224,7 +9224,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}robot [reply aud]
 ╠${prefix}slow [reply aud]
 ╠${prefix}squirrel [reply aud]
-╠═══════✪「 IMG EFFECT 」
+╠═══════✪「 قائمه افكتات صور 」
 ╠${prefix}wanted
 ╠${prefix}blur
 ╠${prefix}framed
@@ -9239,7 +9239,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}beautifuleffect
 ╠${prefix}deleteeffect
 ╠${prefix}pixelate
-╠═══════✪「 RANDOM IMG 」
+╠═══════✪「 قائمه صور عشوائيه 」
 ╠${prefix}coffee
 ╠${prefix}bts
 ╠${prefix}woof
@@ -9252,7 +9252,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}wallcode
 ╠${prefix}animewall [query]
 ╠${prefix}animewall2 [query]
-╠═══════✪「 EMOTE 」
+╠═══════✪「 EMOTEقائمه 」
 ╠${prefix}instagramemoji
 ╠${prefix}facebookemoji
 ╠${prefix}iphoneemoji
@@ -9265,7 +9265,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}googleemoji
 ╠${prefix}pediaemoji
 ╠${prefix}microsoftemoji
-╠═══════✪「 ANIME 」
+╠═══════✪「 قائمه قصص مصورة يابانية 」
 ╠${prefix}naruto
 ╠${prefix}yaoi
 ╠${prefix}neko2
@@ -9314,7 +9314,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}animemegumin
 ╠${prefix}smug2
 ╠${prefix}couplepp
-╠══════✪「 STICKER 」
+╠══════✪「 قائمه استيكر 」
 ╠ ${prefix}patrick
 ╠ ${prefix}emoji
 ╠ ${prefix}emojimix
@@ -9322,7 +9322,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}ttp
 ╠ ${prefix}doge
 ╠ ${prefix}lovesticker
-╠════✪「 ANIME STICKER 」
+╠════✪「 قائمه استيكر انمي 」
 ╠${prefix}loli
 ╠${prefix}bully
 ╠${prefix}cuddle
@@ -9352,7 +9352,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}cringe
 ╠${prefix}neko
 ╠${prefix}gura
-╠═══════✪「 NSFW 」
+╠═══════✪「 NSFWقائمه 」
 ╠${prefix}hentaivideo
 ╠${prefix}yuri
 ╠${prefix}masturbation
@@ -9378,7 +9378,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}spank
 ╠${prefix}hneko
 ╠${prefix}nwaifu
-╠═══════✪「 FUN 」
+╠═══════✪「 قائمه مرح 」
 ╠ ${prefix}how [text
 ╠ ${prefix}when [text]
 ╠ ${prefix}where [text]
@@ -9443,7 +9443,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}playboy
 ╠ ${prefix}fuckgirl
 ╠ ${prefix}playgirl
-╠══════✪「 SOUND 」
+╠══════✪「 قائمه صوتيات 」
 ╠ ${prefix}sound1
 ╠ ${prefix}sound2
 ╠ ${prefix}sound3
@@ -9605,7 +9605,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}sound159
 ╠ ${prefix}sound160
 ╠ ${prefix}sound161
-╠══════✪「 GAME 」
+╠══════✪「 قائمه الالعاب 」
 ╠ ${prefix}truth
 ╠ ${prefix}dare
 ╠ ${prefix}tictactoe
@@ -9613,16 +9613,16 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}guess [option]
 ╠ ${prefix}math [mode]
 ╠ ${prefix}suitpvp [tag]
-╠══✪「 ANONYMOUS CHAT 」
+╠══✪「 قائمه محادثه مجهوله 」
 ╠${prefix}anonymous
 ╠${prefix}start
 ╠${prefix}next
 ╠${prefix}leave
-╠══════✪「 TOOL 」
+╠══════✪「 قائمه ادوات 」
 ╠ ${prefix}translate [text]
 ╠ ${prefix}fliptext [text]
 ╠ ${prefix}toletter [number]
-╠══════✪「 DATABASE 」
+╠══════✪「 قائمه قاعده البيانات 」
 ╠ ${prefix}setcmd
 ╠ ${prefix}listcmd
 ╠ ${prefix}delcmd
@@ -9631,7 +9631,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}listmsg
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
-╠══════✪「 lNDO 」
+╠══════✪「 lNDOقائمه 」
 ╠ ${prefix}darkjoke
 ╠ ${prefix}quotes
 ╠ ${prefix}animequotes
@@ -9656,7 +9656,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}covidindo
 ╠${prefix}earthquake
 ╠${prefix}tvschedule
-╠══════✪「 INDO HSCOPE 」
+╠══════✪「 INDO HSCOPEقائمه 」
 ╠${prefix}nomorhoki
 ╠${prefix}artimimpi 
 ╠${prefix}artinama 
@@ -9687,7 +9687,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}masasubur
 ╠${prefix}zodiak
 ╠${prefix}shio
-╠══════✪「 OTHER 」
+╠══════✪「 قائمه اخري 」
 ╠ ${prefix}afk
 ╠ ${prefix}readmore [text]
 ╠ ${prefix}toviewonce
@@ -9706,13 +9706,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}donate
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'ownermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Owner Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه المالك 」	
 ╠ ${prefix}self
 ╠ ${prefix}public
 ╠ ${prefix}antitag
@@ -9731,13 +9731,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}bcloc [text]
 ╠ ${prefix}setppbot [image]
 ╠ ${prefix}setexif
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'groupmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Group Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 GROUP 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه الجروب 」	
 ╠${prefix}groupsetting
 ╠${prefix}grouplink
 ╠${prefix}ephemeral [option]
@@ -9777,13 +9777,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 GROUP 」
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'rpgmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Rpg Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 RPG 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 RPGقائمه 」	
 ╠${prefix}hunt
 ╠${prefix}mine
 ╠${prefix}fish
@@ -9795,13 +9795,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 RPG 」
 ╠${prefix}profile
 ╠${prefix}inventory
 ╠${prefix}leaderboard
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'makermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Maker Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 MAKER 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه صنع لوجو 」	
 ╠${prefix}candy
 ╠${prefix}8bit
 ╠${prefix}horror
@@ -9909,13 +9909,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 MAKER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'downloadmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Download Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 DOWNLOAD 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه التنزيل 」	
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
 ╠${prefix}igstory [username]
@@ -9936,13 +9936,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 DOWNLOAD 」
 ╠${prefix}gitclone [repo link]
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'searchmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Search Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 SEARCH 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه البحث 」	
 ╠${prefix}play [query]
 ╠${prefix}song [query]
 ╠${prefix}yts [query]
@@ -9968,13 +9968,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 SEARCH 」
 ╠${prefix}wattpad [query]
 ╠ ${prefix}mcserver [ip|port]
 ╠${prefix}drakor [query]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'convertmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Convert Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 CONVERT 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه التحويل 」	
 ╠ ${prefix}toimage [reply stick]
 ╠ ${prefix}sticker [reply img|gif]
 ╠ ${prefix}take [reply img|gif|stik]
@@ -10003,13 +10003,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 CONVERT 」
 ╠${prefix}robot [reply aud]
 ╠${prefix}slow [reply aud]
 ╠${prefix}squirrel [reply aud]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'randomimagemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Random Image Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 RANDOM IMG 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه صور عشوائيه 」	
 ╠${prefix}coffee
 ╠${prefix}bts
 ╠${prefix}woof
@@ -10022,14 +10022,14 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 RANDOM IMG �
 ╠${prefix}wallcode
 ╠${prefix}animewall [query]
 ╠${prefix}animewall2 [query]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 
 case 'emotemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Emote Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 EMOTE 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 EMOTEقائمه 」	
 ╠${prefix}instagramemoji
 ╠${prefix}facebookemoji
 ╠${prefix}iphoneemoji
@@ -10042,13 +10042,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 EMOTE 」
 ╠${prefix}googleemoji
 ╠${prefix}pediaemoji
 ╠${prefix}microsoftemoji
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'imageeffectmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Image Effect Menu')
-await XeonBotInc.send5ButImg(from, `╔═════✪「 IMG EFFECT 」	
+await XeonBotInc.send5ButImg(from, `╔═════✪「 قائمه افكتات للصور 」	
 ╠${prefix}wanted
 ╠${prefix}blur
 ╠${prefix}framed
@@ -10063,13 +10063,13 @@ await XeonBotInc.send5ButImg(from, `╔═════✪「 IMG EFFECT 」
 ╠${prefix}beautifuleffect
 ╠${prefix}deleteeffect
 ╠${prefix}pixelate
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'animemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anime Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 ANIME 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه قصص مصورة يابانية 」	
 ╠${prefix}naruto
 ╠${prefix}yaoi
 ╠${prefix}neko2
@@ -10117,13 +10117,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 ANIME 」
 ╠${prefix}megumin2
 ╠${prefix}loli
 ╠${prefix}couplepp
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'stickermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Sticker Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 STICKER 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه استيكر 」	
 ╠ ${prefix}patrick
 ╠ ${prefix}emoji
 ╠ ${prefix}emojimix
@@ -10131,13 +10131,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 STICKER 」
 ╠ ${prefix}ttp
 ╠ ${prefix}doge
 ╠ ${prefix}lovesticker
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'animestickermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anime Sticker Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 ANIME STICKER 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه استيكر انمي 」	
 ╠${prefix}loli
 ╠${prefix}bully
 ╠${prefix}cuddle
@@ -10167,13 +10167,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 ANIME STICKER
 ╠${prefix}cringe
 ╠${prefix}neko
 ╠${prefix}gura
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'nsfwmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Nsfw Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 NSFW 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 NSFWقائمه 」	
 ╠${prefix}hentaivideo
 ╠${prefix}yuri
 ╠${prefix}masturbation
@@ -10199,13 +10199,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 NSFW 」
 ╠${prefix}spank
 ╠${prefix}hneko
 ╠${prefix}nwaifu
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'funmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Fun Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 Fun 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه مرح 」	
 ╠ ${prefix}how [text
 ╠ ${prefix}when [text]
 ╠ ${prefix}where [text]
@@ -10270,13 +10270,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 Fun 」
 ╠ ${prefix}playboy
 ╠ ${prefix}fuckgirl
 ╠ ${prefix}playgirl
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'soundmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Sound Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 Sound 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه صوتيات 」	
 ╠ ${prefix}sound1
 ╠ ${prefix}sound2
 ╠ ${prefix}sound3
@@ -10438,13 +10438,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 Sound 」
 ╠ ${prefix}sound159
 ╠ ${prefix}sound160
 ╠ ${prefix}sound161
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'gamemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Game Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 GAME 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه الالعاب 」	
 ╠ ${prefix}truth
 ╠ ${prefix}dare
 ╠ ${prefix}tictactoe
@@ -10452,34 +10452,34 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 GAME 」
 ╠ ${prefix}guess [option]
 ╠ ${prefix}math [mode]
 ╠ ${prefix}suitpvp [tag]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'anonymousmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anonymous Menu')
-await XeonBotInc.send5ButImg(from, `╔═══✪「 ANONYMOUS 」	
+await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه مجهوله 」	
 ╠${prefix}anonymous
 ╠${prefix}start
 ╠${prefix}next
 ╠${prefix}leave
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'toolmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Tool Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 TOOL 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 أداة 」	
 ╠ ${prefix}translate [text]
 ╠ ${prefix}fliptext [text]
 ╠ ${prefix}toletter [number]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'databasemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Database Menu')
-await XeonBotInc.send5ButImg(from, `╔═══✪「 DATABASE 」	
+await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه قاعدة البيانات 」	
 ╠ ${prefix}setcmd
 ╠ ${prefix}listcmd
 ╠ ${prefix}delcmd
@@ -10488,13 +10488,13 @@ await XeonBotInc.send5ButImg(from, `╔═══✪「 DATABASE 」
 ╠ ${prefix}listmsg
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'indomenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Indo Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 INDO 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 INDOقائمه 」	
 ╠ ${prefix}darkjoke
 ╠ ${prefix}quotes
 ╠ ${prefix}animequotes
@@ -10519,13 +10519,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 INDO 」
 ╠${prefix}covidindo
 ╠${prefix}earthquake
 ╠${prefix}tvschedule
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'indohoroscopemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Indo Horoscope Menu')
-await XeonBotInc.send5ButImg(from, `╔═✪「 INDO HOROSCOPE 」	
+await XeonBotInc.send5ButImg(from, `╔═✪「 قائمه ابراج الهند 」	
 ╠${prefix}nomorhoki
 ╠${prefix}artimimpi 
 ╠${prefix}artinama 
@@ -10556,15 +10556,15 @@ await XeonBotInc.send5ButImg(from, `╔═✪「 INDO HOROSCOPE 」
 ╠${prefix}masasubur
 ╠${prefix}zodiak
 ╠${prefix}shio
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'othermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Other Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 OTHER 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه اخري 」	
 ╠ ${prefix}afk
-╠ ${prefix}readmore [text]
+╠ ${prefix}readmore [نص]
 ╠ ${prefix}toviewonce
 ╠ ${prefix}chatinfo
 ╠ ${prefix}alive
@@ -10581,7 +10581,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OTHER 」
 ╠ ${prefix}donate
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
-╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
