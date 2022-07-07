@@ -8825,153 +8825,153 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
         	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
                      }
-            break
-                case 'command': {
+             break
+                case  command : {
                 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `الرجاء اختيار القائمة\n\n`,
+                    description: `Please Choose The Menu\n\n`,
                     buttonText: "Menu",
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "الميزات الأولية للبوت 🦄",
+								"title": "Initial Features Of Bot 🦄",
 								"rows": [
 									{
-										"title": "اخر ☕",
-										"description": "يعرض قائمة الميزات الأخرى",
+										"title": "Other ☕",
+										"description": "Displays The List Of Other Features",
 										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "ميزات البوت ❤️",
+								"title": "Bot Features ❤️",
 								"rows": [
 									{
-										"title": "كل القائمه 🥀",
-										"description": "يعرض قائمة بجميع الميزات!",
+										"title": "All Menu 🥀",
+										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "قائمة المالك 💠",
-										"description": "يعرض قائمة ميزات المالك",
+										"title": "Owner Menu 💠",
+										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "قائمه الجروب ✨",
-										"description": "يعرض قائمة ميزات الجروب",
+										"title": "Group Menu ✨",
+										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "قائمه صانع لوجو 🌈",
-										"description": "يعرض قائمة ميزات صنع الشعار",
+										"title": "Maker Menu 🌈",
+										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "قائمه الصوتيات 🎵",
-										"description": "يعرض قائمة ميزات الصوت",
+										"title": "Sound Menu 🎵",
+										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
 									},
 									{
-										"title": "قائمه التنزيل ↘️",
-										"description": "يعرض قائمة ميزات التنزيل",
+										"title": "Download Menu ↘️",
+										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "قائمه استيكر 🃏",
-										"description": "يعرض قائمة ميزات الاستيكر",
+										"title": "Sticker Menu 🃏",
+										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "قائمه البحث 🔎",
-										"description": "يعرض قائمة ميزات البحث",
+										"title": "Search Menu 🔎",
+										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-										"title": "قائمه ادوات ⚙️",
-										"description": "يعرض قائمة ميزات الأداة",
+										"title": "Tool Menu ⚙️",
+										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
 									},
 									{
-										"title": "قائمه صور عشوائيه 🌆",
-										"description": "يعرض قائمة ميزات الصورة العشوائية",
+										"title": "Random Image Menu 🌆",
+										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
 									},
 									{
-										"title": "قائمه افكتات الصور 🖼️",
-										"description": "يعرض قائمة ميزات افكتات الصور ",
+										"title": "Image Effect Menu 🖼️",
+										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
 									},
 										{
-											"title": "قائمه انمي عشوائيه 😘",
-										"description": "يعرض قائمة ميزات الأنمي العشوائية",
+											"title": "Anime Menu 😘",
+										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "Emote قائمه 😀",
-										"description": "يعرض قائمة ميزات التعبيرات",
+											"title": "Emote Menu 😀",
+										"description": "Displays The List Of Emote Features",
 										"rowId": `${prefix}emotemenu`
 										},
 										{
-										"title": "قائمه استيكر انمي ☺️",
-										"description": "يعرض قائمة ميزات ملصقات الرسوم المتحركة",
+										"title": "Anime Sticker Menu ☺️",
+										"description": "Displays The List Of Anime Sticker Features",
 										"rowId": `${prefix}animestickermenu`
 									     },
 									{
-										"title": "Nsfw قائمه 🤓",
-										"description": "يعرض قائمة ميزات Nsfe",
+										"title": "Nsfw Menu 🤓",
+										"description": "Displays The List Of Nsfe Features",
 										"rowId": `${prefix}nsfwmenu`
 									     },
 										{
-											"title": "قائمه مرح 🕺",
-										"description": "يعرض قائمة ميزات المرح",
+											"title": "Fun Menu 🕺",
+										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-										"title": "قائمه الالعاب 🎮",
-										"description": "يعرض قائمة ميزات الالعاب",
+										"title": "Game Menu 🎮",
+										"description": "Displays The List Of Game Features",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "قائمه التحويل ⚒️",
-										"description": "يعرض قائمة ميزات التحويل",
+											"title": "Convert Menu ⚒️",
+										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "قائمه قاعده البيانات ♻️",
-										"description": "يعرض قائمة ميزات قاعده البيانات",
+											"title": "Database Menu ♻️",
+										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": " قائمه هنديه  🦜",
-										"description": "يعرض قائمة الميزات الهندية",
+										"title": "Indo Menu  🦜",
+										"description": "Displays The List Of Indo Features",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "قائمة الأبراج 🕊️",
-										"description": "يعرض قائمة ميزات الأبراج",
+											"title": "Horoscope Menu 🕊️",
+										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
 										}
 								]
 							},
 							{
-								"title": "الدردشة مع زملائك المستخدمين 🌝",
+								"title": "Chat With Fellow Users 🌝",
 								"rows": [
 									{
-										"title": "قائمة الدردشة المجهولة 🙎🏻‍♂️",
-										"description": "يعرض قائمة ميزات الدردشة المجهولة",
+										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
+										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
 									}
 								]
 							},
 							{
-								"title": "تنسب إليه ©️",
+								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "شكرا لك ❤️",
-										"description": "يعرض قائمة ائتمان الروبوت !!",
+										"title": "Thanks To ❤️",
+										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
 									}
 								]
