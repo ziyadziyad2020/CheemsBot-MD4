@@ -1,6 +1,6 @@
 
 
-<h1 align="center">𝘍  𝘈  𝘋  𝘠   𝘊  𝘈  𝘐  𝘙  𝘖  🐼🍷 ٫<br></h1>
+<h1 align="center">𝑬𝑳𝑮𝑨𝒁𝑨𝑹 𝑨𝑳𝑾𝑨𝒁𝑬𝑹🐼🍷 ٫<br></h1>
 <p align="center">
 <img src="https://telegra.ph/file/865d80256cc0d533783e4.jpg" alt="animated" width="540" height="280" />
 </p>
