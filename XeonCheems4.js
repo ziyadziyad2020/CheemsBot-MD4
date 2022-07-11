@@ -3244,7 +3244,7 @@ id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'المطور 😈',
+displayText: 'المطور 🐼🍷 ،',
 id: 'owner'
 }
 }]
@@ -3285,7 +3285,7 @@ id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'المطور 😈',
+displayText: 'المطور 🐼🍷 ،',
 id: 'owner'
 }
 }]
@@ -3327,7 +3327,7 @@ id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'المطور 😈',
+displayText: 'المطور 🐼🍷 ،',
 id: 'owner'
 }
 }]
