@@ -2646,9 +2646,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return reply(mess.botAdmin)
 if (!isAdmins && !isCreator) return reply(mess.admin)
-if (args.length < 1) return reply('type auto sticker on to enable\ntype auto sticker off to disable')
+if (args.length < 1) return reply('اكتب auto sticker on لتمكين \ n إيقاف نوع الملصق التلقائي للتعطيل')
 if (args[0]  === 'on'){
-if (isAutoSticker) return reply(`Already activated`)
+if (isAutoSticker) return reply(`بالفعل تنشيط`)
 autosticker.push(from)
 fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
 reply('autosticker activated')
@@ -2701,8 +2701,8 @@ ntilink.splice(off, 1)
 replay('Success in turning off group chat antilink in this group')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
