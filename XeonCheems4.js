@@ -8799,7 +8799,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'المطور🙄',
+                                    displayText: 'المطور 🐼🍷 ،',
                                     id: 'owner'
                                 }
                             }]
@@ -8820,7 +8820,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { urlButton: { displayText: `سكربت 🍜`, url: `${botscript}` } },
             { quickReplyButton: { displayText: `كل القائمه 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `قائمه الخيارات 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `المطور🙄`, id: 'owner'} }
+            { quickReplyButton: { displayText: `المطور 🐼🍷 ،`, id: 'owner'} }
         	]
         	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
