@@ -2287,7 +2287,7 @@ if (isBanChat) return reply(mess.banChat)
           reply(`Exif Has Been Successfully Changed to\n\n${themeemoji} Packname : ${global.packname}\n${themeemoji} Author : ${global.author}`)
             }
             break
-	case 'kick': {
+	case 'طرد': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2297,7 +2297,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'add': {
+	case 'اضافه': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2307,7 +2307,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'promote': {
+	case 'رفع': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2317,7 +2317,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'demote': {
+	case 'تنزيل': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2327,7 +2327,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'block': {
+        case 'بلوك': {
         	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!isCreator) return replay(`${mess.owner}`)
@@ -2335,7 +2335,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'unblock': {
+        case 'فك البلوك': {
         	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!isCreator) return replay(`${mess.owner}`)
@@ -2388,7 +2388,7 @@ if (isBanChat) return reply(mess.banChat)
                 reply(mess.success)
                 }
                 break
-            case 'tagall': {
+            case 'تاك': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2611,8 +2611,8 @@ if (isBanChat) return reply(mess.banChat)
                     await XeonBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
-                        { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
-                        { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
+                        { buttonId: 'group open', buttonText: { displayText: 'فتح' }, type: 1 },
+                        { buttonId: 'group close', buttonText: { displayText: 'قفل' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `Group Mode`, XeonBotInc.user.name, m)
 
@@ -3161,7 +3161,7 @@ if (isBanChat) return reply(mess.banChat)
                 }
             }
             break
-case 'grupsetting':
+case 'اعدادات الجروب':
             case 'groupsetting':{
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
