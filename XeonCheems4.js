@@ -3162,7 +3162,7 @@ if (isBanChat) return reply(mess.banChat)
             }
             break
 case 'اعدادات الجروب':
-            case 'groupsetting':{
+            case 'اعدادات الجروب':{
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     let sections = []
@@ -3192,10 +3192,10 @@ if (isBanChat) return reply(mess.banChat)
                     const sendm =  XeonBotInc.sendMessage(
       from, 
       {
-       text: "Group Settings",
+       text: "اعدادات الجروب",
        footer: botname,
        title: "Set your group settings here......",
-       buttonText: "Click Button",
+       buttonText: "اضغط علي الزر",
        sections
       }, { quoted : m }
     )  
