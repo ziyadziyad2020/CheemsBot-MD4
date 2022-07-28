@@ -3162,7 +3162,7 @@ if (isBanChat) return reply(mess.banChat)
             }
             break
 case 'اعدادات الجروب':
-            case 'اعدادات الجروب':{
+            case 'groupsetting':{
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     let sections = []
@@ -3194,7 +3194,7 @@ if (isBanChat) return reply(mess.banChat)
       {
        text: "اعدادات الجروب",
        footer: botname,
-       title: "Set your group settings here......",
+       title: "اضبط إعدادات مجموعتك هنا......",
        buttonText: "اضغط علي الزر",
        sections
       }, { quoted : m }
@@ -8554,7 +8554,7 @@ View List Of Messages With ${prefix}listmsg`)
                 }
                 break
             }
-            case 'public': {
+            case 'عام': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -8562,7 +8562,7 @@ View List Of Messages With ${prefix}listmsg`)
                 reply('Successful Change To Public Usage')
             }
             break
-            case 'self': {
+            case 'خاص': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -8596,7 +8596,7 @@ replay('Choose on or off')
 }
 }
 break
-            case 'ping': case 'p': case 'botstatus': case 'statusbot': {
+            case 'بينج': case 'p': case 'botstatus': case 'statusbot': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 const used = process.memoryUsage()
