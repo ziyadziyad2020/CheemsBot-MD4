@@ -630,7 +630,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 تم اكتشاف رابط Wa.me �
 //anti bad words by xeon
 if (antiToxic)
 if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+tos = ['مرحبًا ، راقب فمك','لم تتعلم كيف تتكلم؟','توقف عن كونك سامة يا صديقي🤢','لا تكون سامة🦄']
 sin =  tos[Math.floor(Math.random() * (tos.length))]
 reply(sin)
 if (m.text) {
@@ -2082,8 +2082,8 @@ case 'dare':
     "send voice note saying can i call u baby?",
     "ss recent call whatsapp",
     "Say *YOU ARE SO BEAUTIFUL DON'T LIE* to guys!",
-    "pop to a group member, and say fuck you",
-    "Act like a chicken in front of ur parents",
+    "pop to a group member, and say كسمك",
+    "Act like a chicken in front of ur يا متناك",
     "Pick up a random book and read one page out loud in vn n send it here",
     "Open your front door and howl like a wolf for 10 seconds",
     "Take an embarrassing selfie and paste it on your profile picture",
