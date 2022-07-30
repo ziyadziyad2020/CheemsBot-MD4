@@ -8833,7 +8833,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 listMessage :{
                     title: `Hi ${pushname}`,
                     description: `اختار من القائمه💕\n\n`,
-                    buttonText: "Menu",
+                    buttonText: "القائمه",
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
@@ -8970,7 +8970,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "شكرا لك ❤️",
+										"title": "قائمه الشكر ❤️",
 										"description": "يعرض قائمة ائتمان البوت !!",
 										"rowId": `${prefix}tqtt`
 									}
@@ -10586,11 +10586,7 @@ break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`Thanks to
-LORD BUDDHA
-Xeon (Me)
-My family
-And all friends who helped assemble this sexy script !!!`)
+reply(`بحب فادي اخويا وكفا🌚💕`)
 break
             default:
                 if (budy.startsWith('=>')) {
