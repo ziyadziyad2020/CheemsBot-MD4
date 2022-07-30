@@ -10586,7 +10586,8 @@ break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`بحب فادي اخويا وكفا🌚💕`)
+reply(` شكرا ل
+نفسي🌚💕`)
 break
             default:
                 if (budy.startsWith('=>')) {
