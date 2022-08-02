@@ -2599,7 +2599,7 @@ if (isBanChat) return reply(mess.banChat)
             reply('Successfully Deleted The Vote Session In This Group')
 	    }
             break
-               case 'Group': case 'grup': {
+               case 'group': case 'grup': {
                	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2925,7 +2925,7 @@ replay('النجاح في إيقاف موقع تويتر antilink في هذه ا
   }
   }
   break
-              case 'قفل كل الروابط': {
+              case 'antilinkall': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
