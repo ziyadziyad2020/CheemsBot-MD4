@@ -2626,7 +2626,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
              if (args[0] === 'open'){
-                await XeonBotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`تم فتح تعديل معلومات المجموعهربنجاح√`)).catch((err) => reply(jsonformat(err)))
+                await XeonBotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`تم فتح تعديل معلومات المجموعه بنجاح√`)).catch((err) => reply(jsonformat(err)))
              } else if (args[0] === 'close'){
                 await XeonBotInc.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`تم اغلاق تعديل معلومات المجموعه بنجاح√`)).catch((err) => reply(jsonformat(err)))
              } else {
@@ -6067,7 +6067,7 @@ let audio = await toPTT(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
 }
 break
-case 'togif': {
+case 'متحركه': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return reply('Reply Image')
@@ -9202,7 +9202,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}smeme [reply img]
 ╠ ${prefix}emoji [emoji]
 ╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
+╠ ${prefix}متحركه [reply stick]
 ╠ ${prefix}tourl [reply img]
 ╠ ${prefix}tovn [reply aud]
 ╠ ${prefix}tomp3 [reply vn]
@@ -9982,7 +9982,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}smeme [reply img]
 ╠ ${prefix}emoji [emoji]
 ╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
+╠ ${prefix}متحركه [reply stick]
 ╠ ${prefix}tourl [reply img]
 ╠ ${prefix}tovn [reply aud]
 ╠ ${prefix}tomp3 [reply vn]
