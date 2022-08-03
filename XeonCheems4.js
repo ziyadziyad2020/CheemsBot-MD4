@@ -2626,9 +2626,9 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
              if (args[0] === 'open'){
-                await XeonBotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Successfully Opened Edit Group Info`)).catch((err) => reply(jsonformat(err)))
+                await XeonBotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`تم فتح تعديل معلومات المجموعهربنجاح√`)).catch((err) => reply(jsonformat(err)))
              } else if (args[0] === 'close'){
-                await XeonBotInc.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Successfully Closed Edit Group Info`)).catch((err) => reply(jsonformat(err)))
+                await XeonBotInc.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`تم اغلاق تعديل معلومات المجموعه بنجاح√`)).catch((err) => reply(jsonformat(err)))
              } else {
              let buttons = [
                         { buttonId: 'editinfo open', buttonText: { displayText: 'فتح' }, type: 1 },
@@ -9011,14 +9011,14 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}coowner [add/del]
 ╠═══════✪「 قائمه الجروب 」	        
 ╠${prefix}grousetting
-╠${prefix}grouplink
+╠${prefix}لينك
 ╠${prefix}ephemeral [option]
 ╠${prefix}setgcpp [image]
 ╠${prefix}setname [text]
 ╠${prefix}setdesc [text]
-╠${prefix}group 
+╠${prefix}جروب 
 ╠${prefix}resetgrouplink
-╠${prefix}editinfo [option]
+╠${prefix}تعديل [option]
 ╠${prefix}اضافه [user]
 ╠${prefix}طرد [reply/tag]
 ╠${prefix}hidetag [text]
@@ -9739,16 +9739,16 @@ case 'groupmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Group Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه الجروب 」	
-╠${prefix}groupsetting
-╠${prefix}grouplink
+╠${prefix}اعدادات
+╠${prefix}لينك
 ╠${prefix}ephemeral [option]
 ╠${prefix}setgcpp [image]
 ╠${prefix}setname [text]
 ╠${prefix}setdesc [text]
-╠${prefix}group
+╠${prefix}جروب
 ╠${prefix}botgroups
 ╠${prefix}resetgrouplink
-╠${prefix}editinfo [option]
+╠${prefix}تعديل [option]
 ╠${prefix}اضافه [user]
 ╠${prefix}طرد [reply/tag]
 ╠${prefix}hidetag [text]
