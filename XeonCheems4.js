@@ -2921,11 +2921,11 @@ replay('النجاح في إيقاف موقع تويتر antilink في هذه ا
   { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
   { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
-  await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `يرجى النقر على الزر أدناه\n\nفتح\nقفل`, `${global.botname}`, m)
   }
   }
   break
-              case 'antilinkall': {
+              case 'الروابط': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -2952,7 +2952,7 @@ replay('النجاح في إيقاف تشغيل جميع مضادات الروا
   { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
   { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
-  await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `يرجى النقر على الزر أدناه\n\nفتح\nقفل`, `${global.botname}`, m)
   }
   }
   break
@@ -9031,7 +9031,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}antilinkig [on/off]
 ╠${prefix}antilinkfb [on/off]
 ╠${prefix}antilinktwit [on/off]
-╠${prefix}antilinkall [on/off]
+╠${prefix}الروابط [on/off]
 ╠${prefix}antivirus [on/off]
 ╠${prefix}antitoxic [on/off]
 ╠${prefix}antiwame [on/off]
@@ -9764,7 +9764,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}antilinkig [on/off]
 ╠${prefix}antilinkfb [on/off]
 ╠${prefix}antilinktwit [on/off]
-╠${prefix}antilinkall [on/off]
+╠${prefix}الروابط [on/off]
 ╠${prefix}antivirus [on/off]
 ╠${prefix}antitoxic [on/off]
 ╠${prefix}antiwame [on/off]
