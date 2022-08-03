@@ -2606,9 +2606,9 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 if (args[0] === 'close'){
-                    await XeonBotInc.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Successful Closing The Group`)).catch((err) => reply(jsonformat(err)))
+                    await XeonBotInc.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`تم اغلاق المجموعه بنجاح√`)).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'open'){
-                    await XeonBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
+                    await XeonBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`تم فتح المجموعه بنجاح√`)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
                         { buttonId: 'group open', buttonText: { displayText: 'فتح' }, type: 1 },
@@ -2619,7 +2619,7 @@ if (isBanChat) return reply(mess.banChat)
              }
             }
             break
-            case 'editinfo': {
+            case 'editinfo': case 'تغيير اعدادات': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
