@@ -2619,7 +2619,7 @@ if (isBanChat) return reply(mess.banChat)
              }
             }
             break
-            case 'editinfo': case 'تغيير اعدادات': {
+            case 'editinfo': case 'تعديل': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
