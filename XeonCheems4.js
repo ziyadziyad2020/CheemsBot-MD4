@@ -3484,7 +3484,7 @@ if (isBanChat) return reply(mess.banChat)
             }
             break
 case 'dogesticker':
-case 'dogestick':
+case 'كلب':
 	case 'doge':{
 	                	            	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -3517,7 +3517,7 @@ encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: 
 await fs.unlinkSync(encmedia)
 }
 break
-            case 'sticker': case 's': case 'stickergif': case 'sgif': {
+            case 'sticker': case 's': case 'stickergif': case 'استيكر': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (/image/.test(mime)) {
@@ -9320,7 +9320,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}emojimix
 ╠ ${prefix}attp
 ╠ ${prefix}ttp
-╠ ${prefix}doge
+╠ ${prefix}كلب
 ╠ ${prefix}lovesticker
 ╠════✪「 قائمه استيكرات انمي 」
 ╠${prefix}loli
@@ -10130,7 +10130,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}emojimix
 ╠ ${prefix}attp
 ╠ ${prefix}ttp
-╠ ${prefix}doge
+╠ ${prefix}كلب
 ╠ ${prefix}lovesticker
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
