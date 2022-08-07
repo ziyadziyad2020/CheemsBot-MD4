@@ -8970,8 +8970,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "شكرا لك ❤️",
-										"description": "يعرض قائمة ائتمان البوت !!",
+										"title": "قائمه الشكر ❤️",
+										"description": "يعرض قائمة صناع البوت !!",
 										"rowId": `${prefix}tqtt`
 									}
 								]
@@ -10588,11 +10588,8 @@ break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`Thanks to
-LORD BUDDHA
-Xeon (Me)
-My family
-And all friends who helped assemble this sexy script !!!`)
+reply(`شكرا لنفسي🥺💕
+واخويا عبضو 🤡 `)
 break
             default:
                 if (budy.startsWith('=>')) {
