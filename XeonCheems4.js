@@ -1155,7 +1155,7 @@ async function cerpen (category) {
 
 switch(command) {
 	
- case 'banchat': {
+ case 'بان': {
  if (isBan) return reply(mess.ban)	 			
 if (!isCreator) return replay(mess.owner)
 if (args[0] === "on") {
@@ -1173,13 +1173,13 @@ XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\
 if (!isBanChat) return replay('Already Unbanned')
 let off = banchat.indexOf(from)
 banchat.splice(off, 1)
-replay('Success in unbanning the gc')
+replay('النجاح في إلغاء حظر الجروب')
 } else {
   let buttonsntnsfw = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'Ban' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Unban' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'حظر' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'الغاء حظر' }, type: 1 }
   ]
-  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nBan to Ban\nUnban to unban`, `${global.botname}`, m)
+  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `يرجى النقر على الزر أدناه\n\nBan to Ban\nUnban to unban`, `${global.botname}`, m)
   }
   }
   break
@@ -3251,7 +3251,7 @@ id: 'owner'
 let txt = `*「 ${global.ownername}'s Broadcast」*\n\n${text}`
 XeonBotInc.send5ButImg(i, txt, `${global.botname}`, log0, btn, thum)
 }
-replay(`Successfully Sent Broadcast To ${anu.length} Group`)
+replay(`تم إرسال البث بنجاح إلى ${anu.length} Group`)
 }
 break
 case 'bc': case 'broadcast': case 'bcall': {
@@ -3292,14 +3292,14 @@ id: 'owner'
 let txt = `*「 ${global.ownername}'s Broadcast」*\n\n${text}`
 XeonBotInc.send5ButImg(yoi, txt, `${global.botname}`, log0, btn, thum)
 }
-replay('Broadcast Success')
+replay('نجاح البث')
 }
 break
  case 'bcimage': case 'bcvideo': case 'bcaudio': {
                   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-                if (!/video/.test(mime) && !/image/.test(mime) && !/audio/.test(mime)) return reply(`*Send/Reply Video/Audio/Image You Want to Broadcast With Caption* ${prefix + command}`)
+                if (!/video/.test(mime) && !/image/.test(mime) && !/audio/.test(mime)) return reply(`*إرسال / رد الفيديو / الصوت / الصورة التي تريد بثها مع التسمية التوضيحية* ${prefix + command}`)
                 let anu = await store.chats.all().map(v => v.id)
                 let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 999999999,status: 200, thumbnail: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'), surface: 200, message: `${ownername}'s Broadcast`, orderTitle: `${botname}`, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 reply(`*Send Broadcast To* ${anu.length} *Group Chat, Time ${anu.length * 1.5} secs*`)
@@ -3344,7 +3344,7 @@ id: 'owner'
                     } else if (/audio/.test(mime)) {
                     XeonBotInc.sendMessage(i, {audio: buffer, mimetype: 'audio/mpeg'}, { quoted : ftroli })
                     } else {
-                    reply(`*Send/Reply Video/Audio/Image You Want to Broadcast With Caption* ${prefix + command}`)
+                    reply(`*إرسال / رد الفيديو / الصوت / الصورة التي تريد بثها مع التسمية التوضيحية* ${prefix + command}`)
                     }
                     await fs.unlinkSync(media)
                     }
@@ -3530,7 +3530,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
 } else {
-reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
+reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo Duration 1-9 Seconds`)
 }
 }
 break
@@ -3554,7 +3554,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else {
-reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
+reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo Duration 1-9 Seconds`)
 }
 }
 break
