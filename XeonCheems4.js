@@ -1161,7 +1161,7 @@ if (!isCreator) return replay(mess.owner)
 if (args[0] === "on") {
 if (isBanChat) return replay('Already Banned')
 banchat.push(from)
-replay('Success in banning the gc')
+replay('النجاح في حظر المجموعه')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -1179,33 +1179,33 @@ replay('النجاح في إلغاء حظر الجروب')
   { buttonId: `${command} on`, buttonText: { displayText: 'حظر' }, type: 1 },
   { buttonId: `${command} off`, buttonText: { displayText: 'الغاء حظر' }, type: 1 }
   ]
-  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `يرجى النقر على الزر أدناه\n\nBan to Ban\nUnban to unban`, `${global.botname}`, m)
+  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `يرجى النقر على الزر أدناه\n\nحظر والغاء حظر`, `${global.botname}`, m)
   }
   }
   break
 
-case 'ban': {
+case 'حظر': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!args[0]) return replay(`Select add or del(add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user u want to ban`)
+if (!args[0]) return replay(`حدد إضافة أو حذف (إضافة إلى الحظر ، حذف إلى إلغاء الحظر) ، على سبيل المثال: رد*${prefix}أضف الحظر * للمستخدم الذي تريد حظره`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
 orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
-if (args[0] === "add") {
+if (args[0] === "فتح") {
 if (isBane) return ads('User was already banned')
 banUser.push(orgnye)
-replay(`Successfully banned the user`)
-} else if (args[0] === "del") {
+replay(`تم حظر المستخدم بنجاح`)
+} else if (args[0] === "غلق") {
 if (!isBane) return ads('User was already unbanned')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user`)
+replay(`تم إلغاء حظر المستخدم بنجاح`)
 } else {
-replay("Error")
+replay("ايرور🙂!")
 }
 }
 break
@@ -1241,9 +1241,9 @@ if (q.includes('--help')) return reply(examkosong)
         if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 {      
-   let txt = `「 *ALL LIMIT USER* 」\n\n`
+   let txt = `「 *كل مستخدم محدود* 」\n\n`
      for (let i of _limit){
-     txt += `➸ *ID :* @${i.id.split("@")[0]}\n➸ *Limit* : ${i.limit}\n`
+     txt += `➸ *بطاقة تعريف :* @${i.id.split("@")[0]}\n➸ *Limit* : ${i.limit}\n`
      }
     reply(txt)       
   }
@@ -1283,7 +1283,7 @@ if (q.includes('--help')) return reply(examkosong)
       {
        buttonId: `${prefix + command}`, 
        buttonText: {
-        displayText: 'Mine Again⛏️'
+        displayText: 'منجم مرة أخرى⛏️'
       }, type: 1},
     ]
     let buttonMessage = {
@@ -1297,7 +1297,7 @@ if (q.includes('--help')) return reply(examkosong)
    
    }, 7000)  
   setTimeout( () => {
-  reply(`@${m.sender.split("@")[0]} Started Mining🎣`)     
+  reply(`@${m.sender.split("@")[0]} بدأت التعدين🎣`)     
   }, 1500)
   kurangDarah(m.sender, 10)
   addBesi(m.sender, besinya)
@@ -2695,7 +2695,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط المجموعة في هذه المجموعة وإلا فسيتم طردك على الفور`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLink) return replay('Already deactivated')
+if (!AntiLink) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
 replay('Success in turning off group chat antilink in this group')
@@ -2726,7 +2726,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط فيديو يوتيوب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkYoutubeVid) return replay('Already deactivated')
+if (!AntiLinkYoutubeVid) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinkytvid.indexOf(from)
 ntilinkytvid.splice(off, 1)
 replay('النجاح في تشغيل يوتيوب antilink في هذه المجموعة')
@@ -2757,7 +2757,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط قناة يوتيوب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkYoutubeChannel) return replay('Already deactivated')
+if (!AntiLinkYoutubeChannel) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinkytch.indexOf(from)
 ntilinkytch.splice(off, 1)
 replay('النجاح في ايقاف يوتيوب antilink في هذه المجموعة')
@@ -2788,7 +2788,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط انستجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkInstagram) return replay('Already deactivated')
+if (!AntiLinkInstagram) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinkig.indexOf(from)
 ntilinkig.splice(off, 1)
 replay('النجاح في إيقاف antilink انستجرام في هذه المجموعة')
@@ -2819,7 +2819,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط فيسبوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkFacebook) return replay('Already deactivated')
+if (!AntiLinkFacebook) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinkfb.indexOf(from)
 ntilinkfb.splice(off, 1)
 replay('النجاح في إيقاف تشغيل مضاد الارتباط على فيسبوك في هذه المجموعة')
@@ -2850,7 +2850,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط تليجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTelegram) return replay('Already deactivated')
+if (!AntiLinkTelegram) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinkig.indexOf(from)
 ntilinkig.splice(off, 1)
 replay('النجاح في إيقاف تشغيل تليجرام مضاد الروابط في هذه المجموعة')
@@ -2881,7 +2881,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط تيكتوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTiktok) return replay('Already deactivated')
+if (!AntiLinkTiktok) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinktt.indexOf(from)
 ntilinktt.splice(off, 1)
 replay('Success in turning off tiktok antilink in this group')
@@ -2912,7 +2912,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nنجح تشغيل منع روابط تويتر في هذه المجموعه!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTwitter) return replay('Already deactivated')
+if (!AntiLinkTwitter) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinktwt.indexOf(from)
 ntilinktwt.splice(off, 1)
 replay('النجاح في إيقاف موقع تويتر antilink في هذه المجموعة')
@@ -2943,7 +2943,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل أي رابط في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkAll) return replay('Already deactivated')
+if (!AntiLinkAll) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntilinkall.indexOf(from)
 ntilinkall.splice(off, 1)
 replay('النجاح في إيقاف تشغيل جميع مضادات الروابط في هذه المجموعة')
@@ -2974,7 +2974,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا يسمح لأي شخص بإرسال فيروس في هذه المجموعة ، سيتم طرد العضو الذي يرسل الفيروس على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiVirtex) return replay('Already deactivated')
+if (!antiVirtex) return replay('تم إلغاء تنشيطه بالفعل')
 let off = ntvirtex.indexOf(from)
 ntvirtex.splice(off, 1)
 replay('النجاح في إيقاف مكافحة الفيروسات هذه المجموعة')
@@ -2998,7 +2998,7 @@ if (Autoreply) return replay('Already activated')
 autorep.push(from)
 replay('النجاح في تشغيل الرد التلقائي في هذه المجموعة')
 } else if (args[0] === "off") {
-if (!Autoreply) return replay('Already deactivated')
+if (!Autoreply) return replay('تم إلغاء تنشيطه بالفعل')
 let off = autorep.indexOf(from)
 autorep.splice(off, 1)
 replay('النجاح في إيقاف تشغيل الرد التلقائي في هذه المجموعة')
@@ -3029,7 +3029,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا يُسمح لأحد باستخدام كلمات سيئة في هذه المجموعة ، ومن يستخدمها سيتم طرده على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiToxic) return replay('Already deactivated')
+if (!antiToxic) return replay('تم إلغاء تنشيطه بالفعل')
 let off = nttoxic.indexOf(from)
 nttoxic.splice(off, 1)
 replay('النجاح في إيقاف مضادات السموم في هذه المجموعة')
@@ -3060,7 +3060,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا أحد مسموح له بإرسال wa.me في هذه المجموعة ، الشخص الذي يرسل سيتم طرده على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiWame) return replay('Already deactivated')
+if (!antiWame) return replay('تم إلغاء تنشيطه بالفعل')
 let off = nttoxic.indexOf(from)
 ntwame.splice(off, 1)
 replay('النجاح في إيقاف مضاد للورم في هذه المجموعة')
@@ -3091,7 +3091,7 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nتم تمكين ميزة Nsfw (ليست آمنة للعمل) في هذه المجموعة ، مما يعني أنه يمكن للمرء الوصول إلى الرسومات الجنسية من الروبوت!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return replay('Already deactivated')
+if (!AntiNsfw) return replay('تم الغاء تنشيطه بالغعل')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
 replay('النجاح في إيقاف تشغيل nsfw في هذه المجموعة')
@@ -3468,12 +3468,12 @@ if (isBanChat) return reply(mess.banChat)
                 if (!text) return reply(mess.linkm)
                 if (!isUrl(args[0]) && !args[0].includes('soundcloud.com')) return reply(`*Not a soundcloud link*`)
                 xeonkey.SoundCloud(`${text}`).then(async (data) => {
-                    let txt = `*SOUNDCLOUD DOWNLOADER*\n\n`
-                    txt += `*${themeemoji}Title :* ${data.title}\n`
-                    txt += `*${themeemoji}Quality :* ${data.medias[0].quality}\n`
-                    txt += `*${themeemoji}Type :* ${data.medias[0].extension}\n`
-                    txt += `*${themeemoji}Size :* ${data.medias[0].formattedSize}\n`
-                    txt += `*${themeemoji}Url Source :* ${data.url}\n\n`
+                    let txt = `*تنزيل الصوت*\n\n`
+                    txt += `*${themeemoji}عنوان :* ${data.title}\n`
+                    txt += `*${themeemoji}جودة :* ${data.medias[0].quality}\n`
+                    txt += `*${themeemoji}يكتب :* ${data.medias[0].extension}\n`
+                    txt += `*${themeemoji}الحجم :* ${data.medias[0].formattedSize}\n`
+                    txt += `*${themeemoji}مصدر عنوان URL :* ${data.url}\n\n`
                     txt += `*${botname}*`
                 buf = await getBuffer(data.thumbnail)   
                 XeonBotInc.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: m }).catch((err) => reply(mess.error))    
