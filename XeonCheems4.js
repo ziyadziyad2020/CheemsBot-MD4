@@ -2396,7 +2396,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝ 
  
- ➲ *الرساله : ${q ? q : 'لا يوجد رساله'}*\n\n`
+ ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
@@ -8098,7 +8098,7 @@ break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"اي خدمه يعم🌚😂", contextInfo:{externalAdReply:{
+XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Success", contextInfo:{externalAdReply:{
 title:`${global.botname}`,
 body:`${global.botname}`,
 thumbnail: log0,
