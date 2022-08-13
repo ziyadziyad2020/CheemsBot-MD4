@@ -2396,7 +2396,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝ 
  
- ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
+ ➲ *الرساله : ${q ? q : 'لا يوجد رساله'}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
@@ -2596,7 +2596,7 @@ if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
             if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
             delete vote[m.chat]
-            reply('Successfully Deleted The Vote Session In This Group')
+            reply('تم حذف جلسة التصويت في هذه المجموعة بنجاح')
 	    }
             break
                case 'group': case 'جروب': {
@@ -2956,7 +2956,7 @@ replay('النجاح في إيقاف تشغيل جميع مضادات الروا
   }
   }
   break
-case 'antivirus': case 'antivirtex': {
+case 'antivirus': case 'الهكر': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -4704,7 +4704,7 @@ quere = args.join(" ")
 convertes = await toHur(quere)
 replay(`\`\`\`「 ALPHABET 」\`\`\`\n*•> Number :*\n${quere}\n*•> Alphabet :*\n${convertes}`)
 } catch {
-replay(`Error!`)
+replay(`ايرور🙂!`)
 }
 }
 break
@@ -6245,7 +6245,7 @@ if (isBan) return reply(mess.ban)
 case 'ig2': case 'igdl2': case 'instagram2': {
                if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Where is the link bro`)
+                if (!text) return reply(`اين الرابط يخويا`)
                 if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(`The link you provided is not a instagram link`)             
                 let urlnya = text
 	            hx.igdl(urlnya)
@@ -6309,7 +6309,7 @@ XeonBotInc.sendMessage(from, {video:{url:args[1]}, caption:'Done!', mimetype:'vi
 } else if (args[0] === "jpg") {
 XeonBotInc.sendMessage(from, {image:{url:args[1]}, caption:'Done!'}, {quoted:m})
 } else {
-reply("Error! ")
+reply("ايرور🙂! ")
 }
 }
 break
@@ -6352,7 +6352,7 @@ break
 case 'igtv': {	            
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Where is the link boss?`)
+                if (!text) return reply(`أين الرابط boss?`)
                 const { instagramdl, instagramdlv2, instagramdlv3 } = require('@bochilteam/scraper')
                 if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply('*The link you provided is not valid*')
                 instagramdlv3(`${text}`).then(async (data) => {            
@@ -6366,7 +6366,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'twitter': case 'td': case 'twitterdl': {     
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)	             
-             if (!text) return reply(`Where is the link?`)
+             if (!text) return reply(`أين الرابط?`)
                 if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`The link you provided is not valid`)
                 xeonkey.Twitter(`${text}`).then(async (data) => {                    
                     let txt = `*TWITTER DOWNLOADER*\n\n`
@@ -6390,7 +6390,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'twittermp3': case 'twitteraudio': { 
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)	             
-             if (!text) return reply(`Where is the link?`)
+             if (!text) return reply(`أين الرابط?`)
                 if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*The link you provided is not valid*`)
                 xeonkey.Twitter(`${text}`).then(async (data) => {
                 XeonBotInc.sendMessage(m.chat, { audio: { url: data.medias[1].url }, mimetype: 'audio/mp4'}, { quoted: m })
@@ -6465,7 +6465,7 @@ break
 case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-             if (!text) return reply(`Where is the link bro?\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+             if (!text) return reply(`أين الرابط يخويا?\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                 if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
             let bocil = require('@bochilteam/scraper')  
                 bocil.facebookdlv2(`${text}`).then(async (data) => {                   
@@ -6488,7 +6488,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-                  if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                  if (!text) return reply(`أين الرابط?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                   if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
   let noh = require('@bochilteam/scraper')                
   noh.savefrom(`${text}`).then(async (anu) => {  
@@ -7955,9 +7955,9 @@ break
 	    case 'tiktok':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
+  if (!q) return reply('أين الرابط?')
   reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+  if (!q.includes('tiktok')) return reply(`هذا ليس رابط تيكتوك!`)
    const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
  reply(mess.error) 
 } )
@@ -7990,7 +7990,7 @@ break
   case 'tiktoknowm': case 'ttnowm':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
+  if (!q) return reply('أين الرابط?')
   reply(mess.wait)
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
    const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
@@ -8098,7 +8098,7 @@ break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Success", contextInfo:{externalAdReply:{
+XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"اي خدمه يعم🌚😂", contextInfo:{externalAdReply:{
 title:`${global.botname}`,
 body:`${global.botname}`,
 thumbnail: log0,
@@ -8329,7 +8329,7 @@ break
                 XeonBotInc.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
                 fs.unlinkSync(ran)
                 })
-                } else reply(`Reply To The Audio You Want To Change With Caption *${prefix + command}*`)
+                } else reply(`الرد على الصوت الذي تريد تغييره مع التسمية التوضيحية *${prefix + command}*`)
                 } catch (e) {
                 reply(e)
                 }
@@ -8351,7 +8351,7 @@ break
                     at: + new Date,
                     locked: false,
                 }
-                reply(`Done!`)
+                reply(`تم التفعيل!`)
             }
             break
             case 'delcmd': {
@@ -8363,7 +8363,7 @@ break
                 if (!hash) return reply(`No Hashes`)
                 if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) return reply(`You Have No Permission To Delete This Sticker Command`)
                 delete global.db.data.sticker[hash]
-                reply(`Done!`)
+                reply(`تم التفعيل!`)
             }
             break
             case 'listcmd': {
@@ -8386,7 +8386,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
                 let hash = m.quoted.fileSha256.toString('base64')
                 if (!(hash in global.db.data.sticker)) return reply(`Hash Not Found In Database`)
                 global.db.data.sticker[hash].locked = !/^un/i.test(command)
-                reply('Done!')
+                reply('تم التفعيل!')
             }
             break
             case 'addmsg': {
