@@ -2965,7 +2965,7 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (antiVirtex) return replay('Already activated')
 ntvirtex.push(from)
-replay('Success in turning on antivirus in this group')
+replay('النجاح في تشغيل مضاد الفيروسات في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
