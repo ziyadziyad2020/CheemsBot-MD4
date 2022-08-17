@@ -1545,8 +1545,8 @@ if (q.includes('--help')) return reply(examkosong)
 case 'resetlinkgc':
 case 'resetlinkgroup':
 case 'resetlinkgrup':
-case 'revoke':
-case 'راستر':
+case 'رسترلينك':
+case 'رستر':
 case 'resetgrouplink':
 case 'resetgclink':
 case 'resetgruplink': {
@@ -2343,7 +2343,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	    case 'setname': case 'تغيير الاسم': case 'setsubject': {
+	    case 'setname': case 'تغيرالاسم': case 'setsubject': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2614,7 +2614,7 @@ if (isBanChat) return reply(mess.banChat)
                         { buttonId: 'group open', buttonText: { displayText: 'فتح' }, type: 1 },
                         { buttonId: 'group close', buttonText: { displayText: 'قفل' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `Group Mode`, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `فتح او قفل`, XeonBotInc.user.name, m)
 
              }
             }
@@ -2634,7 +2634,7 @@ if (isBanChat) return reply(mess.banChat)
                         { buttonId: 'editinfo open', buttonText: { displayText: 'فتح' }, type: 1 },
                         { buttonId: 'editinfo close', buttonText: { displayText: 'قفل' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `Mode Edit Info`, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `وضع تعديل المعلومات`, XeonBotInc.user.name, m)
 
             }
             }
@@ -3534,7 +3534,7 @@ reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo D
 }
 }
 break
-case 'swm': case 'س ـرقههه': case 'stickerwm': {
+case 'swm': case 'اناحرامي': case 'stickerwm': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply(`Example :\nswm ${global.author}|${global.packname}`)
