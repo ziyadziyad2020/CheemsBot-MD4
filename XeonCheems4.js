@@ -1546,7 +1546,7 @@ case 'resetlinkgc':
 case 'resetlinkgroup':
 case 'resetlinkgrup':
 case 'revoke':
-case 'resetlink':
+case 'راستر':
 case 'resetgrouplink':
 case 'resetgclink':
 case 'resetgruplink': {
@@ -2258,7 +2258,7 @@ if (isBanChat) return reply(mess.banChat)
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
               reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
               break  
-            case 'join': {
+            case 'انضم': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -2343,7 +2343,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	    case 'setname': case 'setgcname': case 'setsubject': {
+	    case 'setname': case 'تغيير الاسم': case 'setsubject': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -3089,41 +3089,41 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nتم تمكين ميزة Nsfw (ليست آمنة للعمل) في هذه المجموعة ، مما يعني أنه يمكن للمرء الوصول إلى الرسومات الجنسية من الروبوت!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nتم تمكين ميزة الاباحي (ليست آمنة للعمل) في هذه المجموعة ، مما يعني أنه يمكن للمرء الوصول إلى الرسومات الجنسية من الروبوت!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiNsfw) return replay('تم الغاء تنشيطه بالغعل')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-replay('النجاح في إيقاف تشغيل nsfw في هذه المجموعة')
+replay('النجاح في إيقاف تشغيل الاباحي في هذه المجموعة')
 } else {
   let buttonsntnsfw = [
   { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
   { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
-  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `يرجى النقر على الزر أدناه\n\nفتح\nوقفل`, `${global.botname}`, m)
   }
   }
   break
-             case 'mute': {
+             case 'الصوت': {
              	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 if (args[0] === "on") {
-                if (db.data.chats[m.chat].mute) return reply(`Previously Active`)
+                if (db.data.chats[m.chat].mute) return reply(`شغال قبل كدا`)
                 db.data.chats[m.chat].mute = true
-                reply(`${XeonBotInc.user.name} Has Been Muted In This Group !`)
+                reply(`${XeonBotInc.user.name} تم كتم الصوت في هذه المجموعة !`)
                 } else if (args[0] === "off") {
-                if (!db.data.chats[m.chat].mute) return reply(`Previously Inactive`)
+                if (!db.data.chats[m.chat].mute) return reply(`مش شغال قبل كدا اصلا`)
                 db.data.chats[m.chat].mute = false
-                reply(`${XeonBotInc.user.name} Has Been Unmuted In This Group!`)
+                reply(`${XeonBotInc.user.name} تم إلغاء كتم الصوت في هذه المجموعة!`)
                 } else {
                  let buttons = [
                         { buttonId: 'mute on', buttonText: { displayText: 'فتح' }, type: 1 },
                         { buttonId: 'mute off', buttonText: { displayText: 'قفل' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `Mute Bot`, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `كتم البوت`, XeonBotInc.user.name, m)
                 }
              }
              break
@@ -3131,9 +3131,9 @@ case 'setppbot': case 'setbotpp': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
-if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
-if (/webp/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
+if (!quoted) return replay(`ارسل/الرد على الصورة مع التسمية التوضيحية ${prefix + command}`)
+if (!/image/.test(mime)) return replay(`إرسال / الرد على الصورة مع التسمية التوضيحية ${prefix + command}`)
+if (/webp/.test(mime)) return replay(`إرسال / الرد على الصورة مع التسمية التوضيحية ${prefix + command}`)
 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 await XeonBotInc.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
 replay(mess.success)
@@ -3144,7 +3144,7 @@ break
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 let response = await XeonBotInc.groupInviteCode(m.chat)
-                XeonBotInc.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
+                XeonBotInc.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} لينك الجروب يروحي🌚`, m, { detectLink: true })
             }
             break
             case 'ephemeral': {
@@ -6160,7 +6160,7 @@ gis(args.join(" "), async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
 let buttons = [
-{buttonId: `gimage ${args.join(" ")}`, buttonText: {displayText: 'Next Image 👀'}, type: 1}
+{buttonId: `gimage ${args.join(" ")}`, buttonText: {displayText: 'الصوره التاليه 👀'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: images },
@@ -8029,7 +8029,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `*| YOUTUBE PLAY |*
+caption: `*| تشغيل يوتيوب |*
 
 ${global.themeemoji} Title : ${anu.title}
 ${global.themeemoji} Ext : Search
@@ -8056,13 +8056,13 @@ sourceUrl: anu.url
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
+case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'بحث': case 'ytmusic': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args[0]) return reply(mess.linkm)
 try {
 hx.youtube(args[0]).then(async(res) => {
-textyt = `*| YOUTUBE DOWNLOADER |*
+textyt = `*| تحميل يوتيوب |*
 
 ${global.themeemoji} Title : ${res.title}
 ${global.themeemoji} Size : ${res.size}
