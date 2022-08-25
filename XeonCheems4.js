@@ -786,7 +786,7 @@ const emoji = new EmojiAPI();
 emoji.get(satu)
 .then(emoji => {
 const buttons = [{buttonId: "y", buttonText: {displayText:satu}, type: 1}]
-const buttonMessage = {image: {url: emoji.images[dua].url},caption: "Here you go!",footerText: `${botname}`,buttons: buttons,headerType: 4}
+const buttonMessage = {image: {url: emoji.images[dua].url},caption: "اي خدمه يروحي🌚💕!",footerText: `${botname}`,buttons: buttons,headerType: 4}
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 })
 } catch (e) {
@@ -3202,16 +3202,16 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-            case 'delete': case 'del': {
+            case 'مسح': case 'del': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
                 let { chat, fromMe, id, isBaileys } = m.quoted
-                if (!isBaileys) return replay(`The Message Was Not Sent By A Bot!`)
+                if (!isBaileys) return replay(`لم يتم إرسال الرسالة من قبل أي روبوت!!`)
                 XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-      case 'bcgc': case 'bcgroup': {
+      case 'شير': case 'bcgroup': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3371,14 +3371,14 @@ case 'chatinfo': {
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) replay('Reply Message')
 let msg = await m.getQuotedObj()
-if (!m.quoted.isBaileys) return replay('The message was not sent by a bot!')
+if (!m.quoted.isBaileys) return replay('لم يتم إرسال الرسالة بواسطة روبوت!')
 let teks = ''
 for (let i of msg.userReceipt) {
 let read = i.readTimestamp
 let unread = i.receiptTimestamp
 let waktu = read ? read : unread
 teks += `${global.themeemoji} @${i.userJid.split('@')[0]}\n`
-teks += ` ┗━${global.themeemoji} *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ${global.themeemoji} *Status :* ${read ? 'Read' : 'Sent'}\n\n`
+teks += ` ┗━${global.themeemoji} *الوقت :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ${global.themeemoji} *الحاله :* ${read ? 'Read' : 'Sent'}\n\n`
 }
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
@@ -3386,9 +3386,9 @@ break
 case 'q': case 'quoted': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.quoted) return replay('Reply Message!!')
+if (!m.quoted) return replay('ريبلاي علي الرساله!!')
 let wokwol = await XeonBotInc.serializeM(await m.getQuotedObj())
-if (!wokwol.quoted) return replay('The message you replied to does not contain a reply')
+if (!wokwol.quoted) return replay('الرسالة التي قمت بالرد عليها لا تحتوي على رد')
 await wokwol.quoted.copyNForward(m.chat, true)
 }
 break
@@ -3396,9 +3396,9 @@ case 'listpc': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
-let teks = `     「 Personal Chat List 」\n\nThere are ${anu.length} users using bot in personal chat`
+let teks = `     「 قائمة الدردشة الشخصية 」\n\nهناك ${anu.length} المستخدمين الذين يستخدمون الروبوت في الدردشة الشخصية`
 for (let i of anu) {
- teks += `\n\nProfile : @${i.id.split('@')[0]}\nChat : ${i.unreadCount}\nLastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
+ teks += `\n\nالبروفايل : @${i.id.split('@')[0]}\nالشات : ${i.unreadCount}\nآخر محادثة : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
 }
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
@@ -3407,7 +3407,7 @@ case 'listgc': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
-let teks = `     「 Group Chat 」\n\nThere are ${anu.length} users using bot in group chat`
+let teks = `     「 محادثه الجروب 」\n\nهناك ${anu.length} المستخدمين الذين يستخدمون الروبوت في الدردشة الجماعية`
 for (let i of anu) {
  let metadata = await XeonBotInc.groupMetadata(i)
  if (metadata.owner === "undefined") {
@@ -3460,7 +3460,7 @@ case 'ttp': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
            if (!text) return reply(`*Example : ${prefix + command} hello*`)
-           await XeonBotInc.sendMedia(m.chat, `https://cililitan.herokuapp.com/api/texttopng2?teks=${text}`, 'A L Y A', 'B O T M D', m, {asSticker: true})
+           await XeonBotInc.sendMedia(m.chat, `https://cililitan.herokuapp.com/api/texttopng2?teks=${text}`, 'E L G A Z A R', 'B O T M D', m, {asSticker: true})
          
                      }
                      break
@@ -3471,7 +3471,7 @@ if (isBanChat) return reply(mess.banChat)
                     let txt = `*تنزيل الصوت*\n\n`
                     txt += `*${themeemoji}عنوان :* ${data.title}\n`
                     txt += `*${themeemoji}جودة :* ${data.medias[0].quality}\n`
-                    txt += `*${themeemoji}يكتب :* ${data.medias[0].extension}\n`
+                    txt += `*${themeemoji}كتابه :* ${data.medias[0].extension}\n`
                     txt += `*${themeemoji}الحجم :* ${data.medias[0].formattedSize}\n`
                     txt += `*${themeemoji}مصدر عنوان URL :* ${data.url}\n\n`
                     txt += `*${botname}*`
@@ -3596,9 +3596,9 @@ if (isBanChat) return reply(mess.banChat)
 case 'bts':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-teks = `Here you go!`
+teks = `اي خدمه يروحي🌚💕!`
 buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
-XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
+XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 break
 case 'wallneon': case 'wallrandom': case 'wallcode': case 'wallpubg': case 'wallml': 	
 try{
@@ -3630,7 +3630,7 @@ reply(mess.wait)
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3702,7 +3702,7 @@ reply(mess.wait)
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  `اي خدمه يروحي🌚💕!`,
   buttons: trapbot,
   headerType: 1
   }     
@@ -3722,7 +3722,7 @@ if (!AntiNsfw) return reply(mess.nsfw)
     ]
   let button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  `اي خدمه يروحي🌚💕!`,
   buttons: hnekobot,
   headerType: 1
   }      
@@ -3743,7 +3743,7 @@ reply(mess.wait)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  `اي خدمه يروحي🌚💕!`,
   buttons: nwaifubot,
   headerType: 1
   }      
@@ -3762,7 +3762,7 @@ reply(mess.wait)
         ]
       let buttonsssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3781,7 +3781,7 @@ reply(mess.wait)
         ]
       let button1ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3800,7 +3800,7 @@ reply(mess.wait)
         ]
       let button12ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3819,7 +3819,7 @@ if (!m.isGroup) return replay(mess.group)
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  `اي خدمه يروحي🌚💕!`,
   buttons: xxhnekobot,
   headerType: 1
   }      
@@ -3837,7 +3837,7 @@ reply(mess.wait)
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3856,7 +3856,7 @@ reply(mess.wait)
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbutsss,
       headerType: 4
@@ -3875,7 +3875,7 @@ reply(mess.wait)
         ]
       let buttonsosMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3894,7 +3894,7 @@ reply(mess.wait)
         ]
       let btutttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3913,7 +3913,7 @@ reply(mess.wait)
         ]
       let xxbuttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3932,7 +3932,7 @@ reply(mess.wait)
         ]
       let buttonsTsMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3951,7 +3951,7 @@ reply(mess.wait)
         ]
       let buttonussMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3970,7 +3970,7 @@ reply(mess.wait)
         ]
       let bxxuttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -3989,7 +3989,7 @@ reply(mess.wait)
         ]
       let buttoxnssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4008,7 +4008,7 @@ reply(mess.wait)
         ]
       let buttonssxMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4027,7 +4027,7 @@ reply(mess.wait)
         ]
       let button1ssxMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbutt1sss,
       headerType: 4
@@ -4046,7 +4046,7 @@ reply(mess.wait)
         ]
       let buttonszzsxMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszzss,
       headerType: 4
@@ -4065,7 +4065,7 @@ reply(mess.wait)
         ]
       let buttonszzsx12Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz12ss,
       headerType: 4
@@ -4084,7 +4084,7 @@ reply(mess.wait)
         ]
       let buttonszzsx123Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz123ss,
       headerType: 4
@@ -4103,7 +4103,7 @@ reply(mess.wait)
         ]
       let buttonszzsx124Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz124ss,
       headerType: 4
@@ -4122,7 +4122,7 @@ reply(mess.wait)
         ]
       let buttonszzsx125Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz125ss,
       headerType: 4
@@ -4141,7 +4141,7 @@ reply(mess.wait)
         ]
       let buttonszzsx126Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz126ss,
       headerType: 4
@@ -4160,7 +4160,7 @@ reply(mess.wait)
         ]
       let buttonszzsx127Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz127ss,
       headerType: 4
@@ -4179,7 +4179,7 @@ reply(mess.wait)
         ]
       let buttonszzsx128Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz128ss,
       headerType: 4
@@ -4198,7 +4198,7 @@ reply(mess.wait)
         ]
       let buttonszzsx129Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz129ss,
       headerType: 4
@@ -4217,7 +4217,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1210Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1210ss,
       headerType: 4
@@ -4236,7 +4236,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1211Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1211ss,
       headerType: 4
@@ -4255,7 +4255,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1212Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1212ss,
       headerType: 4
@@ -4274,7 +4274,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1213Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1213ss,
       headerType: 4
@@ -4293,7 +4293,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1214Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1214ss,
       headerType: 4
@@ -4312,7 +4312,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1215Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1215ss,
       headerType: 4
@@ -4331,7 +4331,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1216Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1216ss,
       headerType: 4
@@ -4350,7 +4350,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1217Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1217ss,
       headerType: 4
@@ -4369,7 +4369,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1218Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1218ss,
       headerType: 4
@@ -4388,7 +4388,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1219Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1219ss,
       headerType: 4
@@ -4407,7 +4407,7 @@ reply(mess.wait)
         ]
       let buttonszzsx1220Messages = {
        image: {url:waifudd.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
       buttons: wbuttszz1220ss,
       headerType: 4
@@ -4426,7 +4426,7 @@ var wbutsss = [
          ]
       let buttonsesMessage = {
       image: {url:ud.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
           buttons: wbutsss,
      headerType: 4
@@ -4445,7 +4445,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `Here you go!`,
+       caption:  `اي خدمه يروحي🌚💕!`,
       footer: `${global.botname}`,
           buttons: wbutsss,
      headerType: 4
@@ -4464,7 +4464,7 @@ reply(mess.wait)
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  `اي خدمه يروحي🌚💕!`,
    footer: `${global.botname}`,
   buttons: wbuttsss,
   headerType: 2
@@ -4525,7 +4525,7 @@ case 'naruto':
 			    var query = ["naruto hd","naruto boruto","naruto sasuke", "naruto aesthetic", "naruto aesthetic"]
                 var data = await pinterest(pickRandom(query))
 				var but = [{buttonId: `naruto`, buttonText: { displayText: "التالي➡️" }, type: 1 }]
-				XeonBotInc.sendMessage(from, { caption: `Here you go!`, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
+				XeonBotInc.sendMessage(from, { caption: `اي خدمه يروحي🌚💕!`, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			    break
 case 'yaoi':
 			if (isBan) return reply(mess.ban)
@@ -4534,7 +4534,7 @@ case 'yaoi':
 			    var query = ["yaoi","yaoi aesthetic","yaoi hd","yaoi ganteng"]
                 var data = await pinterest(pickRandom(query))
 				var but = [{buttonId: `${command}`, buttonText: { displayText: "التالي➡️" }, type: 1 }]
-				XeonBotInc.sendMessage(from, { caption: "Here you go!", image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
+				XeonBotInc.sendMessage(from, { caption: "اي خدمه يروحي🌚💕!", image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			    break
 case 'coffee': case 'kopi': {
 	if (isBan) return reply(mess.ban)	 			
@@ -4544,7 +4544,7 @@ if (isBanChat) return reply(mess.banChat)
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: `Here you go!`,
+                    caption: `اي خدمه يروحي🌚💕!`,
                     footer: `${botname}`,
                     buttons: buttons,
                     headerType: 4
@@ -5439,9 +5439,9 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/horror-blood-text-effect-online-883.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
   case 'whitebear':{
@@ -5449,9 +5449,9 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'thunder2':{
@@ -5459,9 +5459,9 @@ case 'thunder2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-thunder-text-effect-online-881.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'blackpink':{
@@ -5469,9 +5469,9 @@ case 'blackpink':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-blackpink-logo-style-online-1001.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'neon':{
@@ -5479,9 +5479,9 @@ case 'neon':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/neon-light-text-effect-online-882.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'matrix2':{
@@ -5489,9 +5489,9 @@ case 'matrix2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/matrix-style-text-effect-online-884.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'sky':{
@@ -5499,9 +5499,9 @@ case 'sky':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 
@@ -5510,9 +5510,9 @@ case 'magma':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-magma-hot-text-effect-online-1030.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'sand':{
@@ -5520,9 +5520,9 @@ case 'sand':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/sand-writing-text-effect-online-990.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'pencil':{
@@ -5530,9 +5530,9 @@ case 'pencil':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-sketch-text-effect-online-1044.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'graffiti':{
@@ -5540,9 +5540,9 @@ case 'graffiti':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'metallic':{
@@ -5550,9 +5550,9 @@ case 'metallic':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-metallic-text-effect-free-online-1041.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'steel':{
@@ -5560,9 +5560,9 @@ case 'steel':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/steel-text-effect-online-921.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'harrypotter':{
@@ -5570,9 +5570,9 @@ case 'harrypotter':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-harry-potter-text-effect-online-1025.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'underwater':{
@@ -5580,9 +5580,9 @@ case 'underwater':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-underwater-text-effect-generator-online-1013.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'luxury':{
@@ -5590,9 +5590,9 @@ case 'luxury':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-luxury-gold-text-effect-online-1003.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'glue2':{
@@ -5600,9 +5600,9 @@ case 'glue2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'fabric':{
@@ -5610,9 +5610,9 @@ case 'fabric':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/fabric-text-effect-online-964.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'neonlight':{
@@ -5620,9 +5620,9 @@ case 'neonlight':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/neon-light-glitch-text-generator-online-1063.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'lava':{
@@ -5630,9 +5630,9 @@ case 'lava':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/lava-text-effect-online-914.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'toxic':{
@@ -5640,9 +5640,9 @@ case 'toxic':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/toxic-text-effect-online-901.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'ancient':{
@@ -5650,9 +5650,9 @@ case 'ancient':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-golden-ancient-text-effect-online-free-1060.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'christmas2':{
@@ -5660,9 +5660,9 @@ case 'christmas2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/sparkles-merry-christmas-text-effect-1054.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'sci_fi':{
@@ -5670,9 +5670,9 @@ case 'sci_fi':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'rainbow':{
@@ -5680,9 +5680,9 @@ case 'rainbow':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-rainbow-color-calligraphy-text-effect-1049.html`
      let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'classic':{
@@ -5690,9 +5690,9 @@ case 'classic':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/video-game-classic-8-bit-text-effect-1037.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'watercolor2':{
@@ -5700,9 +5700,9 @@ case 'watercolor2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'halloween2':{
@@ -5710,9 +5710,9 @@ case 'halloween2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-spooky-halloween-text-effect-online-1046.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'halloweenfire':{
@@ -5720,9 +5720,9 @@ case 'halloweenfire':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/halloween-fire-text-effect-940.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'writing':{
@@ -5730,9 +5730,9 @@ case 'writing':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/sand-writing-text-effect-online-990.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'foggy':{
@@ -5740,9 +5740,9 @@ case 'foggy':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/write-text-on-foggy-window-online-free-1015.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'marvel':{
@@ -5750,9 +5750,9 @@ case 'marvel':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-logo-style-marvel-studios-ver-metal-972.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'skeleton2':{
@@ -5760,9 +5760,9 @@ case 'skeleton2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-halloween-skeleton-text-effect-online-1047.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'sketch':{
@@ -5770,9 +5770,9 @@ case 'sketch':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-sketch-text-effect-online-1044.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'wonderful':{
@@ -5780,9 +5780,9 @@ case 'wonderful':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'cool':{
@@ -5790,9 +5790,9 @@ case 'cool':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'collwall':{
@@ -5800,9 +5800,9 @@ case 'collwall':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-cool-wall-graffiti-text-effect-online-1009.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'multicolor2':{
@@ -5810,9 +5810,9 @@ case 'multicolor2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'batman':{
@@ -5820,9 +5820,9 @@ case 'batman':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/make-a-batman-logo-online-free-1066.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'juice':{
@@ -5830,9 +5830,9 @@ case 'juice':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/fruit-juice-text-effect-861.html`
 let anui = await textpro(link, q)
-     reply(`Wait a moment while making the logo about 1 minute`) 
+     reply(`انتظر لحظة بينما يصنع اللوجو حوالي دقيقة واحدة`) 
      console.log(anui)
-    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"Here you go!"}, {quoted:m})
+    XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
 case 'pornhub':{
@@ -5846,7 +5846,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"Here you go!"},{quoted:m})
+XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
 case 'retro':{
@@ -5860,7 +5860,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/create-3d-retro-text-effect-online-free-1065.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"Here you go!"},{quoted:m})
+XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
 case 'horror':{
@@ -5874,7 +5874,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/create-a-cinematic-horror-text-effect-1045.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"Here you go!"},{quoted:m})
+XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
 case '8bit':{
@@ -5888,7 +5888,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/video-game-classic-8-bit-text-effect-1037.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"Here you go!"},{quoted:m})
+XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
 case 'emoji': {
@@ -7952,7 +7952,7 @@ break
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
             break
-	    case 'tiktok':{
+	    case 'تيكتوك':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('أين الرابط?')
@@ -7992,18 +7992,18 @@ break
 	if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('أين الرابط?')
   reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+  if (!q.includes('tiktok')) return reply(`الرابط الذي قدمته غير صالح!`)
    const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
  reply(mess.error) 
 } )
    console.log(musim_rambutan)
    const xeonytiktoknowm = musim_rambutan.result.nowatermark
-    XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+    XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "اي خدمه يروحي🌚💕!" }, { quoted: m })
    }
   break
   case 'tiktokaudio':
 case 'tiktokmusic':
-case 'ttaud':{
+case 'tiktok':{
 	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('Where is the audio?')
@@ -8091,7 +8091,7 @@ sourceUrl: args[0]
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }).catch(_ => _)
 } catch {
-reply("Link error!")
+reply("اللينك خطأ!")
 }
 }
 break
@@ -8125,7 +8125,7 @@ break
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!text) return reply(mess.linkm)
-                if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid`)
+                if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`الرابط الذي قدمته غير صالح`)
                 anu = await fetchJson(`https://api.akuari.my.id/downloader/youtube?link=${text}`)        
                 if (anu.filesize_video >= 999999) return reply('*File Over Limit* '+util.format(anu))
                 tummb = await getBuffer(anu.thumb)
@@ -8425,7 +8425,7 @@ View List Of Messages With ${prefix}listmsg`)
 	        reply(teks)
 	    }
 	    break
-            case 'delmsg': case 'مسح': {
+            case 'delmsg': case 'delmsge': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	        let msgs = global.db.data.database
