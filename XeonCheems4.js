@@ -8409,7 +8409,7 @@ View List Of Messages With ${prefix}listmsg`)
 	if (isBanChat) return reply(mess.banChat)
                 if (!text) return reply(`Example : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
                 let msgs = global.db.data.database
-                if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
+                if (!(text.toLowerCase() in msgs)) return reply(`'${text}' غير مدرج في قائمة الرسائل`)
                 XeonBotInc.copyNForward(m.chat, msgs[text.toLowerCase()], true)
             }
             break
@@ -8425,11 +8425,11 @@ View List Of Messages With ${prefix}listmsg`)
 	        reply(teks)
 	    }
 	    break
-            case 'delmsg': case 'deletemsg': {
+            case 'delmsg': case 'مسح': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	        let msgs = global.db.data.database
-	        if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
+	        if (!(text.toLowerCase() in msgs)) return reply(`'${text}' غير مدرج في قائمة الرسائل`)
 		delete msgs[text.toLowerCase()]
 		reply(`Delete Successfully '${text}' From The Message list`)
             }
@@ -8437,43 +8437,43 @@ View List Of Messages With ${prefix}listmsg`)
 	    case 'anonymous': {
 		if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return reply('لا يمكن استخدام الميزات للمجموعات!')
 				this.anonymous = this.anonymous ? this.anonymous : {}
 				let buttons = [
                     { buttonId: 'Start', buttonText: { displayText: '🚶بدء🚶' }, type: 1 }
                 ]
-                XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, XeonBotInc.user.name, m)
+                XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await XeonBotInc.getName(m.sender)} مرحبًا بك في الدردشة المجهولة \ n \ n انقر فوق الزر أدناه للعثور على شريك\`\`\``, XeonBotInc.user.name, m)
             }
 			break
             case 'keluar': case 'leave': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return reply('لا يمكن استخدام الميزات للمجموعات!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 let room = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!room) {
                     let buttons = [
                         { buttonId: 'start', buttonText: { displayText: '🚶بدء🚶' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`لست في جلسة مجهولة الهوية ، اضغط على الزر للعثور على شريك \`\`\``)
                    reply(false)
                 }
-                reply('Ok')
+                reply('حسنا')
                 let other = room.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
+                if (other) await XeonBotInc.sendText(other, `\`\`\`غادر الشريك جلسة مجهولة\`\`\``, m)
                 delete this.anonymous[room.id]
                 if (command === 'leave') break
             }
             case 'mulai': case 'start': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return reply('لا يمكن استخدام الميزات للمجموعات!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`ما زلت في جلسة مجهولة ، اضغط على الزر أدناه لإنهاء الجلسة المجهولة\`\`\``, XeonBotInc.user.name, m)
                     reply(false)
                 }
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
@@ -8482,10 +8482,10 @@ View List Of Messages With ${prefix}listmsg`)
                         { buttonId: 'next', buttonText: { displayText: '⏩تخطي⏩' }, type: 1 },
                         { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`تم العثور على شريك بنجاح ، يمكنك الآن إرسال رسالة\`\`\``, XeonBotInc.user.name, m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`تم العثور على شريك بنجاح ، يمكنك الآن إرسال رسالة\`\`\``, XeonBotInc.user.name, m)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -8503,25 +8503,25 @@ View List Of Messages With ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`من فضلك انتظر البحث عن شريك\`\`\``, XeonBotInc.user.name, m)
                 }
                 break
             }
             case 'next': case 'lanjut': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
+                if (m.isGroup) return reply('لا يمكن استخدام الميزات للمجموعات!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
                     let buttons = [
                         { buttonId: 'start', buttonText: { displayText: '🚶بدء🚶' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`لست في جلسة مجهولة الهوية ، اضغط على الزر للعثور على شريك\`\`\``)
                     reply(false)
                 }
                 let other = romeo.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
+                if (other) await XeonBotInc.sendText(other, `\`\`\`غادر الشريك جلسة مجهولة\`\`\``, m)
                 delete this.anonymous[romeo.id]
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
@@ -8529,10 +8529,10 @@ View List Of Messages With ${prefix}listmsg`)
                         { buttonId: 'next', buttonText: { displayText: '⏩تخطي⏩' }, type: 1 },
                         { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`تم العثور على شريك بنجاح ، يمكنك الآن إرسال رسالة\`\`\``, XeonBotInc.user.name, m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`تم العثور على شريك بنجاح ، يمكنك الآن إرسال رسالة\`\`\``, XeonBotInc.user.name, m)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -8550,7 +8550,7 @@ View List Of Messages With ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, m)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`من فضلك انتظر البحث عن شريك\`\`\``, XeonBotInc.user.name, m)
                 }
                 break
             }
@@ -8559,7 +8559,7 @@ View List Of Messages With ${prefix}listmsg`)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
                 XeonBotInc.public = true
-                reply('Successful Change To Public Usage')
+                reply('تم تغيير حاله البوت الي عام')
             }
             break
             case 'خاص': {
@@ -8567,7 +8567,7 @@ View List Of Messages With ${prefix}listmsg`)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
                 XeonBotInc.public = false
-                reply('Successful Change To Self Usage')
+                reply('تم تغيير حاله البوت الي خاص')
             }
             break
 case 'setstatuts':
@@ -10613,7 +10613,8 @@ case 'tqtt':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`شكرا لنفسي🥺💕
-واخويا عبضو 🤡 `)
+واخويا عبضو 🤡
+وشكرا ليك ياللي بتستخدم البوت🌚💕 `)
 break
             default:
                 if (budy.startsWith('=>')) {
