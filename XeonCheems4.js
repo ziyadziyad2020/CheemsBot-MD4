@@ -1313,11 +1313,11 @@ if (q.includes('--help')) return reply(examkosong)
  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
  if (!isInventoryMonay){ addInventoriMonay(m.sender) }
  if (!isInventory){ addInventori(m.sender) }
- if (!q) return reply(`What Do You Want To Buy?\n\n1.potion\n2.baitfood\n3.limit\n\nExample: ${prefix + command} baitfood`)
+ if (!q) return reply(`What Do You Want To Buy?\n\n1.potion\n2.baitfood\n3.limit\n\nمثال: ${prefix + command} baitfood`)
  var anu = args[1]
   if (args[0] === 'potion'){
   let noh = 100000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
  if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
@@ -1328,7 +1328,7 @@ if (q.includes('--help')) return reply(examkosong)
  } else 
  if (args[0] === 'baitfood'){
   let noh = 5000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
  if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
@@ -1339,7 +1339,7 @@ if (q.includes('--help')) return reply(examkosong)
   } else 
   if (args[0] === 'limit'){
   let noh = 35000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
  if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
@@ -1353,14 +1353,14 @@ if (q.includes('--help')) return reply(examkosong)
  case 'sel': case 'jual':{
  	 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
- if (!q) return  reply(`What Do You Want To Sell??\nExample : ${prefix + command} fish 2`)
+ if (!q) return  reply(`What Do You Want To Sell??\nمثال : ${prefix + command} fish 2`)
  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
  if (!isInventoryMonay){ addInventoriMonay(m.sender) }
  if (!isInventory){ addInventori(m.sender) }
  var anu = args[1]
  if (args[0] === 'fish'){
  if (isIkan < anu) return reply(`You Don't Have Enough Fish(es) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
  kurangIkan(m.sender, anu)
  let monaynya = 1500 * anu
  addMonay(m.sender, monaynya)
@@ -1370,7 +1370,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'chicken'){
  if (isAyam < anu) return reply(`You Don't Have Enough Chicken(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
  kurangAyam(m.sender, anu)
  let monaynya = 2500 * anu
  addMonay(m.sender, monaynya)
@@ -1380,7 +1380,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'rabbit'){
  if (isKelinci < anu) return reply(`You Don't Have Enough Rabbit(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
  kurangKelinci(m.sender, anu)
  let monaynya = 3000 * anu
  addMonay(m.sender, monaynya)
@@ -1390,7 +1390,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'sheep'){
  if (isDomba < anu) return reply(`You Don't Have Enough Sheep(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
  kurangDomba(m.sender, anu)
  let monaynya = 5000 * anu
  addMonay(m.sender, monaynya)
@@ -1400,7 +1400,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'cow'){
  if (isSapi < anu) return reply(`You Don't Have Enough Cow(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
  kurangSapi(m.sender, anu)
  let monaynya = 10000 * anu
  addMonay(m.sender, monaynya)
@@ -1410,7 +1410,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'elephant'){
  if (isGajah < anu) return reply(`You Don't Have Enough Elephant(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
  kurangGajah(m.sender, anu)
  let monaynya = 15000 * anu
  addMonay(m.sender, monaynya)
@@ -1420,7 +1420,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'iron'){
  if (isBesi < anu) return reply(`You Don't Have Enough Iron(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
  kurangBesi(m.sender, anu)
  let monaynya = 16000 * anu
  addMonay(m.sender, monaynya)
@@ -1430,7 +1430,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'gold'){
  if (isEmas < anu) return reply(`You Don't Have Enough Gold(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
  kurangEmas(m.sender, anu)
  let monaynya = 50000 * anu
  addMonay(m.sender, monaynya)
@@ -1440,7 +1440,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'emerald'){
  if (isEmerald < anu) return reply(`You Don't Have Enough Emerald(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
+ if (!args[1]) return reply(`مثال : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
  kurangEmerald(m.sender, anu)
  let monaynya = 100000 * anu
  addMonay(m.sender, monaynya)
@@ -1626,7 +1626,7 @@ if (isBanChat) return reply(mess.banChat)
             try {
             if (this.game) {
             delete this.game
-            XeonBotInc.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
+            XeonBotInc.sendText(m.chat, `تم حذف الجلسه بنجاح`, m)
             } else if (!this.game) {
             reply(`TicTacToe🎮 Session Does Not Exist`)
             } else reply('?')
@@ -1644,7 +1644,7 @@ if (isBanChat) return reply(mess.banChat)
             let timeout = 60000
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) return replay(`Complete Your Previous Suit`)
 	    if (m.mentionedJid[0] === m.sender) return reply(`Can't Play With Myself !`)
-            if (!m.mentionedJid[0]) return reply(`_Who Do You Want To Challenge?_\nTag The Person..\n\nExample : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
+            if (!m.mentionedJid[0]) return reply(`_Who Do You Want To Challenge?_\nTag The Person..\n\nمثال : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0])))  reply(`The Person You Are Challenging Is Playing Suit With Someone Else :(`)
             let id = 'suit_' + new Date() * 1
             let caption = `_*SUIT PvP*_
@@ -1717,7 +1717,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'guess': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`Example : ${prefix + command} song\n\nOption : \n1.song\n2. picture\n3. saying\n4. sentence\n5. lyrics\n6.food`)
+if (!args.join(" ")) return replay(`مثال : ${prefix + command} song\n\nOption : \n1.song\n2. picture\n3. saying\n4. sentence\n5. lyrics\n6.food`)
 if (args[0] === "song") {
 if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) return replay("There are still unfinished sessions!")
 let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
@@ -1815,7 +1815,7 @@ break
 if (isBanChat) return reply(mess.banChat)
                 if (kuismath.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
                 let { genMath, modes } = require('./lib/math')
-                if (!text) return replay(`Mode: ${Object.keys(modes).join(' | ')}\nFor Examples: ${prefix}math medium`)
+                if (!text) return replay(`Mode: ${Object.keys(modes).join(' | ')}\nFor مثالs: ${prefix}math medium`)
                 let result = await genMath(text.toLowerCase())
                 XeonBotInc.sendText(m.chat, `*What Is The Result Of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} second`, m).then(() => {
                     kuismath[m.sender.split('@')[0]] = result.jawaban
@@ -1864,7 +1864,7 @@ Cieeee, What's Going On❤️💖👀`
             case 'is':
             if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
+				if (!text) return replay(`Use Text, مثال : ${prefix + command} he married `)
 					const apa = [`Yes`, `No`, `It Could Be`, `Thats right`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 XeonBotInc.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
@@ -1873,7 +1873,7 @@ XeonBotInc.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { 
 					            case 'what':
 					if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
+				if (!text) return replay(`Use Text, مثال : ${prefix + command} he married `)
 					const lel = [`Ask Your Gf`, `I Dont Know`, `I Don't Know, Ask Your Father`]
 					const kahk = lel[Math.floor(Math.random() * lel.length)]
 XeonBotInc.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
@@ -1882,7 +1882,7 @@ XeonBotInc.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` },
 case 'can':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
+				if (!text) return replay(`Use Text, مثال : ${prefix + command} you fuck her lol `)
 					const bisa = [`Can`,`Can't`,`Cannot`,`Of Course You Can!!!`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
 XeonBotInc.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
@@ -1891,7 +1891,7 @@ XeonBotInc.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { 
 case 'how':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} is my face`)
+				if (!text) return replay(`Use Text, مثال : ${prefix + command} is my face`)
 					const gimana = [`It's Okay`, `It's Difficult Bro`, `Sorry Bot Can't Answer`, `Try Searching On Google`,`Holy Cow! Really???`,`Dizzy Ah`,`Ohhh I See:(`,`The Patient, Boss:(`,`How Are You?`]
 					const ya = gimana[Math.floor(Math.random() * gimana.length)]
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { quoted: m })
@@ -1900,7 +1900,7 @@ XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { 
 case 'rate':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} My Dp`)
+				if (!text) return replay(`Use Text, مثال : ${prefix + command} My Dp`)
 					const ra = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const te = ra[Math.floor(Math.random() * ra.length)]
 XeonBotInc.sendMessage(from, { text: `Rate : ${q}\nAnswer : *${te}%*` }, { quoted: m })
@@ -1909,7 +1909,7 @@ XeonBotInc.sendMessage(from, { text: `Rate : ${q}\nAnswer : *${te}%*` }, { quote
   case 'handsomecheck':
   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
+				if (!text) return replay(`Tag Someone, مثال : ${prefix + command} @Xeon`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
@@ -1918,7 +1918,7 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${t
 case 'beautifulcheck':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
+				if (!text) return replay(`Tag Someone, مثال : ${prefix + command} @Xeon`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
@@ -1926,7 +1926,7 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${t
 					case 'charactercheck':
 					if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
+					if (!text) return replay(`Tag Someone, مثال : ${prefix + command} @Xeon`)
 					const xeony =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const taky = xeony[Math.floor(Math.random() * xeony.length)]
 					XeonBotInc.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
@@ -1943,7 +1943,7 @@ if (isBanChat) return reply(mess.banChat)
                       case 'uglycheck':
                                   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
+				if (!text) return replay(`Tag Someone, مثال : ${prefix + command} @Xeon`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
@@ -2238,7 +2238,7 @@ case 'dare':
 case 'when':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-				if (!text) return replay(`Use Text, Example : ${prefix + command} will i get married `)
+				if (!text) return replay(`Use Text, مثال : ${prefix + command} will i get married `)
 					const kapan = ['5 More Days', '10 More Days', '15 More Days','20 More Days', '25 More Days','30 More Days','35 More Days','40 More Days','45 More Days','50 More Days','55 More Days','60 More Days','65 More Days','70 More Days','75 More Days','80 More Days','85 More Days','90 More Days','100 More Days','5 Months More', '10 Months More', '15 Months More','20 Months More', '25 Months More','30 Months More','35 Months More','40 Months More','45 Months More','50 Months More','55 Months More','60 Months More','65 Months More','70 Months More','75 Months More','80 Months More','85 Months More','90 Months More','100 Months More','1 More Year','2 More Years','3 More Years','4 More Years','5 More Years','Tomorrow','The Day After Tomorrow',`After This Command, You Too ${q}`]
 					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
@@ -2246,7 +2246,7 @@ XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }
 case 'wangy':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-              if (!text) return replay(`Use Text, Example : ${prefix + command} hinata`)
+              if (!text) return replay(`Use Text, مثال : ${prefix + command} hinata`)
               qq = q.toUpperCase()
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaah the smell of hair ${qq} smelly i want to smell the fragrance ${qq} AAAAAAAAH ~ Her hair.... aaah i want to stroke her hair too ~~ AAAAAH ${qq} first time out in anime is cute too ❤️ ❤️ ❤️ so AAAAAAAH ${qq} AAAAAA LUCCUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️what ? ${qq} it's not real ? Just HELL you say ? no, no no no no no no no no no no no no no no no !! I DON'T CARE ABOUT THE REALITY, I DON'T CARE. ❤️ ❤️ ❤️ ${qq} me ... ${qq} on the laptop watching me, ${qq} .. you believe in me ? aaaaaaaaaaah thanks ${q} I don't want to give up ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH I STILL HAVE ${qq} ALSO NOT THE SAME AAAAAAAAAAAAAAH`
              reply(awikwok)
@@ -2254,7 +2254,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'checkdeath':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Bot`)
+             if (!text) return replay(`Use Someone's Name, مثال : ${prefix + command} Bot`)
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
               reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
               break  
@@ -2281,13 +2281,13 @@ if (isBan) return reply(mess.ban)
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                if (!isCreator) return replay(`${mess.owner}`)
-               if (!text) return replay(`Example : ${prefix + command} packname|author`)
+               if (!text) return replay(`مثال : ${prefix + command} packname|author`)
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
           reply(`Exif Has Been Successfully Changed to\n\n${themeemoji} Packname : ${global.packname}\n${themeemoji} Author : ${global.author}`)
             }
             break
-	case 'طرد': {
+	case 'طرد': case 'اطرد': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2432,7 +2432,7 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
             if (m.chat in vote) replay(`_There Are Still Votes In This Chat!_\n\n*${prefix}delvote* - To Delete Vote Session`)
-            if (!text) return replay(`Enter Reason For Vote, Example: *${prefix + command} Handsome Owner*`)
+            if (!text) return replay(`Enter Reason For Vote, مثال: *${prefix + command} Handsome Owner*`)
             reply(`Voting Starts!\n\n*${prefix}upvote* - For Upvote\n*${prefix}devote* - For Devote\n*${prefix}checkvote* - To Check The Vote\n*${prefix}delvote* - To Delete Vote Session`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
@@ -3215,7 +3215,7 @@ if (isBanChat) return reply(mess.banChat)
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!args.join(" ")) return replay(`Where is the text?\n\nExample : ${prefix + command} ${global.ownername}`)
+if (!args.join(" ")) return replay(`Where is the text?\n\nمثال : ${prefix + command} ${global.ownername}`)
 let getGroups = await XeonBotInc.groupFetchAllParticipating()
 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
 let anu = groups.map(v => v.id)
@@ -3254,11 +3254,11 @@ XeonBotInc.send5ButImg(i, txt, `${global.botname}`, log0, btn, thum)
 replay(`تم إرسال البث بنجاح إلى ${anu.length} Group`)
 }
 break
-case 'bc': case 'broadcast': case 'bcall': {
+case 'bc': case 'شيرعام': case 'bcall': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!args.join(" ")) return replay(`Where is the text??\n\nExample : ${prefix + command} ${global.ownername}`)
+if (!args.join(" ")) return replay(`Where is the text??\n\nمثال : ${prefix + command} ${global.ownername}`)
 let anu = await store.chats.all().map(v => v.id)
 replay(`Send Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} second`)
 for (let yoi of anu) {
@@ -3355,7 +3355,7 @@ case 'bcloc': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-                if (!text) return reply(`Use ${prefix}bcloc text\n\nExample : ${prefix + command} attention everybody`)
+                if (!text) return reply(`Use ${prefix}bcloc text\n\nمثال : ${prefix + command} attention everybody`)
                 let anu = await store.chats.all().map(v => v.id)
                 let [melo, melo2] = text.split`|`
                 reply(`*Send Broadcast To* ${anu.length} Chat\nTime ${anu.length * 1.5} sec`)
@@ -3444,7 +3444,7 @@ break
        case 'attp2': {
 		   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           if (!text) return reply(`Example : ${prefix + command} text`)
+           if (!text) return reply(`مثال : ${prefix + command} text`)
            await XeonBotInc.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
 
          }
@@ -3452,14 +3452,14 @@ if (isBanChat) return reply(mess.banChat)
 case 'attp': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           if (!text) reply(`Use ${prefix}attp hello\n*Example : ${prefix + command} ${ownername}*` )
+           if (!text) reply(`Use ${prefix}attp hello\n*مثال : ${prefix + command} ${ownername}*` )
            await XeonBotInc.sendMedia(m.chat, `https://cililitan.herokuapp.com/api/attp?teks=${text}`, 'Xeon', 'Op', m, {asSticker: true}).catch((err) => reply(mess.error))
          }
          break
 case 'ttp': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           if (!text) return reply(`*Example : ${prefix + command} hello*`)
+           if (!text) return reply(`*مثال : ${prefix + command} hello*`)
            await XeonBotInc.sendMedia(m.chat, `https://cililitan.herokuapp.com/api/texttopng2?teks=${text}`, 'E L G A Z A R', 'B O T M D', m, {asSticker: true})
          
                      }
@@ -3537,7 +3537,7 @@ break
 case 'swm': case 'سرقه': case 'سرقة': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return reply(`Example :\nswm ${global.author}|${global.packname}`)
+if (!args.join(" ")) return reply(`مثال :\nswm ${global.author}|${global.packname}`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -4655,7 +4655,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'readmore': {
             if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} halo gaes`)
+                if (!text) return reply(`مثال : ${prefix + command} halo gaes`)
                 anu = await fetchJson(`https://cililitan.herokuapp.com/api/readmore?teks=${text}`)
                reply(`${anu.result}`)
             }
@@ -4689,7 +4689,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'fliptext': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return replay(`Example:\n${prefix}fliptext ${ownername}`)
+if (args.length < 1) return replay(`مثال:\n${prefix}fliptext ${ownername}`)
 quere = args.join(" ")
 flipe = quere.split('').reverse().join('')
 replay(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -4698,7 +4698,7 @@ break
 case 'toletter': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!Number(args[0])) return replay(`Example:\n${prefix}toletter 956`)
+if (!Number(args[0])) return replay(`مثال:\n${prefix}toletter 956`)
 try {
 quere = args.join(" ")
 convertes = await toHur(quere)
@@ -5349,7 +5349,7 @@ case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 
 case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
 case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': case 'joker': case 'wicker':
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case 'demon': {
-             if (!q) return reply(`Example : ${prefix + command} ${global.ownername}`) 
+             if (!q) return reply(`مثال : ${prefix + command} ${global.ownername}`) 
                 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
              reply(mess.wait)
@@ -5419,13 +5419,13 @@ if (isBanChat) return reply(mess.banChat)
 case 'textmaker': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return reply(`Example :\n${prefix + command} <name>`)
+if (args.length < 1) return reply(`مثال :\n${prefix + command} <name>`)
 if (args[0] === 'glitch') {
-if (args.length < 2) return reply(`Example :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
+if (args.length < 2) return reply(`مثال :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
 let teds = await thiccysapi.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [args[1]])
 XeonBotInc.sendMessage(from, {image:{url:teds}, caption:"Done!"}, {quoted:m})
 } else if (args[0] === 'glow') {
-if (args.length < 2) return reply(`Example :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
+if (args.length < 2) return reply(`مثال :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
 let teds = await thiccysapi.textpro("https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html", [args[1]])
 XeonBotInc.sendMessage(from, {image:{url:teds}, caption:"Done!"}, {quoted:m})
 } else {
@@ -5838,7 +5838,7 @@ let anui = await textpro(link, q)
 case 'pornhub':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(`Example: ${prefix + command} ajg | ea`)
+if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -5852,7 +5852,7 @@ break
 case 'retro':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(`Example: ${prefix + command} ajg | ea`)
+if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -5866,7 +5866,7 @@ break
 case 'horror':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(`Example: ${prefix + command} ajg | ea`)
+if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -5880,7 +5880,7 @@ break
 case '8bit':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(`Example: ${prefix + command} ajg | ea`)
+if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -5991,7 +5991,7 @@ break
 case 'emojimix': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) reply(`*Example :* ${prefix + command} 🦄+🤣`)
+if (!q) reply(`*مثال :* ${prefix + command} 🦄+🤣`)
 let [emoji1, emoji2] = q.split`+`
 let kuntuh = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 for (let res of kuntuh.results) {
@@ -6124,7 +6124,7 @@ break
 	case 'yts': case 'ytsearch': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`Example : ${prefix + command} stay jb`)
+if (!args.join(" ")) return replay(`مثال : ${prefix + command} stay jb`)
 let yts = require("yt-search")
 let search = await yts(args.join(" "))
 let teks = '*| YOUTUBE SEARCH |*\n\n Result From '+text+'\n\n'
@@ -6138,7 +6138,7 @@ break
 case 'جوجل': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
+if (!args[0]) return reply(`مثال: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
 let google = require('google-it')
 google({'query': args.join(" ")}).then(res => {
 let teks = `Google Search From : ${text}\n\n`
@@ -6187,7 +6187,7 @@ break
 	case 'igstoryxx': case 'instagramstoryxx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example :\n${prefix + command} josephxeon13`)
+if (!args[0]) return reply(`مثال :\n${prefix + command} josephxeon13`)
 try {
 hx.igstory(args[0]).then(async(resed) => {
 ini_anu = []
@@ -6224,7 +6224,7 @@ break
 case 'igs2': case 'igstory2': case 'instagramstory2': {
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Where is the username?\nExample: ${prefix}igstory josephxeon13`)
+                if (!text) return reply(`Where is the username?\nمثال: ${prefix}igstory josephxeon13`)
                 let urlnya = text
 	            hx.igstory(urlnya)
 	            .then(async(result) => {
@@ -6267,7 +6267,7 @@ case 'ig2': case 'igdl2': case 'instagram2': {
 case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
+if (!args[0]) return reply(`مثال :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
 try {
 hx.igdl(args[0]).then(async(resed) => {
 ini_anu = []
@@ -6402,7 +6402,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'twitterxx': case 'twdlxx': case 'twmp4xx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
+if (!args[0]) return reply(`مثال :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
 try {
 let lotwit = await aiovideodl(args[0])
 teks = `*| TWITTER DOWNLOADER |*
@@ -6465,7 +6465,7 @@ break
 case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-             if (!text) return reply(`Where is the link bro?\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+             if (!text) return reply(`Where is the link bro?\nمثال: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                 if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
             let bocil = require('@bochilteam/scraper')  
                 bocil.facebookdlv2(`${text}`).then(async (data) => {                   
@@ -6488,7 +6488,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-                  if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                  if (!text) return reply(`Where is the link?\nمثال: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                   if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
   let noh = require('@bochilteam/scraper')                
   noh.savefrom(`${text}`).then(async (anu) => {  
@@ -6501,7 +6501,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'facebookxx': case 'fbdlxxx': case 'fbmp4xxx': case 'fbxxx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
+if (!args[0]) return reply(`مثال :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
 try {
 let resd = await aiovideodl(args[0])
 teks = `*| FACEBOOK DOWNLOADER |*
@@ -6592,7 +6592,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'wattpad': {
             	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(`Example : ${prefix + command} love`)
+            if (!text) return reply(`مثال : ${prefix + command} love`)
             let res = await fetchJson(`https://zenzapis.xyz/webzone/wattpad?query=$text}&apikey=hdiiofficial`)
             let { judul, dibaca, divote, bab, waktu, url, thumb, description } = res.result[0]
             let capt = `Wattpad From query\n\n`
@@ -6667,7 +6667,7 @@ break
 	if (isBanChat) return reply(mess.banChat)
 	reply(mess.wait)
             let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-            if (!args[0]) reply(`Use ${prefix}gitclone repo link\nExample: https://github.com/DGXeon/CheemsBot-MD4`)
+            if (!args[0]) reply(`Use ${prefix}gitclone repo link\nمثال: https://github.com/DGXeon/CheemsBot-MD4`)
     if (!regex1.test(args[0])) return reply(mess.linkm)
     let [, user, repo] = args[0].match(regex1) || []
     repo = repo.replace(/.git$/, '')
@@ -6688,7 +6688,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': {
  	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-              if (!q) return reply(`Example : ${prefix + command} ${global.ownername}`) 
+              if (!q) return reply(`مثال : ${prefix + command} ${global.ownername}`) 
           
              let link
              if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
@@ -6774,7 +6774,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'drakor': {
             	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(`Example : ${prefix + command} love`)
+            if (!text) return reply(`مثال : ${prefix + command} love`)
             let res = await fetchJson(`https://zenzapis.xyz/webzone/drakor?query=${text}&apikey=hdiiofficial`)
             let capt = `Drakor Search From : ${text}\n\n`
             for (let i of res.result) {
@@ -6868,7 +6868,7 @@ if (isBanChat) return reply(mess.banChat)
                 case 'anime':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-	    if(!q) return reply(`Which anime do you want to search?\nExample ${prefix}manga naruto`)
+	    if(!q) return reply(`Which anime do you want to search?\nمثال ${prefix}manga naruto`)
 reply(mess.wait)						
 const { Anime } =require("@shineiichijo/marika")
     const client = new Anime();
@@ -6916,7 +6916,7 @@ case 'manga':
 reply(mess.wait)						
 const { Manga } =require("@shineiichijo/marika")
 const manga = new Manga();
-if(!q) return reply(`Which manga do you want to search?\nExample ${prefix}manga naruto`)
+if(!q) return reply(`Which manga do you want to search?\nمثال ${prefix}manga naruto`)
 let srh = await manga.searchManga(q)
     let mang = `🎀 *Title: ${srh.data[0].title}*\n`;
     mang += `📈 *Status: ${srh.data[0].status}*\n`;
@@ -7001,7 +7001,7 @@ case 'film':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	reply(mess.wait)
-if (!q) return reply(`What film you wanna search?\nExample: ${prefix}film Spiderman`)
+if (!q) return reply(`What film you wanna search?\nمثال: ${prefix}film Spiderman`)
 xeonkey.Film(q)
     .then(data => {console.log(data)
     let krl = `*❒「  Film ${q} 」*\n*🌿 مؤلف* : ${data[0].author}\n\n`
@@ -7025,7 +7025,7 @@ case 'image': {
 case 'mcserver': case 'mcquery': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`Example : \n${prefix + command} ip|port\nUses : \n${prefix + command} play.xeon.com|19132`)
+if (!args.join(" ")) return replay(`مثال : \n${prefix + command} ip|port\nUses : \n${prefix + command} play.xeon.com|19132`)
 const Query = require("minecraft-query");
 
 const qury = args.join(" ")
@@ -7051,7 +7051,7 @@ break
 case 'mcpedl': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`Example : ${prefix + command} shader`)
+if (!args.join(" ")) return replay(`مثال : ${prefix + command} shader`)
 xeontod.mcpedl(args.join(" ")).then(async(res) => {
 teks = `*| MCPEDL SEARCH |*`
 for (let i of res) {
@@ -7075,7 +7075,7 @@ break
 case 'happymod': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`Example : ${prefix + command} mobile legend`)
+if (!args.join(" ")) return replay(`مثال : ${prefix + command} mobile legend`)
 xeontod.happymod(args.join(" ")).then(async(res) => {
 teks = '```「 HappyMod Search 」```'
 for (let i of res) {
@@ -7100,7 +7100,7 @@ break
 case 'searchgc': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return replay(`Example :\n${prefix}searchgc Classy Editor`)
+if (args.length < 1) return replay(`مثال :\n${prefix}searchgc Classy Editor`)
 nae = args.join(" ")
 hx.linkwa(nae).then(res => {
 teks = '```「 Search Group 」```'
@@ -7480,7 +7480,7 @@ break
             case 'cinemaschedule': {
             	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(`Example: ${prefix + command} jakarta`)
+            if (!text) return reply(`مثال: ${prefix + command} jakarta`)
             let res = await fetchJson(`https://zenzapis.xyz/webzone/jadwalbioskop?kota=${text}&apikey=hdiiofficial`)
             let capt = `Jadwal Bioskop From : ${text}\n\n`
             for (let i of res.result){
@@ -7634,7 +7634,7 @@ break
 	        case 'nomerhoki': case 'nomorhoki': {
 			   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!Number(text)) return reply(`Example : ${prefix + command} 916909137213`)
+                if (!Number(text)) return reply(`مثال : ${prefix + command} 916909137213`)
                 let anu = await primbon.nomer_hoki(Number(text))
                 if (anu.status == false) return reply(anu.message)
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Phone Number :* ${anu.message.nomer_hp}\n${themeemoji} *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n${themeemoji} *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n${themeemoji} *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
@@ -7643,7 +7643,7 @@ break
             case 'artimimpi': case 'tafsirmimpi': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} belanja`)
+                if (!text) return reply(`مثال : ${prefix + command} belanja`)
                 let anu = await primbon.tafsir_mimpi(text)
                 if (anu.status == false) return reply(anu.message)
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Dream :* ${anu.message.mimpi}\n${themeemoji} *Meaning :* ${anu.message.arti}\n${themeemoji} *Solution :* ${anu.message.solusi}`, m)
@@ -7652,7 +7652,7 @@ break
             case 'ramalanjodoh': case 'ramaljodoh': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -7662,7 +7662,7 @@ break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -7672,7 +7672,7 @@ break
             case 'suamiistri': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -7682,7 +7682,7 @@ break
             case 'ramalancinta': case 'ramalcinta': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -7692,7 +7692,7 @@ break
             case 'artinama': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika Ardianta`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika Ardianta`)
                 let anu = await primbon.arti_nama(text)
                 if (anu.status == false) return reply(anu.message)
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Name :* ${anu.message.nama}\n${themeemoji} *Meaning :* ${anu.message.arti}\n${themeemoji} *Notes :* ${anu.message.catatan}`, m)
@@ -7701,7 +7701,7 @@ break
             case 'kecocokannama': case 'cocoknama': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7711,7 +7711,7 @@ break
             case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika|Novia`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika|Novia`)
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
                 if (anu.status == false) return reply(anu.message)
@@ -7721,7 +7721,7 @@ break
             case 'jadianpernikahan': case 'jadiannikah': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 6, 12, 2020`)
+                if (!text) return reply(`مثال : ${prefix + command} 6, 12, 2020`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.tanggal_jadian_pernikahan(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7731,7 +7731,7 @@ break
             case 'sifatusaha': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix+ command} 28, 12, 2021`)
+                if (!text) return reply(`مثال : ${prefix+ command} 28, 12, 2021`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7741,7 +7741,7 @@ break
             case 'rejeki': case 'rezeki': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rejeki_hoki_weton(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7751,7 +7751,7 @@ break
             case 'pekerjaan': case 'kerja': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.pekerjaan_weton_lahir(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7761,7 +7761,7 @@ break
             case 'ramalannasib': case 'ramalnasib': case 'nasib': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : 7, 7, 2005`)
+                if (!text) return reply(`مثال : 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.ramalan_nasib(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7771,7 +7771,7 @@ break
             case 'potensipenyakit': case 'penyakit': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.cek_potensi_penyakit(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7781,7 +7781,7 @@ break
             case 'artitarot': case 'tarot': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.arti_kartu_tarot(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7791,7 +7791,7 @@ break
             case 'fengshui': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Name, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Name, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`)
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
                 if (anu.status == false) return reply(anu.message)
@@ -7801,7 +7801,7 @@ break
             case 'haribaik': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.petung_hari_baik(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7811,7 +7811,7 @@ break
             case 'harisangar': case 'taliwangke': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.hari_sangar_taliwangke(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7819,7 +7819,7 @@ break
             }
             break
             case 'harinaas': case 'harisial': {
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_hari_naas(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7829,7 +7829,7 @@ break
             case 'nagahari': case 'harinaga': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rahasia_naga_hari(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7839,7 +7839,7 @@ break
             case 'arahrejeki': case 'arahrezeki': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_arah_rejeki(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7849,7 +7849,7 @@ break
             case 'peruntungan': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Name, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`)
+                if (!text) return reply(`مثال : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Name, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`)
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
                 if (anu.status == false) return reply(anu.message)
@@ -7859,7 +7859,7 @@ break
             case 'weton': case 'wetonjawa': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return (`Example : ${prefix + command} 7, 7, 2005`)
+                if (!text) return (`مثال : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.weton_jawa(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7869,7 +7869,7 @@ break
             case 'sifat': case 'karakter': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7879,7 +7879,7 @@ break
             case 'keberuntungan': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} Dika, 7, 7, 2005`)
+                if (!text) return reply(`مثال : ${prefix + command} Dika, 7, 7, 2005`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7889,7 +7889,7 @@ break
             case 'memancing': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} 12, 1, 2022`)
+                if (!text) return reply(`مثال : ${prefix + command} 12, 1, 2022`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -7899,7 +7899,7 @@ break
             case 'masasubur': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return (`Example : ${prefix + command} 12, 1, 2022, 28\n\nNote : ${prefix + command} First Day Of Menstruation Cycle`)
+                if (!text) return (`مثال : ${prefix + command} 12, 1, 2022, 28\n\nNote : ${prefix + command} First Day Of Menstruation Cycle`)
                 let [tgl, bln, thn, siklus] = text.split`,`
                 let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
                 if (anu.status == false) return reply(anu.message)
@@ -7909,7 +7909,7 @@ break
             case 'zodiak': case 'zodiac': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix+ command} 7 7 2005`)
+                if (!text) return reply(`مثال : ${prefix+ command} 7 7 2005`)
                 let zodiak = [
                     ["capricorn", new Date(1970, 0, 1)],
                     ["aquarius", new Date(1970, 0, 20)],
@@ -7946,7 +7946,7 @@ break
             case 'shio': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`)
+                if (!text) return reply(`مثال : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`)
                 let anu = await primbon.shio(text)
                 if (anu.status == false) return reply(anu.message)
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
@@ -8205,7 +8205,7 @@ break
             case 'umma': case 'ummadl': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-	        if (!text) return reply(`Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`)
+	        if (!text) return reply(`مثال : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`)
                 let { umma } = require('./lib/scraper')
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
@@ -8238,7 +8238,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
         case 'ringtone': {
         	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-		if (!text) return reply(`Where is the ringtone name noob?, Example : ${prefix + command} charlie puth`)
+		if (!text) return reply(`Where is the ringtone name noob?, مثال : ${prefix + command} charlie puth`)
         let { ringtone } = require('./lib/scraper')
 		let anu = await ringtone(text)
 		let result = anu[Math.floor(Math.random() * anu.length)]
@@ -8247,7 +8247,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 	    break
 case 'tempo': {
 if (isBan) return reply(mess.ban)
-if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
+if (!args.join(" ")) return reply(`مثال: ${prefix + command} 10`)
 var req = args.join(' ')
 media = await XeonBotInc.downloadAndSaveMediaMessage(quoted, "tempo")
 if (isQuotedAudio) {
@@ -8276,7 +8276,7 @@ break
 case 'volume': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
+if (!args.join(" ")) return reply(`مثال: ${prefix + command} 10`)
 media = await XeonBotInc.downloadAndSaveMediaMessage(quoted, "volume")
 if (isQuotedAudio) {
 rname = getRandom('.mp3')
@@ -8393,7 +8393,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) return reply(`Reply Message You Want To Save In Database`)
-                if (!text) return reply(`Example : ${prefix + command} File Name`)
+                if (!text) return reply(`مثال : ${prefix + command} File Name`)
                 let msgs = global.db.data.database
                 if (text.toLowerCase() in msgs) return reply(`'${text}' Has Been Registered In The Message List`)
                 msgs[text.toLowerCase()] = quoted.fakeObj
@@ -8407,7 +8407,7 @@ View List Of Messages With ${prefix}listmsg`)
             case 'getmsg': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(`Example : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
+                if (!text) return reply(`مثال : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
                 let msgs = global.db.data.database
                 if (!(text.toLowerCase() in msgs)) return reply(`'${text}' غير مدرج في قائمة الرسائل`)
                 XeonBotInc.copyNForward(m.chat, msgs[text.toLowerCase()], true)
@@ -8631,7 +8631,7 @@ break
                 respon = `
 Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\nRuntime : ${runtime(process.uptime())}
 
-💻 Info Server
+💻 معلومات السيرفر
 RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 
 _NodeJS Memory Usaage_
@@ -8648,7 +8648,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             case 'speedtest': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            reply('Testing Speed...')
+            reply('اختبار السرعه...')
             let cp = require('child_process')
             let { promisify } = require('util')
             let exec = promisify(cp.exec).bind(cp)
@@ -8664,7 +8664,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             }
             break
-            case 'owner': case 'creator': {
+            case 'المطور': case 'creator': {
                 XeonBotInc.sendContact(m.chat, global.vcardowner, m)
             }
             break
@@ -8728,7 +8728,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 case 'request': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`Example : ${prefix + command} hello dev please add a downloader feature`)
+if (!args.join(" ")) return replay(`مثال : ${prefix + command} hello dev please add a downloader feature`)
 teks = `*| REQUEST |*`
 teks1 = `\n\nNumber : @${m.sender.split("@")[0]}\nRequest : ${args.join(" ")}`
 teks2 = `\n\nSuccessfully sent to owner`
@@ -8741,7 +8741,7 @@ break
                     case 'bug': case 'report': {
                     	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-                    	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
+                    	if(!text) return reply(`Enter The Bug\n\nمثال: ${command} Menu Error`)
                     	XeonBotInc.sendMessage(`${owner}@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
