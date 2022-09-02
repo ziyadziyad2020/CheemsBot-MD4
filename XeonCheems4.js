@@ -972,7 +972,7 @@ ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-${isWin ? `@${winner.split('@')[0]} مبروك كبت!` : isTie ? `لقد خسرت` : `دور ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `@${winner.split('@')[0]} مبروك كسبت!` : isTie ? `لقد خسرت` : `دور ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
@@ -1619,7 +1619,7 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
-            case 'delttc': case 'delttt': {
+            case 'مغادره.الجيم': case 'delttt': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.game = this.game ? this.game : {}
@@ -2343,7 +2343,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	    case 'setname': case 'تغيرالاسم': case 'setsubject': {
+	    case 'setname': case 'تغيرالنيم': case 'setsubject': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2353,7 +2353,7 @@ if (isBanChat) return reply(mess.banChat)
                 await XeonBotInc.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-          case 'setdesc': case 'setdescription': {
+          case 'setdesc': case 'تغيرالبايو': {
           	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2375,7 +2375,7 @@ if (isBanChat) return reply(mess.banChat)
                 reply(mess.success)
                 }
                 break
-           case 'setgrouppp': case 'setgruppp': case 'setgcpp': {
+           case 'تغيرالصوره': case 'تغيرالصورة': case 'setgcpp': {
            	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -6000,7 +6000,7 @@ await fs.unlinkSync(encmedia)
 }
 }
 break
-	case 'toimage': case 'toimg': {
+	case 'لاستيكر': case 'toimg': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return reply('Reply Image')
@@ -6017,7 +6017,7 @@ fs.unlinkSync(ran)
 })
 }
 break
-case 'tomp4': case 'tovideo': {
+case 'tomp4': case 'لفيديو': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return reply('Reply Image')
@@ -6042,7 +6042,7 @@ let audio = await toAudio(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
 }
 break
-case 'tomp3': {
+case 'لصوتي': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
