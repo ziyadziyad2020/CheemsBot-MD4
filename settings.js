@@ -55,22 +55,22 @@ global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
 global.vcardowner = ['201098906252'] //ur owner number
-global.ownername = "Տᗩᖇᒪᗩ🐼🍷 ٫" //ur owner name
-global.ytname = "YT: Sarla" //ur yt chanel name
-global.socialm = "GitHub: Sarla" //ur github or insta name
+global.ownername = "𝑬𝑳𝑮𝑨𝒁𝑨𝑹 𝑨𝑳𝑾𝑨𝒁𝑬𝑹🐼🍷 ٫" //ur owner name
+global.ytname = "YT: Elgazar" //ur yt chanel name
+global.socialm = "GitHub: Elgazar" //ur github or insta name
 global.location = "Egypt, Cairo, Aizawl" //ur location
 
 //bot bomdy 
 global.owner = ['201098906252']
 global.ownertag = '201098906252' //ur tag number
-global.botname = 'ᗷOT Տᗩᖇᒪᗩ🐼🍷 ٫' //ur bot name
+global.botname = '𝑩𝑶𝑻 𝑬𝑳𝑮𝑨𝒁𝑨𝑹🐼🍷 ٫' //ur bot name
 global.linkz = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemBt-MD' //script link
-global.reactmoji = "😍" //ur menu react emoji
+global.reactmoji = "🌚" //ur menu react emoji
 global.themeemoji = "🦄" //ur theme emoji
-global.packname = "⍣سارلا يكثمك🤓⍣" //ur sticker watermark packname
-global.author = "⍣ دور هتلاقيني😍 ⍣" //ur sticker watermark author
+global.packname = "⍣ الجزار الوزير يروحي ⍣" //ur sticker watermark packname
+global.author = "⍣ 01098906252 ⍣" //ur sticker watermark author
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
@@ -116,9 +116,9 @@ global.mess = {
     linkm: 'أين الرابط?',
     error: 'ايرور!!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
-    ban: 'لقد تم حظرك من قبل المالك ، إذا كنت تريد أن تكون غير محظور ، مالك الدر',
+    ban: 'لقد تم حظرك من قبل المالك ، إذا كنت تريد أن تكون غير محظور ، مالك الدردشة.',
     nsfw: 'لم يتم تنشيط ميزة nsfw ، يرجى الاتصال بالمسؤول للتفعيل',
-    banChat: 'تم حظر الروبوت في هذه المجموعة ، يرجى الاتصال بالمالك لإلغاء الحظر',
+    banChat: 'تم حظر الروبوت في هذه المجموعة ، يرجى الاتصال بالمالك لإلغاء الحظر'
 }
     global.limitawal = {
     premium: "Infinity",
