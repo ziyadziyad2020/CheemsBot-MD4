@@ -2038,7 +2038,7 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${s
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「 اكبر *طيب* في الجروب هو *${command}* 「 صح؟ 🥲 」◣ @${jodoh.split('@')[0]}`
+            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]}`「 صح؟ 🥲 」◣
             let ments = [me, jodoh]
             let buttons = [
                         { buttonId: '👀', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
