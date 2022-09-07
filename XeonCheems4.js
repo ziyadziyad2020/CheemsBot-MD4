@@ -1829,34 +1829,36 @@ if (isBanChat) return reply(mess.banChat)
             }
             break
             case 'زوجني': {
+            	if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `「مبروك واعتبره/ا زوجك/تك 🤡」◣
 
-@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-「اضغط اقبل اذا موافق 😂🤡」◣`
+@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '「اقبل🤗」◣', buttonText: { displayText: '「اقبل🤗」◣' }, type: 1 }
+                        { buttonId: '「اضغط اقبل اذا موافق 😂🤡」◣', buttonText: { displayText: 'اقبل😍' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
+                    await XeonBotInc.sendButtonText(m.chat, buttons, jawab, XeonBotInc.user.name, m, {mentions: ments})
             }
             break
             case 'زواج': {
+            	if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-	    「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣
-	    「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣`
+「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣`
             let menst = [orang, jodoh]
             let buttons = [
-                        { buttonId: '「 يب هم مناسبين لبعض😂🤡 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
+                        { buttonId: '「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
+                    await XeonBotInc.sendButtonText(m.chat, buttons, jawab, XeonBotInc.user.name, m, {mentions: menst})
             }
             break
             case 'is':
@@ -1946,57 +1948,102 @@ if (isBanChat) return reply(mess.banChat)
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
 					break
-                    case 'جبان':
-      case 'غبي':
-      case 'حمار':
-      case 'ذكي':
-      case 'منحرف':
-      case 'محبوب':
-      case 'كلب':
-      case 'احمق':
-      case 'قرد':
-      case 'كريه':
-      case 'مكروه':
-      case 'خروف':
-      case 'سافل':
-      case 'ورع':
-      case 'مخادع':
-      case 'مظلوم':
-      case 'مسكين':
-      case 'مخدوع':
-      case 'جميل':
-      case 'طيب':
-      case 'محترم':
-      case 'زفت':
-      case 'وصخ':
-      case 'حزين':
-      case 'مجنون':
+                    case 'احمق':
       case 'بشع':
-      case 'صنم':
-      case 'شجاع':
+      case 'جبان':
+      case 'جميل':
+      case 'حزين':
+      case 'حمار':
+      case 'خروف':
+      case 'ذكي':
       case 'رقاص':
-      case 'مضحك':
-      case 'مستفز':
-      case 'عاقل':
-      case 'محتال':
-      case 'نجس':
-      case 'مؤدب':
-      case 'غامض':
-      case 'ظالم':	
-      case 'مبااع':
+      case 'زفت':
+      case 'سافل':
+      case 'شجاع':
       case 'صادق':
-      case 'كذاب': {
+      case 'صنم':
+      case 'طيب':
+      case 'ظالم':
+      case 'عاقل':
+      case 'غامض':
+      case 'غبي':
+      case 'قرد':
+      case 'كاذب':
+      case 'كريه':
+      case '>':
+      case 'ماباع':
+      case 'مجنون':
+      case 'محبوب':
+      case 'محترم':
+      case 'محتال':
+      case 'مخادع':
+      case 'مخدوع':
+      case 'مسكين':
+      case 'مستفز':
+      case 'مضحك':
+      case 'مظلوم':
+      case 'مكروه':
+      case 'مؤدب':
+      case 'نجس':
+      case 'وصخ':
+      case 'ورع':
+      case 'شاذ':
+      case 'علق':
+      case 'متناك':
+      case 'خول':
+      case 'وسخ':
+      case 'مكروف':
+      case 'بيتناك':
+      case 'كس':
+      case 'معرص':
+      case 'شرموط':
+      case 'اهطل':
+      case 'loda':
+      case 'laund':
+      case 'nigga':
+      case 'noobra':
+      case 'tharki':
+      case 'nibba':
+      case 'nibbi':
+      case 'mumu':
+      case 'rascal':
+      case 'scumbag':
+      case 'nuts':
+      case 'comrade':
+      case 'fagot':
+      case 'scoundrel':
+      case 'ditch':
+      case 'dope':
+      case 'gucci':
+      case 'lit':
+      case 'dumbass':
+      case 'sexy':
+      case 'crackhead':
+      case 'mf':
+      case 'motherfucker':
+      case 'dogla':
+      case 'bewda':
+      case 'boka':
+      case 'khanki':
+      case 'bal':
+      case 'sucker':
+      case 'fuckboy':
+      case 'playboy':
+      case 'fuckgirl':
+      case 'playgirl':
+      case 'hot': {
+      	            	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
-	    「 صح؟ 🥲 」◣`
+            let jawab = `「 اكبر *طيب* في الجروب هو *${command}* 「 صح؟ 🥲 」◣ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '「 يب 😂 」◣', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
+                        { buttonId: '👀', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
+                    await XeonBotInc.sendButtonText(m.chat, buttons, jawab, botname, m, {mentions: ments})
             }
             break
 case 'dare':
@@ -10212,6 +10259,17 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}نجس
 ╠ ${prefix}وصخ
 ╠ ${prefix}ورع
+╠ ${prefix}شاذ
+╠ ${prefix}علق
+╠ ${prefix}متناك
+╠ ${prefix}خول
+╠ ${prefix}وسخ
+╠ ${prefix}مكروف
+╠ ${prefix}بيتناك
+╠ ${prefix}كس
+╠ ${prefix}معرص
+╠ ${prefix}شرموط
+╠ ${prefix}اهطل
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'soundmenu':
