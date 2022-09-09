@@ -7013,7 +7013,7 @@ xeonkey.Film(q)
 });
 break
 case 'img':
-case 'image': {
+case 'صوره': {
 	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 reply(mess.wait)
@@ -7026,7 +7026,7 @@ case 'image': {
 case 'mcserver': case 'mcquery': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`مثال : \n${prefix + command} ip|port\nUses : \n${prefix + command} play.xeon.com|19132`)
+if (!args.join(" ")) return replay(`Example : \n${prefix + command} ip|port\nUses : \n${prefix + command} play.xeon.com|19132`)
 const Query = require("minecraft-query");
 
 const qury = args.join(" ")
@@ -8307,7 +8307,7 @@ break
 	if (isBanChat) return reply(mess.banChat)
                 try {
                 let set
-                if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
+                if (/دبه/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
                 if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
                 if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
                 if (/earrape/.test(command)) set = '-af volume=12'
@@ -8315,8 +8315,8 @@ break
                 if (/fat/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
                 if (/nightcore/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
                 if (/reverse/.test(command)) set = '-filter_complex "areverse"'
-                if (/robot/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
-                if (/slow/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
+                if (/روبوت/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
+                if (/بطئ/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
                 if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
                 if (/tupai/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
                 if (/audio/.test(mime)) {
@@ -10005,7 +10005,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}styletext [text]
 ╠${prefix}volume [reply aud]
 ╠${prefix}tempo [reply aud]
-╠${prefix}bass [reply aud]
+╠${prefix}دبه [reply aud]
 ╠${prefix}blown [reply aud]
 ╠${prefix}deep [reply aud]
 ╠${prefix}earrape [reply aud]
@@ -10013,8 +10013,8 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}fat [reply aud]
 ╠${prefix}nightcore [reply aud]
 ╠${prefix}reverse [reply aud]
-╠${prefix}robot [reply aud]
-╠${prefix}slow [reply aud]
+╠${prefix}روبوت [reply aud]
+╠${prefix}بطئ [reply aud]
 ╠${prefix}squirrel [reply aud]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
