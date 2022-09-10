@@ -2389,13 +2389,13 @@ if (isBanChat) return reply(mess.banChat)
                 reply(mess.success)
                 }
                 break
-            case 'تاك': {
+            case 'تاك': case 'منشن': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝ 
+let teks = `╚»˙·٠•●♥ منشن للكل ♥●•٠·˙«╝ 
  
  ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
@@ -2404,7 +2404,7 @@ let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-                case 'وهمي': case 'منشن.وهمي': {
+                case 'وهمي': case 'مخفي': {
                 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
@@ -3404,7 +3404,7 @@ for (let i of anu) {
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
 break
-case 'listgc': {
+case 'المستخدمين': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
@@ -3416,7 +3416,7 @@ for (let i of anu) {
  } else {
  loldd = metadata.owner
  }
- teks += `\n\nName : ${metadata.subject ? metadata.subject : "undefined"}\nOwner : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\nMade : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
+ teks += `\n\nالاسم : ${metadata.subject ? metadata.subject : "undefined"}\nالمالك : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nايدي : ${metadata.id ? metadata.id : "undefined"}\nالتاريخ : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nعضو : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
 }
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
@@ -6068,11 +6068,11 @@ let audio = await toPTT(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
 }
 break
-case 'متحركه': {
+case 'متحركه': case 'لمتحركه':{
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!m.quoted) return reply('Reply Image')
-if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+if (!m.quoted) return reply('اعمل ريبلاي علي صوره')
+if (!/webp/.test(mime)) return reply(`دد علي ملصق مع التسمية التوضيحية *${prefix + command}*`)
 reply(mess.wait)
 let { webp2mp4File } = require('./lib/uploader')
 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
@@ -6165,7 +6165,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: images },
-caption: `*| GOOGLE IMAGE |*
+caption: `*| صور من جوجل |*
 
 ${global.themeemoji} Query : ${text}
 ${global.themeemoji} Media Url : ${images}`,
