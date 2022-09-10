@@ -738,13 +738,13 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 تم اكتشاف رابط تيك�
 if (AntiLinkAll)
    if (budy.includes("https://")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nأرسل المسؤول رابطًا ، والمسؤول حر في إرسال أي رابط😇`
+bvl = `\`\`\`「 منع الروابط 」\`\`\`\n\nالادمن بعت رابط والادمن يبعت اللي هوا عاوزو`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 تم اكتشاف رابط 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب إرسال رابط في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 تم اكتشاف رابط من العرص دا 」\`\`\`\n\n@${kice.split("@")[0]} تم طرد ابن المتناكه دا عشان بعت رابط في الجروب`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 
@@ -3220,7 +3220,7 @@ if (!args.join(" ")) return replay(`Where is the text?\n\nمثال : ${prefix + 
 let getGroups = await XeonBotInc.groupFetchAllParticipating()
 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
 let anu = groups.map(v => v.id)
-replay(`Send broadcast to ${anu.length} group chat, time's up ${anu.length * 1.5} second`)
+replay(`إرسال البث إلى ${anu.length} مجموعة الدردشة ، انتهى الوقت ${anu.length * 1.5} ثانيه`)
 for (let i of anu) {
 await sleep(1500)
 let btn = [{
