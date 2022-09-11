@@ -64,13 +64,13 @@ global.location = "Egypt, Cairo, Aizawl" //ur location
 global.owner = ['967770500831']
 global.ownertag = '967770500831' //ur tag number
 global.botname = '𝔹𝕆𝕋 ℝ𝔸𝕀ℤ𝔼𝕃🐼🍷 ٫' //ur bot name
-global.linkz = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //your theme url which will be displayed on whatsapp
-global.websitex = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //ur website to be displayed
+global.linkz = "https://youtube.com/channel/UChalUSaq3jtBm4tOveuu3LA" //your theme url which will be displayed on whatsapp
+global.websitex = "https://youtube.com/channel/UChalUSaq3jtBm4tOveuu3LA" //ur website to be displayed
 global.botscript = 'https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3' //script link
 global.reactmoji = "🐦" //ur menu react emoji
 global.themeemoji = "🌚" //ur theme emoji
 global.packname = "⚜️𝙱𝙾𝚃_𝙳𝙰𝙴𝙼𝙾𝙽⚜️" //ur sticker watermark packname
-global.author = "⚜️𝙱𝙾𝚃_𝚁𝙰𝙸𝚉𝙴𝙻⚜️" //ur sticker watermark author
+global.author = "⚜️𝚁𝙰𝙸𝚉𝙴𝙻⚜️" //ur sticker watermark author
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
