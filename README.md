@@ -1,8 +1,8 @@
 
 
-<h1 align="center">𝑬𝑳𝑮𝑨𝒁𝑨𝑹 𝑨𝑳𝑾𝑨𝒁𝑬𝑹🐼🍷 ٫<br></h1>
+<h1 align="center">⚜️𝙱𝙾𝚃_𝚁𝙰𝙸𝚉𝙴𝙻⚜️<br></h1>
 <p align="center">
-<img src="https://telegra.ph/file/e003f745c48bada8abe50.jpg" alt="animated" width="540" height="280" />
+<img src="https://telegra.ph/file/39272916fd98efa5fec86.jpg" alt="animated" width="540" height="280" />
 </p>
 
 <p align="center">
@@ -52,11 +52,11 @@ Scan qr code from the above button, u can pay through GooglePay, Paytm, PhonePe 
 - [`2nd GC`](https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5)
 - [`3rd GC`](https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd)
 
-# Setup For Deployment 👇
+# الاستعداد للفورك 👇
 
 - FORK THE REPOSITORY [Here](https://github.com/DGXeon/CheemsBot-MD4/fork)
 
-## `Scan QR Code For Session`
+## `نشر`
 [![Cheems Bot](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@DGXeon/Cheems-Bot-Multi-Device-Qr-Code-Generator?output%20only=1&lite=1#index.js)
 
 ## `SETTINGS`
@@ -74,7 +74,7 @@ https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DGXeon/CheemsBot-MD4/)
+[![Deploy](https://dashboard.heroku.com/new?template=https://github.com/Raizelbot/CheemsBot-MD4)](https://heroku.com/deploy?template=https://github.com/DGXeon/CheemsBot-MD4/)
 
 # Install Manually 👇
 ## `Requirements`
