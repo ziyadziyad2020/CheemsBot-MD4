@@ -63,7 +63,7 @@ global.location = "Egypt, Cairo, Aizawl" //ur location
 //bot bomdy 
 global.owner = ['967770500831']
 global.ownertag = '967770500831' //ur tag number
-global.botname = '⚜️𝗥𝗔𝗜𝗭𝗘𝗟_𝗕𝗢𝗧⚜️' //ur bot name
+global.botname = '🔱 𝚁𝚊𝚒𝚣𝚎𝚕 𝙶𝚎𝚘𝚛𝚐𝚎 🔱' //ur bot name
 global.linkz = "https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3" //your theme url which will be displayed on whatsapp
 global.websitex = "https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3" //ur website to be displayed
 global.botscript = 'https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3' //script link
