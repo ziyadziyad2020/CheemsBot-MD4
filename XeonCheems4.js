@@ -1567,7 +1567,7 @@ if (isBanChat) return reply(mess.banChat)
                 reply(`${m.pushName} Has Gone Afk/Offline${text ? ': ' + text : ''}`)
             }
             break	
-        case 'xo': case 'ttt': case 'tictactoe': {
+        case 'xo': case 'ttt': case 'لعب': {
         	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             let TicTacToe = require("./lib/tictactoe")
@@ -1594,7 +1594,7 @@ if (isBanChat) return reply(mess.banChat)
             9: '9️⃣',
             }[v]
             })
-            let str = `الروم ID: ${room.id}
+            let str = `الغرفه ID: ${room.id}
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
@@ -1619,7 +1619,7 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
-            case 'مغادره.الجيم': case 'delttt': {
+            case 'مغادره.الجيم': case 'انقلاع': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.game = this.game ? this.game : {}
@@ -2038,11 +2038,11 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${s
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
-	    「 صح؟ 🥲 」◣`
+            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」
+	    「 صح؟ 🥲 」`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '「 يب 😂 」◣', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
+                        { buttonId: '「 يب 😂 」', buttonText: { displayText: '「 يب 😂 」' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, jawab, botname, m, {mentions: ments})
             }
@@ -2295,7 +2295,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await XeonBotInc.groupParticipantsUpdate(m.chat, [تم الطرد بنجاح], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'اضافه': {
@@ -2397,7 +2397,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `*｢🐦منشن جماعي🐦｣* 
  
- ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
+ ❐ *الرساله : ${q ? q : 'لا يوجد رساله'}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
@@ -3203,7 +3203,7 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-            case 'مسح': case 'del': {
+            case 'مسح': case 'حذف': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
@@ -3212,7 +3212,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-      case 'شير': case 'bcgroup': {
+      case 'شير': case 'جماعي': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3484,7 +3484,7 @@ if (isBanChat) return reply(mess.banChat)
                 })
             }
             break
-case 'dogesticker':
+case 'كلبي':
 case 'كلب':
 	case 'doge':{
 	                	            	            	if (isBan) return reply(mess.ban)
@@ -3496,7 +3496,7 @@ encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: 
 await fs.unlinkSync(encmedia)
 }
 break
-case 'lovesticker':
+case 'حب':
 case 'lovestick' :{
 	            	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -3508,7 +3508,7 @@ await fs.unlinkSync(encmedia)
 }
 break
 case 'gura':
-case 'gurastick':{
+case 'رعب':{
 	                	            	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
@@ -3535,10 +3535,10 @@ reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo D
 }
 }
 break
-case 'swm': case 'سرقه': case 'زرف': {
+case 'حقوق': case 'سرقه': case 'زرف': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return reply(`مثال :\nswm ${global.author}|${global.packname}`)
+if (!args.join(" ")) return reply(`مثال :\زرف ${global.author}|${global.packname}`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -3550,7 +3550,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: global.atnm })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
+if ((quoted.msg || quoted).seconds > 11) return reply('الحد الأقصى عشر ثواني!')
 let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
@@ -3618,9 +3618,9 @@ case '8ball':
 case 'goose':
 case 'gecg':
 case 'feed':
-case 'avatar':
+case 'افتار':
 case 'lizard':
-case 'meow':
+case 'مياو':
 case 'tickle':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -7572,7 +7572,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-case 'wallpaper': case 'animewallpaper': case 'animewall': {
+case 'wallpaper': case 'خلفية': case 'animewall': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!args.join(" ")) return reply("What picture are you looking for??")
@@ -8311,7 +8311,7 @@ reply("Send video/audio")
 }
 }
 break
-		   case 'دبه': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'روبوت': case 'بطئ': case 'smooth': case 'squirrel':
+		   case 'دبه': case 'blown': case 'deep': case 'earrape': case 'سريع': case 'fat': case 'nightcore': case 'reverse': case 'روبوت': case 'بطئ': case 'smooth': case 'squirrel':
 		if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 try {
