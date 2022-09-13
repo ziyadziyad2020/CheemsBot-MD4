@@ -63,9 +63,9 @@ global.location = "Egypt, Cairo, Aizawl" //ur location
 //bot bomdy 
 global.owner = ['967770500831']
 global.ownertag = '967770500831' //ur tag number
-global.botname = '𝔹𝕆𝕋 ℝ𝔸𝕀ℤ𝔼𝕃🐼🍷 ٫' //ur bot name
-global.linkz = "https://youtube.com/channel/UChalUSaq3jtBm4tOveuu3LA" //your theme url which will be displayed on whatsapp
-global.websitex = "https://youtube.com/channel/UChalUSaq3jtBm4tOveuu3LA" //ur website to be displayed
+global.botname = '⚜️𝗥𝗔𝗜𝗭𝗘𝗟_𝗕𝗢𝗧⚜️' //ur bot name
+global.linkz = "https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3" //your theme url which will be displayed on whatsapp
+global.websitex = "https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3" //ur website to be displayed
 global.botscript = 'https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3' //script link
 global.reactmoji = "🐦" //ur menu react emoji
 global.themeemoji = "🌚" //ur theme emoji
