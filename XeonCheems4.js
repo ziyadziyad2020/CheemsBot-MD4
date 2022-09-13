@@ -938,7 +938,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	    if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
 	    reply({
 	    '-3': 'انتهت اللعبة',
-	    '-2': 'غير صالح',
+	    '-2': 'غير صالح يورع',
 	    '-1': 'موقف غير صحيح',
 	    0: 'موقف غير صحيح',
 	    }[ok])
@@ -976,7 +976,7 @@ ${isWin ? `@${winner.split('@')[0]} مبروك ربحت!` : isTie ? `لقد خس
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
-كتب * استسلام * ل الاستسلام والاعتراف يهزم`
+كتب * استسلام * ل الاستسلام والاعتراف يهزما`
 	    if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
 	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
 	    if (room.x !== room.o) await XeonBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
@@ -1572,10 +1572,10 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
             let TicTacToe = require("./lib/tictactoe")
             this.game = this.game ? this.game : {}
-            if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replay(`انت في جيم`)
+            if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replay(`انت في لعبه يبني`)
             let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
             if (room) {
-            reply('وجدت الشريك!')
+            reply('وجدت الشريك🤠!')
             room.o = m.chat
             room.game.playerO = m.sender
             room.state = 'PLAYING'
@@ -1614,12 +1614,12 @@ Type *surrender* to surrender and admit defeat`
             state: 'WAITING'
             }
             if (text) room.name = text
-            reply('في انتظار الشريك' + (text ? ` Type The Command Below ${prefix}${command} ${text}` : ''))
-            this.game[room.id] = room
+            reply('في انتظار الشريك 🐦' + (text ? ` Type The Command Below ${prefix}${command} ${text}` : ''))
+           this.game[room.id] = room
             }
             }
             break
-            case 'مغادره.الجيم': case 'delttt': {
+            case 'مغادره.الجيم': case 'استسلام': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.game = this.game ? this.game : {}
@@ -2600,7 +2600,7 @@ if (isBanChat) return reply(mess.banChat)
             reply('Successfully Deleted The Vote Session In This Group')
 	    }
             break
-               case 'group': case 'جروب': {
+               case 'قروب': case 'جروب': {
                	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -3128,7 +3128,7 @@ if (isBanChat) return reply(mess.banChat)
                 }
              }
              break
-case 'ضعهاصوره': case 'setbotpp': {
+case 'ضعهاصوره': case 'بروفايلك': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3212,7 +3212,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-      case 'شير': case 'شيرلجروب': {
+      case 'شير': case 'جماعي': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3518,7 +3518,7 @@ encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: 
 await fs.unlinkSync(encmedia)
 }
 break
-            case 'sticker': case 's': case 'س': case 'استيكر': {
+            case 'sticker': case 's': case 'س': case 'ملصق': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (/image/.test(mime)) {
@@ -3526,7 +3526,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply('مده المقطع اطول من10ثواني!')
+if ((quoted.msg || quoted).seconds > 11) return reply('مده المقطع اطول من 10 ثواني هل انت بخير يا بني!')
 let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
@@ -3535,7 +3535,7 @@ reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo D
 }
 }
 break
-case 'swm': case 'سرقه': case 'سرقة': {
+case 'زرف': case 'سرقه': case 'سرقة': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply(`مثال :\nswm ${global.author}|${global.packname}`)
@@ -3618,7 +3618,7 @@ case '8ball':
 case 'goose':
 case 'gecg':
 case 'feed':
-case 'avatar':
+case 'افتار':
 case 'lizard':
 case 'meow':
 case 'tickle':
@@ -10603,7 +10603,7 @@ case 'tqtt':
 	if (isBanChat) return reply(mess.banChat)
 reply(`شكرا لنفسي🥺💕
 واخواني  🤡
-اياتو ولوفس والجزار الوزير
+اياتو ولوفي والجزار الوزير
 وشكرا ليك ياللي بتستخدم البوت🌚💕 `)
 break
             default:
