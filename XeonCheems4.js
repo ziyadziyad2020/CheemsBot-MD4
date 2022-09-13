@@ -966,13 +966,13 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	    isWin = true
 	    }
 	    let winner = isSurrender ? room.game.currentTurn : room.game.winner
-	    let str = `الروم ID: ${room.id}
+	    let str = `الغرفه ID: ${room.id}
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-${isWin ? `@${winner.split('@')[0]} مبروك كسبت!` : isTie ? `لقد خسرت` : `دور ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `@${winner.split('@')[0]} مبروك ربحت!` : isTie ? `لقد خسرت` : `دور ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
@@ -1619,7 +1619,7 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
-            case 'مغادره.الجيم': case 'انقلاع': {
+            case 'مغادره.الجيم': case 'delttt': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.game = this.game ? this.game : {}
@@ -1635,19 +1635,19 @@ if (isBanChat) return reply(mess.banChat)
             }
             }
             break
-            case 'suitpvp': case 'suit': {
+            case 'حجر': case 'suit': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.suit = this.suit ? this.suit : {}
             let poin = 10
             let poin_lose = 10
             let timeout = 60000
-            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) return replay(`Complete Your Previous Suit`)
+            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) return replay(`أكمل بدلتك السابقة`)
 	    if (m.mentionedJid[0] === m.sender) return reply(`Can't Play With Myself !`)
             if (!m.mentionedJid[0]) return reply(`_Who Do You Want To Challenge?_\nTag The Person..\n\nمثال : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
-            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0])))  reply(`The Person You Are Challenging Is Playing Suit With Someone Else :(`)
+            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0])))  reply(`الشخص الذي تتحداه يرتدي بدلة مع شخص آخر :(`)
             let id = 'suit_' + new Date() * 1
-            let caption = `_*SUIT PvP*_
+            let caption = `_*بدلة حماية الأصناف النباتية*_
 
 @${m.sender.split`@`[0]} menantang @${m.mentionedJid[0].split`@`[0]} To Play Suit
 
@@ -1659,7 +1659,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             p2: m.mentionedJid[0],
             status: 'wait',
             waktu: setTimeout(() => {
-            if (this.suit[id]) XeonBotInc.sendText(m.chat, `_Suit Time Out_`, m)
+            if (this.suit[id]) XeonBotInc.sendText(m.chat, `_البدلة المهلة_`, m)
             delete this.suit[id]
             }, 60000), poin, poin_lose, timeout
             }
@@ -1856,7 +1856,7 @@ if (isBanChat) return reply(mess.banChat)
 「 معلش زوجناكم لأنكم تصلحون لبعض  」`
             let menst = [orang, jodoh]
             let buttons = [
-                        { buttonId: '「 الي يشوفهم مناسبين لبعض زيي يضغط يب 」', buttonText: { displayText: '「 يب هم مناسبين لبعض😂 」◣' }, type: 1 }
+                        { buttonId: '「 الي يشوفهم مناسبين لبعض زيي يضغط يب  」', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, jawab, XeonBotInc.user.name, m, {mentions: menst})
             }
@@ -1989,14 +1989,14 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${s
       case 'ورع':
       case 'شاذ':
       case 'علق':
-      case 'بغيض':
-      case 'هبل':
+      case 'متناك':
+      case 'خول':
       case 'وسخ':
       case 'مكروف':
-      case 'بغل':
-      case 'غريب':
-      case 'مشبوه':
-      case 'حمامه':
+      case 'بيتناك':
+      case 'كس':
+      case 'معرص':
+      case 'شرموط':
       case 'اهطل':
       case 'loda':
       case 'laund':
@@ -2038,7 +2038,7 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${s
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」
+            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
 	    「 صح؟ 🥲 」`
             let ments = [me, jodoh]
             let buttons = [
@@ -2295,7 +2295,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await XeonBotInc.groupParticipantsUpdate(m.chat, [تم الطرد بنجاح], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'اضافه': {
@@ -2397,7 +2397,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `*｢🐦منشن جماعي🐦｣* 
  
- ❐ *الرساله : ${q ? q : 'لا يوجد رساله'}*\n\n`
+ ❐ *الرساله : ${q ? q : 'لا رساله'}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
@@ -2413,7 +2413,7 @@ if (isBanChat) return reply(mess.banChat)
             XeonBotInc.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
             }
             break
-	    case 'style': case 'زخرفة': {
+	    case 'زخرفة': case 'زخرفه': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //wont response when limit runs out\\
@@ -2926,7 +2926,7 @@ replay('النجاح في إيقاف موقع تويتر antilink في هذه ا
   }
   }
   break
-              case 'الحمايه': {
+              case 'الروابط': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -3128,7 +3128,7 @@ if (isBanChat) return reply(mess.banChat)
                 }
              }
              break
-case 'setppbot': case 'setbotpp': {
+case 'ضعهاصوره': case 'setbotpp': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3203,7 +3203,7 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-            case 'مسح': case 'حذف': {
+            case 'مسح': case 'del': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
@@ -3212,7 +3212,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-      case 'شير': case 'جماعي': {
+      case 'شير': case 'شيرلجروب': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3296,7 +3296,7 @@ XeonBotInc.send5ButImg(yoi, txt, `${global.botname}`, log0, btn, thum)
 replay('نجاح البث')
 }
 break
- case 'bcimage': case 'bcvideo': case 'bcaudio': {
+ case 'شيرلصوره': case 'شيرلفيديو': case 'شيرلصوتي': {
                   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3352,7 +3352,7 @@ id: 'owner'
                 reply(` *Send Broadcast To* ${anu.length} *Chats*`)
             }
             break
-case 'bcloc': {
+case 'الموقع': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
@@ -3421,14 +3421,14 @@ for (let i of anu) {
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
 break
-case 'الاحياء': case 'المتصلين': {
+case 'الصاحيين': case 'المتصلين': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
 let online = [...Object.keys(store.presences[id]), botNumber]
 let liston = 1
-XeonBotInc.sendText(m.chat, '     「 قائمه المتصلين الاصنام 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+XeonBotInc.sendText(m.chat, '     「 قائمه المتصلين 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
 }
 break
 case 'patrick':
@@ -3484,7 +3484,7 @@ if (isBanChat) return reply(mess.banChat)
                 })
             }
             break
-case 'كلبي':
+case 'dogesticker':
 case 'كلب':
 	case 'doge':{
 	                	            	            	if (isBan) return reply(mess.ban)
@@ -3496,7 +3496,7 @@ encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: 
 await fs.unlinkSync(encmedia)
 }
 break
-case 'حب':
+case 'lovesticker':
 case 'lovestick' :{
 	            	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -3508,7 +3508,7 @@ await fs.unlinkSync(encmedia)
 }
 break
 case 'gura':
-case 'رعب':{
+case 'gurastick':{
 	                	            	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
@@ -3518,7 +3518,7 @@ encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: 
 await fs.unlinkSync(encmedia)
 }
 break
-            case 'sticker': case 's': case 'س': case 'ملصق': {
+            case 'sticker': case 's': case 'س': case 'استيكر': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (/image/.test(mime)) {
@@ -3526,7 +3526,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
+if ((quoted.msg || quoted).seconds > 11) return reply('مده المقطع اطول من10ثواني!')
 let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
@@ -3535,10 +3535,10 @@ reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo D
 }
 }
 break
-case 'حقوق': case 'سرقه': case 'زرف': {
+case 'swm': case 'سرقه': case 'سرقة': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return reply(`مثال :\زرف ${global.author}|${global.packname}`)
+if (!args.join(" ")) return reply(`مثال :\nswm ${global.author}|${global.packname}`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -3550,7 +3550,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: global.atnm })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply('الحد الأقصى عشر ثواني!')
+if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
 let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
@@ -3559,7 +3559,7 @@ reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo D
 }
 }
 break
-case 'smeme': case 'stickermeme': case 'stickmeme': {
+case 'smeme': case 'اكتب': case 'كتابه': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let { TelegraPh } = require('./lib/uploader')
@@ -3618,9 +3618,9 @@ case '8ball':
 case 'goose':
 case 'gecg':
 case 'feed':
-case 'افتار':
+case 'avatar':
 case 'lizard':
-case 'مياو':
+case 'meow':
 case 'tickle':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -4519,7 +4519,7 @@ case 'waifu': case 'لولي':
 					XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 					})
 					break
-case 'naruto':
+case 'ناروتو':
 			if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 				reply(mess.wait)
@@ -5989,10 +5989,10 @@ reply(mess.wait)
 emote(q, "10")
 break
 
-case 'emojimix': {
+case 'دمج': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) reply(`*مثال :* ${prefix + command} 🦄+🤣`)
+if (!q) reply(`*مثال : دمج* ${prefix + command} 🦄+🤣`)
 let [emoji1, emoji2] = q.split`+`
 let kuntuh = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 for (let res of kuntuh.results) {
@@ -6161,7 +6161,7 @@ gis(args.join(" "), async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
 let buttons = [
-{buttonId: `gimage ${args.join(" ")}`, buttonText: {displayText: 'الصوره التاليه 👀'}, type: 1}
+{buttonId: `صوره ${args.join(" ")}`, buttonText: {displayText: 'الصوره التاليه 👀'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: images },
@@ -7572,7 +7572,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-case 'wallpaper': case 'خلفية': case 'animewall': {
+case 'wallpaper': case 'animewallpaper': case 'animewall': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!args.join(" ")) return reply("What picture are you looking for??")
@@ -8163,7 +8163,7 @@ if (isBanChat) return reply(mess.banChat)
                 })
             }
             break
-	  case 'pinterest': case 'pin': {
+	  case 'pinterest': case 'صورة': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply("What picture are you looking for?")
@@ -8195,7 +8195,7 @@ reply("Error")
 }
 }
 break
-case 'mediafire': {
+case 'ميديافاير': {
 	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 if (!text) return reply(mess.linkm)
@@ -8204,10 +8204,10 @@ const baby1 = await mediafireDl(text)
 if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
 const result4 = `*MEDIAFIRE DOWNLOADER*
 				
-*Name* : ${baby1[0].nama}
-*Size* : ${baby1[0].size}
+*الاسم* : ${baby1[0].nama}
+*الحجم* : ${baby1[0].size}
 *Mime* : ${baby1[0].mime}
-*Link* : ${baby1[0].link}`
+*الرابط* : ${baby1[0].link}`
 reply(`${result4}`)
 XeonBotInc.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
 }
@@ -8311,7 +8311,7 @@ reply("Send video/audio")
 }
 }
 break
-		   case 'دبه': case 'blown': case 'deep': case 'earrape': case 'سريع': case 'fat': case 'nightcore': case 'reverse': case 'روبوت': case 'بطئ': case 'smooth': case 'squirrel':
+		   case 'دبه': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'روبوت': case 'بطئ': case 'smooth': case 'squirrel':
 		if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 try {
@@ -8399,7 +8399,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
                 reply('تم التفعيل!')
             }
             break
-            case 'addmsg': {
+            case 'ردجديد': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) return reply(`Reply Message You Want To Save In Database`)
@@ -8407,11 +8407,11 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
                 let msgs = global.db.data.database
                 if (text.toLowerCase() in msgs) return reply(`'${text}' Has Been Registered In The Message List`)
                 msgs[text.toLowerCase()] = quoted.fakeObj
-reply(`Successfully Added Message In Message List As '${text}'
+(`تم اضاف الرد الجديد '${text}'
     
-Access With ${prefix}getmsg ${text}
+الرد ${prefix}الجديد ${text}
 
-View List Of Messages With ${prefix}listmsg`)
+لرؤية الردود اكتب ${prefix}الردود`)
             }
             break
             case 'getmsg': {
@@ -8423,19 +8423,19 @@ View List Of Messages With ${prefix}listmsg`)
                 XeonBotInc.copyNForward(m.chat, msgs[text.toLowerCase()], true)
             }
             break
-            case 'listmsg': {
+            case 'الردود': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 let msgs = JSON.parse(fs.readFileSync('./database/database.json'))
 	        let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
 		let teks = '「 DATABASE LIST 」\n\n'
 		for (let i of seplit) {
-		    teks += `${themeemoji} *Name :* ${i.nama}\n${themeemoji} *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
+		    teks += `${themeemoji} *الإسم :* ${i.nama}\n${themeemoji} *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
 	        }
 	        reply(teks)
 	    }
 	    break
-            case 'delmsg': case 'delmsge': {
+            case 'delmsg': case 'حذفرد': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	        let msgs = global.db.data.database
@@ -8655,7 +8655,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 reply(respon)
             }
             break
-            case 'speedtest': {
+            case 'تيست': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
             reply('اختبار السرعه...')
@@ -8674,11 +8674,11 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             }
             break
-            case 'المطور': case 'owner': {
+            case 'المطور': case 'owner': case 'المالك': {
                 XeonBotInc.sendContact(m.chat, global.vcardowner, m)
             }
             break
-  case 'setmenu': {
+  case 'تغيرالقائمه': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
             if (!isCreator) return reply(mess.owner)
@@ -8721,34 +8721,34 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 } else {
                 let sections = [
                 {
-                title: "😛CHANGE BOT MENU😛",
+                title: "😛تغيير قائمة البوت😛",
                 rows: [
-                {title: "Image Menu", rowId: `setmenu templateImage`, description: `Tap to change bot menu to Image Menu`},
-                {title: "Gif Menu", rowId: `setmenu templateGif`, description: `Tap to change bot menu to Gif Menu`},
-                {title: "Video Menu", rowId: `setmenu templateVideo`, description: `Tap to change bot menu to Video Menu`},
+                {title: "قائمة الصورة", rowId: `تعيين قالب القائمه صوره`, description: `انقر لتغيير قائمة البوت إلى قائمة الصوره`},
+                {title: "قائمه المتحركه", rowId: `تعيين قالب القائمة لمتحركه`, description: `انقر لتغيير قائمة البوت إلى قائمة متحركه`},
+                {title: "قائمه الفيديو", rowId: `تعيين قالب القائمة فيديو`, description: `انقر لتغيير قائمة البوت إلى قائمة الفيديو`},
                 ///////////////{title: "Text Menu", rowId: `setmenu templateMessage`, description: `Tap to change bot menu to Text Menu`},
-                {title: "Document Menu", rowId: `setmenu templateDocument`, description: `Tap to change bot menu to Document Menu`}
+                {title: "قائمة المستند", rowId: `تعيين وثيقة قالب القائمة`, description: `انقر لتغيير قائمة البوت إلى قائمة المستندات`}
                 ]
                 },
                 ]
-                XeonBotInc.sendListMsg(m.chat, `Please select the menu you want to change!`, ` `, XeonBotInc.user.name, `Click Here`, sections, m)
+                XeonBotInc.sendListMsg(m.chat, `الرجاء تحديد القائمة التي تريد تغييرها!`, ` `, XeonBotInc.user.name, `اضغط علي الزر`, sections, m)
                 }
             }
             break
-case 'request': {
+case 'طلب': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(`مثال : ${prefix + command} hello dev please add a downloader feature`)
-teks = `*| REQUEST |*`
-teks1 = `\n\nNumber : @${m.sender.split("@")[0]}\nRequest : ${args.join(" ")}`
-teks2 = `\n\nSuccessfully sent to owner`
+if (!args.join(" ")) return replay(`مثال : ${prefix + command} مرحبًا ديف ، يرجى إضافة ميزة التنزيل`)
+teks = `*| طلب |*`
+teks1 = `\n\nالرقم : @${m.sender.split("@")[0]}\nطلب : ${args.join(" ")}`
+teks2 = `\n\nتم إرسالها إلى المالك بنجاح`
 for (let i of owner) {
 XeonBotInc.sendMessage(i + "@s.whatsapp.net", {text: teks + teks1, mentions:[m.sender]}, {quoted:m})
 }
 XeonBotInc.sendMessage(m.chat, {text: teks + teks2 + teks1, mentions:[m.sender]}, {quoted:m})
 }
 break
-                    case 'bug': case 'report': {
+                    case 'ابلاغ': case 'report': {
                     	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                     	if(!text) return reply(`Enter The Bug\n\nمثال: ${command} Menu Error`)
@@ -8757,10 +8757,10 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
+case 'سكريبت': case 'script': case 'donate': case 'donate': case 'التسجيل': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script 」*\n\nيوتيوب: ${global.websitex}\nجيت هيب: ${global.botscript}\n\nلا تنسى التبرع 🍜`
+teks = `*「 ${global.botname} Script 」*\n\nيوتيوب: ${global.websitex}\nجيتهاب: ${global.botscript}\n\nلا تنسى التبرع 🍜`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'القائمه 🌺'}, type: 1}
 ]
@@ -9004,13 +9004,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}بان [on/off]
 ╠ ${prefix}انضم [link]
 ╠ ${prefix}تغيربايو
-╠ ${prefix}bcgroup [text]
+╠ ${prefix}شيرلجروب [text]
 ╠ ${prefix}شيرعام [text]
-╠ ${prefix}bcimage [image]
-╠ ${prefix}bcvideo [video]
-╠ ${prefix}bcaudio [audio]
-╠ ${prefix}bcloc [text]
-╠ ${prefix}setppbot [image]
+╠ ${prefix}شيرلصوره [image]
+╠ ${prefix}شيرلفيديو [video]
+╠ ${prefix}شيرلصوتي [audio]
+╠ ${prefix}الموقع [text]
+╠ ${prefix}ضعهاصوره [image]
 ╠ ${prefix}تغيرالحقوق
 ╠ ${prefix}بلوك [tag/number]
 ╠ ${prefix}فك البلوك [tag/number]
@@ -9204,13 +9204,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}toimage [reply stick]
 ╠ ${prefix}sticker [reply img|gif]
 ╠ ${prefix}سرقه [reply img|gif|stik]
-╠ ${prefix}smeme [reply img]
+╠ ${prefix}اكتب [reply img]
 ╠ ${prefix}emoji [emoji]
 ╠ ${prefix}tovideo [reply img]
 ╠ ${prefix}متحركه [reply stick]
 ╠ ${prefix}tourl [reply img]
 ╠ ${prefix}tovn [reply aud]
-╠ ${prefix}tomp3 [reply vn]
+╠ ${prefix}لصوتي [reply vn]
 ╠ ${prefix}toaudio [reply vid]
 ╠ ${prefix}ebinary [reply txt]
 ╠ ${prefix}dbinary [reply txt]
@@ -9271,7 +9271,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}pediaemoji
 ╠${prefix}microsoftemoji
 ╠═══════✪「 قائمه صور انمي 」
-╠${prefix}naruto
+╠${prefix}تاروتو
 ╠${prefix}yaoi
 ╠${prefix}neko2
 ╠${prefix}waifu
@@ -9709,21 +9709,21 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}readmore [text]
 ╠ ${prefix}toviewonce
 ╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
+╠ ${prefix}اوامر
+╠ ${prefix}سكريبت
 ╠ ${prefix}القائمه
-╠ ${prefix}speedtest
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
+╠ ${prefix}تيست
+╠ ${prefix}بينج
+╠ ${prefix}المالك
+╠ ${prefix}الاوامر
+╠ ${prefix}مسح
 ╠ ${prefix}chatinfo
 ╠ ${prefix}quoted
 ╠ ${prefix}listpc
-╠ ${prefix}listgc
+╠ ${prefix}المستخدمين
 ╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
+╠ ${prefix}طلب
+╠ ${prefix}ابلاغ [bug]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'ownermenu':
@@ -9739,13 +9739,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}تغيربايو
 ╠ ${prefix}بلوك [user]
 ╠ ${prefix}فك البلوك [user]
-╠ ${prefix}bcgroup [text]
+╠ ${prefix}شيرلجروب [text]
 ╠ ${prefix}شيرعام [text]
-╠ ${prefix}bcimage [image]
-╠ ${prefix}bcvideo [video]
-╠ ${prefix}bcaudio [audio]
-╠ ${prefix}bcloc [text]
-╠ ${prefix}setppbot [image]
+╠ ${prefix}شيرلصوره [image]
+╠ ${prefix}شيرلفيديو [video]
+╠ ${prefix}شيرلصوتي [audio]
+╠ ${prefix}الموقع [text]
+╠ ${prefix}ضعهاصوره [image]
 ╠ ${prefix}تغيرالحقوقxif
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
@@ -9993,13 +9993,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}toimage [reply stick]
 ╠ ${prefix}sticker [reply img|gif]
 ╠ ${prefix}سرقه [reply img|gif|stik]
-╠ ${prefix}smeme [reply img]
+╠ ${prefix}اكتب [reply img]
 ╠ ${prefix}emoji [emoji]
 ╠ ${prefix}tovideo [reply img]
 ╠ ${prefix}متحركه [reply stick]
 ╠ ${prefix}tourl [reply img]
 ╠ ${prefix}tovn [reply aud]
-╠ ${prefix}tomp3 [reply vn]
+╠ ${prefix}لصوتي [reply vn]
 ╠ ${prefix}toaudio [reply vid]
 ╠ ${prefix}ebinary [reply txt]
 ╠ ${prefix}dbinary [reply txt]
@@ -10085,7 +10085,7 @@ case 'animemenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anime Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه انمي 」	
-╠${prefix}naruto
+╠${prefix}ناروتو
 ╠${prefix}yaoi
 ╠${prefix}neko2
 ╠${prefix}waifu
@@ -10264,15 +10264,15 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}ورع
 ╠ ${prefix}شاذ
 ╠ ${prefix}علق
-╠ ${prefix}متناك
+╠ ${prefix}غول
 ╠ ${prefix}خول
 ╠ ${prefix}وسخ
 ╠ ${prefix}مكروف
-╠ ${prefix}بيتناك
-╠ ${prefix}كس
-╠ ${prefix}معرص
-╠ ${prefix}شرموط
-╠ ${prefix}اهطل
+╠ ${prefix}مضربه
+╠ ${prefix}طم
+╠ ${prefix}سيسي
+╠ ${prefix}فراغ
+╠ ${prefix}فراغ
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'soundmenu':
@@ -10582,29 +10582,28 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}readmore [text]
 ╠ ${prefix}toviewonce
 ╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
+╠ ${prefix}اوامر
+╠ ${prefix}سكريبت
 ╠ ${prefix}القائمه
-╠ ${prefix}speedtest
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
+╠ ${prefix}تسيت
+╠ ${prefix}بينج
+╠ ${prefix}المالك
+╠ ${prefix}الاوامر
+╠ ${prefix}مسح
 ╠ ${prefix}chatinfo
 ╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
+╠ ${prefix}مستخدمين.الخاص
 ╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
+╠ ${prefix}طلب
+╠ ${prefix}ابلاغ [bug]
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "سكربت🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`شكرا لنفسي🥺💕
-واخواني 
-اياتو ولوفي والجزار الوزير🌚 
+واخواني  🤡
+اياتو ولوفس والجزار الوزير
 وشكرا ليك ياللي بتستخدم البوت🌚💕 `)
 break
             default:
