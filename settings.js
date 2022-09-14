@@ -64,9 +64,9 @@ global.location = "Egypt, Cairo, Aizawl" //ur location
 global.owner = ['967770500831']
 global.ownertag = '967770500831' //ur tag number
 global.botname = '🔱 𝚁𝚊𝚒𝚣𝚎𝚕 𝙶𝚎𝚘𝚛𝚐𝚎 🔱' //ur bot name
-global.linkz = "https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3" //your theme url which will be displayed on whatsapp
-global.websitex = "https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3" //ur website to be displayed
-global.botscript = 'https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3' //script link
+global.linkz = "https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z" //your theme url which will be displayed on whatsapp
+global.websitex = "https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z" //ur website to be displayed
+global.botscript = 'https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z' //script link
 global.reactmoji = "🐦" //ur menu react emoji
 global.themeemoji = "🌚" //ur theme emoji
 global.packname = "⚜️𝙱𝙾𝚃_𝙳𝙰𝙴𝙼𝙾𝙽⚜️" //ur sticker watermark packname
@@ -106,7 +106,7 @@ global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
     success: '*｢تم ✓｣*',
-    admin: '*｢هذه الميزه للرجال فقط تمرجل وحاول من جديد｣*',
+    admin: '*｢هذه الميزه للرجال فقط تمرجلي وحاولي من جديد｣*',
     botAdmin: '*｢جيب اشراف لتفعيل الأمر｣*',
     owner: '*｢هذه الميزه للمالك فقط｣*',
     group: '*｢هذه الميزه بالقروبات فقط｣*',
