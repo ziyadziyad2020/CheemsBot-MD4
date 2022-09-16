@@ -9643,7 +9643,6 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}سوره الاحزاب
 ╠ ${prefix}سوره غافر
 ╠ ${prefix}سوره يس
-╠ ${prefix}سوره يوسف
 ╠ ${prefix}{الشيخ سعد الغامدي}
 ╠ ${prefix}سوره الإسراء
 ╠ ${prefix}سوره الصافات
@@ -10507,7 +10506,6 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}سوره الاحزاب
 ╠ ${prefix}سوره غافر
 ╠ ${prefix}سوره يس
-╠ ${prefix}سوره يوسف
 ╠ ${prefix}{الشيخ سعد الغامدي}
 ╠ ${prefix}سوره الإسراء
 ╠ ${prefix}سوره الصافات
