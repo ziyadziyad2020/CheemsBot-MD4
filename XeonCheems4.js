@@ -860,7 +860,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await reply(`🎮 Math Quiz 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Send ${prefix}math mode`)
+                await reply(`🎮 لعبة الرياضيات 🎮\n\nCorrect Answer 🎉\n\nتريد أن تلعب مرة أخرى؟  إرسال ${prefix}مسأله mode`)
                 delete kuismath[m.sender.split('@')[0]]
             } else reply('* إجابة خاطئة!*')
         }
@@ -1602,7 +1602,7 @@ ${arr.slice(6).join('')}
 
 Waiting @${room.game.currentTurn.split('@')[0]}
 
-Type *surrender* to surrender and admit defeat`
+Type *استسلام* to surrender and admit defeat`
             if (room.x !== room.o) await XeonBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
             await XeonBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
             } else {
@@ -1619,7 +1619,7 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
-            case 'مغادره.الجيم': case 'استسلام': {
+            case 'مغادره.الجيم': case 'انهاء': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.game = this.game ? this.game : {}
