@@ -54,23 +54,23 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.vcardowner = ['967770500831'] //ur owner number
-global.ownername = "⚜️𝙱𝙾𝚃_𝚁𝙰𝙸𝚉𝙴𝙻⚜️" //ur owner name
-global.ytname = "YT: RAIZEL" //ur yt chanel name
+global.vcardowner = ['201098906252'] //ur owner number
+global.ownername = "𝑬𝑳𝑮𝑨𝒁𝑨𝑹 𝑨𝑳𝑾𝑨𝒁𝑬𝑹🐼🍷 ٫" //ur owner name
+global.ytname = "YT: Elgazar" //ur yt chanel name
 global.socialm = "GitHub: Elgazar" //ur github or insta name
 global.location = "Egypt, Cairo, Aizawl" //ur location
 
 //bot bomdy 
-global.owner = ['967770500831']
-global.ownertag = '967770500831' //ur tag number
-global.botname = '🔱 𝚁𝚊𝚒𝚣𝚎𝚕 𝙶𝚎𝚘𝚛𝚐𝚎 🔱' //ur bot name
-global.linkz = "https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z" //your theme url which will be displayed on whatsapp
-global.websitex = "https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z" //ur website to be displayed
-global.botscript = 'https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z' //script link
-global.reactmoji = "🐦" //ur menu react emoji
-global.themeemoji = "🌚" //ur theme emoji
-global.packname = "⚜️𝙱𝙾𝚃_𝙳𝙰𝙴𝙼𝙾𝙽⚜️" //ur sticker watermark packname
-global.author = "⚜️𝚁𝙰𝙸𝚉𝙴𝙻⚜️" //ur sticker watermark author
+global.owner = ['201098906252']
+global.ownertag = '201098906252' //ur tag number
+global.botname = '𝑩𝑶𝑻 𝑬𝑳𝑮𝑨𝒁𝑨𝑹🐼🍷 ٫' //ur bot name
+global.linkz = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //your theme url which will be displayed on whatsapp
+global.websitex = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //ur website to be displayed
+global.botscript = 'https://github.com/DGXeon/CheemBt-MD' //script link
+global.reactmoji = "🌚" //ur menu react emoji
+global.themeemoji = "🌞" //ur theme emoji
+global.packname = "⍣ الجزار الوزير يروحي ⍣" //ur sticker watermark packname
+global.author = "⍣ 01098906252 ⍣" //ur sticker watermark author
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
@@ -79,7 +79,7 @@ global.err4r = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
 
 //damtabase
-global.premium = ['967770500831'] //ur premium numbers
+global.premium = ['201098906252'] //ur premium numbers
 global.ntilinkytvid = []
 global.ntilinkytch = []
 global.ntilinkig = []
@@ -105,16 +105,16 @@ global.antitags = true
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: '*｢تم ✓｣*',
-    admin: '*｢هذه الميزه للرجال فقط تمرجلي وحاولي من جديد｣*',
-    botAdmin: '*｢جيب اشراف لتفعيل الأمر｣*',
-    owner: '*｢هذه الميزه للمالك فقط｣*',
-    group: '*｢هذه الميزه بالقروبات فقط｣*',
-    private: '*｢هذه الميزه بالخاص فقط｣*',
-    bot: '*｢هذه الميزه للبوت فقط｣*',
-    wait: '*｢انتظر قليل.......｣*',
-    linkm: '*｢اين الرابط؟｣*',
-    error: '*｢حصل ايرور براسي يعمري｣*',
+    success: 'تم يروحي ✓',
+    admin: 'هذه الميزه للرجاله المشرفين,استرجل وجرب مره تانيه!! ',
+    botAdmin: 'يجب أن يكون البوت مسؤولاً أولاً!',
+    owner: 'هذه الميزة للمالك فقط!',
+    group: 'لميزة تستخدم فقط للمجموعات!',
+    private: 'الميزاة المستخدمة فقط للدردشة الخاصة!',
+    bot: 'هذه الميزة مخصصة للبوت فقط',
+    wait: 'استني شويه ...',
+    linkm: 'أين الرابط?',
+    error: 'ايرور!!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
     ban: 'لقد تم حظرك من قبل المالك ، إذا كنت تريد أن تكون غير محظور ، مالك الدردشة.',
     nsfw: 'لم يتم تنشيط ميزة nsfw ، يرجى الاتصال بالمسؤول للتفعيل',
