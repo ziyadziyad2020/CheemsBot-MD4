@@ -2391,7 +2391,7 @@ if (isBanChat) return reply(mess.banChat)
        break
 case 'grupinfo': case 'المالك':
 try{
- var pic = await Wizard.getProfilePicture(m.chat)
+ var pic = await Xeon.getProfilePicture(m.chat)
   } catch {
  var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
   }
@@ -2400,22 +2400,22 @@ ds = await getBuffer(pic)
 Wizard.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
 break
  case 'tagall': case 'تاك': case 'منشن': {
-   if (!m.isGroup) throw mess.group
-   if (!isBotAdmins) throw mess.botAdmin
-   if (!isAdmins) throw mess.admin
+   if (!m.isGroup) return mess.group
+   if (!isBotAdmins) return mess.botAdmin
+   if (!isAdmins) return mess.admin
 let teks = ` 
  ┏━━━━━━━━━━━┑
  ┃𝗧𝗔𝗚𝗔𝗟𝗟/منشن للكل
  ┃┄┄┄┄┄┄┄┄┄┄┄
- ┃*𝐌𝐄𝐒𝐒𝐀𝐆𝐄/الرساله : ${q ? q : 'blank'}*\n\n
+ ┃*𝐌𝐄𝐒𝐒𝐀𝐆𝐄/الرساله : ${q ? q : 'message'}*\n\n`
  ┗━━━━━━━━ 
-`
+
  for (let mem of participants) {
-   teks += `🎪 @${mem.id.split('@')[0]}\n`
-   }
-   Wizard.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
-   }
-   break
+                teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
+                }
+                XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+                }
+                break
                 case 'وهمي': case 'مخفي': {
                 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
