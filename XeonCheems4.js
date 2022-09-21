@@ -2388,29 +2388,17 @@ if (isBanChat) return reply(mess.banChat)
                 await XeonBotInc.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
                 reply(mess.success)
                 }
-       break
-case 'grupinfo': case 'المالك':
-try{
- var pic = await Xeon.getProfilePicture(m.chat)
-  } catch {
- var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
-  }
-let ingfo = `*𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢/معلومات المجموعة*\n\n*𝗡𝗔𝗠𝗘/الاسم :* ${groupName}\n*𝗜𝗗 𝗚𝗥𝗢𝗨𝗣/ايدي الجروب:* ${m.chat}\n*𝗠𝗔𝗗𝗘/تاريخ الانشاء :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n*𝗚𝗥𝗢𝗨𝗣 𝗢𝗪𝗡𝗘𝗥/مالك الجروب:* @${groupMetadata.owner.split('@')[0]}\n*𝗔𝗗𝗠𝗜𝗡𝗦/الادمن :* ${groupAdmins.length}\n*𝗠𝗘𝗠𝗕𝗘𝗥𝗦/الاعضاء :* ${participants.length}\n*𝗗𝗘𝗦𝗖/الوصف :* \n${groupMetadata.desc}`
-ds = await getBuffer(pic)
-Wizard.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
-break
- case 'tagall': case 'تاك': case 'منشن': {
-   if (!m.isGroup) return mess.group
-   if (!isBotAdmins) return mess.botAdmin
-   if (!isAdmins) return mess.admin
-let teks = ` 
- ┏━━━━━━━━━━━┑
- ┃𝗧𝗔𝗚𝗔𝗟𝗟/منشن للكل
- ┃┄┄┄┄┄┄┄┄┄┄┄
- ┃*𝐌𝐄𝐒𝐒𝐀𝐆𝐄/الرساله : ${q ? q : 'message'}*\n\n`
- ┗━━━━━━━━ 
-
- for (let mem of participants) {
+                break
+            case 'تاك': case 'منشن': {
+            	if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+                if (!m.isGroup) return replay(`${mess.group}`)
+                if (!isBotAdmins) return replay(`${mess.botAdmin}`)
+                if (!isAdmins) return replay(`${mess.admin}`)
+let teks = `╚»˙·٠•●♥ منشن للكل ♥●•٠·˙«╝ 
+ 
+ ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
+                for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
