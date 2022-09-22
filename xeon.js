@@ -178,6 +178,8 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  مرحبا بك في 
    │✑  ${metadata.subject}
+   │✑  الوصف :
+   │✑ ${metadata.desc}
    │✑  الرقم : 
    │✑ ${xmembers}th
    │✑  الوقت : 
