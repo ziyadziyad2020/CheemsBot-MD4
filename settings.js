@@ -64,13 +64,13 @@ global.location = "Egypt, Cairo, Aizawl" //ur location
 global.owner = ['201098906252']
 global.ownertag = '201098906252' //ur tag number
 global.botname = '𝑩𝑶𝑻 𝑬𝑳𝑮𝑨𝒁𝑨𝑹🐼🍷 ٫' //ur bot name
-global.linkz = "https://telegra.ph/file/f504bef433c8fd31d1674.jpg" //your theme url which will be displayed on whatsapp
-global.websitex = "https://telegra.ph/file/f504bef433c8fd31d1674.jpg" //ur website to be displayed
-global.botscript = 'https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z' //script link
+global.linkz = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //your theme url which will be displayed on whatsapp
+global.websitex = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g" //ur website to be displayed
+global.botscript = 'https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn' //script link
 global.reactmoji = "🌚" //ur menu react emoji
 global.themeemoji = "🌞" //ur theme emoji
 global.packname = "⍣ الجزار الوزير يروحي ⍣" //ur sticker watermark packname
-global.author = "⍣ 01098906252 ⍣" //ur sticker watermark author
+global.author = "⍣01098906252⍣" //ur sticker watermark author
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
@@ -110,14 +110,14 @@ global.mess = {
     botAdmin: 'يجب أن يكون البوت مسؤولاً أولاً!',
     owner: 'هذه الميزة للمالك فقط!',
     group: 'لميزة تستخدم فقط للمجموعات!',
-    private: 'الميزاة المستخدمة فقط للدردشة الخاصة!',
+    private: 'الميزه المستخدمة فقط للدردشة الخاصة!',
     bot: 'هذه الميزة مخصصة للبوت فقط',
-    wait: 'استني شويه ...',
+    wait: 'استني شويه...',
     linkm: 'أين الرابط?',
     error: 'ايرور!!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
     ban: 'لقد تم حظرك من قبل المالك ، إذا كنت تريد أن تكون غير محظور ، مالك الدردشة.',
-    nsfw: 'لم يتم تنشيط ميزة الاباحي ، يرجى الاتصال بالمسؤول للتفعيل',
+    nsfw: 'لم يتم تنشيط ميزة nsfw ، يرجى الاتصال بالمسؤول للتفعيل',
     banChat: 'تم حظر الروبوت في هذه المجموعة ، يرجى الاتصال بالمالك لإلغاء الحظر'
 }
     global.limitawal = {
