@@ -1067,9 +1067,8 @@ Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
             if (!afkTime || afkTime < 0) continue
             let reason = user.afkReason || ''
             reply(`
-Don't tag him!
-He's in AFK/Offline ${reason ? 'dengan alasan ' + reason : 'no reason'}
-It's been ${clockString(new Date - afkTime)}
+متعملش ريب عليه لانه في وضع الاختفاء ${reason ? 'dengan alasan ' + reason : 'no reason'}
+مده الغياب ${clockString(new Date - afkTime)}
 `.trim())
         }
 
@@ -1619,7 +1618,7 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
-            case 'مغادره.الجيم': case 'delttt': {
+            case 'مغادره-الجيم': case 'delttt': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             this.game = this.game ? this.game : {}
@@ -3203,7 +3202,7 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-            case 'مسح': case 'del': {
+            case 'مسح': case 'حذف': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
@@ -3367,7 +3366,7 @@ if (!isCreator) return replay(mess.owner)
 		}		
             }
             break
-case 'chatinfo': {
+case 'المعلومات': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) replay('Reply Message')
@@ -3379,12 +3378,12 @@ let read = i.readTimestamp
 let unread = i.receiptTimestamp
 let waktu = read ? read : unread
 teks += `${global.themeemoji} @${i.userJid.split('@')[0]}\n`
-teks += ` ┗━${global.themeemoji} *الوقت :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ${global.themeemoji} *الحاله :* ${read ? 'Read' : 'Sent'}\n\n`
+teks += ` ┗━${global.themeemoji} *الوقت :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ${global.themeemoji} *الحاله :* ${read ? 'قرأت' : 'ارسلت'}\n\n`
 }
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
 break
-case 'q': case 'quoted': {
+case 'q': case 'الرد': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return replay('ريبلاي علي الرساله!!')
@@ -3393,7 +3392,7 @@ if (!wokwol.quoted) return replay('الرسالة التي قمت بالرد ع�
 await wokwol.quoted.copyNForward(m.chat, true)
 }
 break
-case 'listpc': case 'مستخدمون': {
+case 'listpc': case 'مستخدمين-البوت': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
@@ -3404,7 +3403,7 @@ for (let i of anu) {
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
 break
-case 'المستخدمين': {
+case 'جروبات-البوت': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
@@ -3613,14 +3612,14 @@ XeonBotInc.sendMessage(from, {image : nyz3, caption:`By ${global.botname}`}, {qu
 error("Error!")
 }
 break
-case 'كلاب':
+case 'doge':
 case '8ball':
 case 'goose':
 case 'gecg':
-case 'feed':
-case 'avatar':
-case 'حربايه':
-case 'قطه':
+case 'انمي-فيد':
+case 'انمي-افاتار':
+case 'chameleon':
+case 'cat':
 case 'tickle':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -3810,7 +3809,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break   
-case 'animenom' :
+case 'انمي-نوم' :
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -3828,7 +3827,7 @@ if (!m.isGroup) return replay(mess.group)
                     return('Error!')
                 })
 break
-case 'waifu3':
+case 'انمي-وايفي':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -3847,7 +3846,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'neko2':
+case 'انمي-نيكو':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -3885,7 +3884,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break   
-case 'animeslap':
+case 'انمي-سلاب':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -3904,7 +3903,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animepat':
+case 'انمي-بات':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -3961,7 +3960,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animekiss':
+case 'انمي-كيس':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -3999,7 +3998,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animespank':
+case 'انمي-سبانك':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4018,7 +4017,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animecry':
+case 'انمي-كري':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4037,7 +4036,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animekill':
+case 'انمي-كيل':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4075,7 +4074,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animebite':
+case 'انمي-بيتي':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4113,7 +4112,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animebully':
+case 'انمي-بولي':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4132,7 +4131,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animebonk':
+case 'انمي-بونك':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4151,7 +4150,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animewink':
+case 'انمي-وينك':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4189,7 +4188,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animesmile':
+case 'انمي-سميلي':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4246,7 +4245,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animeblush':
+case 'انمي-بلوش':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4265,7 +4264,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animesmug':
+case 'انمي-سموج':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4284,7 +4283,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animeglomp':
+case 'انمي-جلومب':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4303,7 +4302,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animehappy':
+case 'انمي-هابي':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4322,7 +4321,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animedance':
+case 'انمي-دانسي':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4379,7 +4378,7 @@ reply(mess.wait)
                     return('Error!')
                 })
 break
-case 'animehandhold':
+case 'انمي-هاندهولد':
    if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(mess.wait)						
@@ -4510,7 +4509,7 @@ case 'كراي':case 'كيل':case 'هوج':case 'بات':case 'ليك':case 'ك
 						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 					})
 					break
-case 'waifu': case 'لولي':
+case 'waifu': case 'انمي-لولي':
 					   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 					reply(mess.wait)
@@ -4519,7 +4518,7 @@ case 'waifu': case 'لولي':
 					XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
 					})
 					break
-case 'ناروتو':
+case 'انمي-ناروتو':
 			if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 				reply(mess.wait)
@@ -4541,7 +4540,7 @@ case 'قهوه': case 'kopi': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             let buttons = [
-                    {buttonId: `coffe`, buttonText: {displayText: 'Next Image'}, type: 1}
+                    {buttonId: `قهوه`, buttonText: {displayText: 'الصوره التاليه'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
@@ -6161,7 +6160,7 @@ gis(args.join(" "), async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
 let buttons = [
-{buttonId: `gimage ${args.join(" ")}`, buttonText: {displayText: 'الصوره التاليه 👀'}, type: 1}
+{buttonId: `صوره ${args.join(" ")}`, buttonText: {displayText: 'الصوره التاليه 👀'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: images },
@@ -8850,8 +8849,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "الميزات الأولية للبوت 🦄",
 								"rows": [
 									{
-										"title": "اخر ☕",
-										"description": "يعرض قائمة الميزات الأخرى",
+										"title": "قائمه الادمن ☕",
+										"description": "يعرض قائمة الادمن",
 										"rowId": `${prefix}othermenu`
 									}
 								]
@@ -8942,7 +8941,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										{
 										"title": "قائمه الالعاب 🎮",
 										"description": "يعرض قائمة ميزات اللعبة",
-										"rowId": `${prefix}indomenu`
+										"rowId": `${prefix}gamemenu`
 									},
 										{
 											"title": "قائمه التحويل ⚒️",
@@ -9184,9 +9183,9 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}pixelate
 ╠═══════✪「 قائمه صور عشوائيه 」
 ╠${prefix}قهوه
-╠${prefix}كلاب
-╠${prefix}قطه
-╠${prefix}حربايه
+╠${prefix}doge(صور كلاب)
+╠${prefix}cat (صور قطط)
+╠${prefix}chameleon(صور حربايه)
 ╠═══════✪「 قائمه تحويل ايموجي 」
 ╠${prefix}ايموجي-انستجرام
 ╠${prefix}ايموجي-فيسبوك
@@ -9198,8 +9197,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}انمي-ناروتو
 ╠${prefix}انمي-نيكو
 ╠${prefix}انمي-وايفي
-╠${prefix}انمي-وايفي2
-╠${prefix}لولي
+╠${prefix}انمي-لولي
 ╠${prefix}انمي-نوم
 ╠${prefix}انمي-افاتار
 ╠${prefix}انمي-فيد
@@ -9211,7 +9209,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}انمي-كيل
 ╠${prefix}انمي-بيتي
 ╠${prefix}انمي-بولي
-╠${prefix}انمي-بولك
+╠${prefix}انمي-بونك
 ╠${prefix}انمي-وينك
 ╠${prefix}انمي-بوكي
 ╠${prefix}انمي-سميلي
@@ -9610,8 +9608,8 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}المطور
 ╠ ${prefix}مسح
 ╠ ${prefix}الرد
-╠ ${prefix}المستخدمين
-╠ ${prefix}الجروبات
+╠ ${prefix}مستخدمين-البوت
+╠ ${prefix}جروبات-البوت
 ╠ ${prefix}طلب
 ╠ ${prefix}ابلاغ
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
@@ -9851,9 +9849,9 @@ case 'randomimagemenu':
 var unicorn = await getBuffer(picak+'Random Image Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه صور عشوائيه 」	
 ╠${prefix}قهوه
-╠${prefix}كلاب
-╠${prefix}قطه
-╠${prefix}حربايه
+╠${prefix}doge(صور كلاب)
+╠${prefix}cat (صور قطط)
+╠${prefix}chameleon(صور حربايه)
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 
@@ -9896,52 +9894,32 @@ case 'animemenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anime Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه انمي 」	
-╠${prefix}ناروتو
-╠${prefix}neko2
-╠${prefix}waifu
-╠${prefix}waifu3
-╠${prefix}shinobu
-╠${prefix}awoo2
-╠${prefix}waifu2
-╠${prefix}foxgirl
-╠${prefix}animenom
-╠${prefix}goose
-╠${prefix}8ball
-╠${prefix}avatar
-╠${prefix}tickle
-╠${prefix}gecg
-╠${prefix}feed
-╠${prefix}animeslap
-╠${prefix}animespank
-╠${prefix}animepat
-╠${prefix}animeneko
-╠${prefix}animekiss
-╠${prefix}animewlp
-╠${prefix}animecuddle
-╠${prefix}animecry
-╠${prefix}animekill
-╠${prefix}animelick
-╠${prefix}animebite
-╠${prefix}animeyeet
-╠${prefix}animebully
-╠${prefix}animebonk
-╠${prefix}animewink
-╠${prefix}animepoke
-╠${prefix}animesmile
-╠${prefix}animewave
-╠${prefix}animeawoo
-╠${prefix}animeblush
-╠${prefix}animesmug
-╠${prefix}animeglomp
-╠${prefix}animehappy
-╠${prefix}animedance
-╠${prefix}animecringe
-╠${prefix}animehighfive
-╠${prefix}animehandhold
-╠${prefix}animemegumin
-╠${prefix}megumin2
-╠${prefix}لولي
-╠${prefix}couplepp
+╠${prefix}انمي-ناروتو
+╠${prefix}انمي-نيكو
+╠${prefix}انمي-وايفي
+╠${prefix}انمي-وايفي2
+╠${prefix}انمي-لولي
+╠${prefix}انمي-نوم
+╠${prefix}انمي-افاتار
+╠${prefix}انمي-فيد
+╠${prefix}انمي-سليب
+╠${prefix}انمي-سبانك
+╠${prefix}انمي-بات
+╠${prefix}انمي-كيس
+╠${prefix}انمي-كري
+╠${prefix}انمي-كيل
+╠${prefix}انمي-بيتي
+╠${prefix}انمي-بولي
+╠${prefix}انمي-بونك
+╠${prefix}انمي-وينك
+╠${prefix}انمي-بوكي
+╠${prefix}انمي-سميلي
+╠${prefix}انمي-بلوش
+╠${prefix}انمي-سموج
+╠${prefix}انمي-جلومب
+╠${prefix}انمي-هابي
+╠${prefix}انمي-دانسي
+╠${prefix}انمي-هاندهولد
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'stickermenu':
@@ -10256,13 +10234,10 @@ case 'gamemenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Game Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه الالعاب 」	
-╠ ${prefix}truth
-╠ ${prefix}dare
-╠ ${prefix}tictactoe
-╠ ${prefix}delttt
-╠ ${prefix}guess [option]
-╠ ${prefix}math [mode]
-╠ ${prefix}suitpvp [tag]
+╠ ${prefix}اكس-او
+╠ ${prefix}مغادره-الجيم
+╠ ${prefix}حجر(قريبا)
+╠ ${prefix}الاسئله(قريبا)
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'anonymousmenu':
@@ -10396,26 +10371,21 @@ case 'othermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Other Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه المالك 」	
-╠ ${prefix}afk
-╠ ${prefix}readmore [text]
-╠ ${prefix}toviewonce
-╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه الادمن 」	
+╠ ${prefix}اختفاء
+╠ ${prefix}المعلومات
+╠ ${prefix}الاوامر
+╠ ${prefix}التسجيل
 ╠ ${prefix}القائمه
-╠ ${prefix}speedtest
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
-╠ ${prefix}chatinfo
-╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
-╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
+╠ ${prefix}تيست
+╠ ${prefix}بينج
+╠ ${prefix}المطور
+╠ ${prefix}مسح
+╠ ${prefix}الرد
+╠ ${prefix}مستخدمين-البوت
+╠ ${prefix}جروبات-البوت
+╠ ${prefix}طلب
+╠ ${prefix}ابلاغ
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'tqtt': 
