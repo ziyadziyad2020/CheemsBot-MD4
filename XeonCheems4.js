@@ -8954,7 +8954,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": "قائمه اولاد 🙎️️",
+										"title": "قائمه رمزيات اولاد 🙎️️",
 										"description": "يعرض قائمة ميزات رمزيات الاولاد",
 										"rowId": `${prefix}indomenu`
 									},
@@ -9545,7 +9545,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠══════✪「 قائمه رمزيات اولاد 」
 ╠ ${prefix}رمزيه1
 ╠ ${prefix}رمزيه2
-╠${prefix}jرمزيه3
+╠${prefix}رمزيه3
 ╠ ${prefix}رمزيه4
 ╠ ${prefix}رمزيه5 
 ╠ ${prefix}رمزيه6
@@ -10304,7 +10304,7 @@ var unicorn = await getBuffer(picak+'Indo Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه رمزيات اولاد 」	
 ╠ ${prefix}رمزيه1
 ╠ ${prefix}رمزيه2
-╠${prefix}jرمزيه3
+╠${prefix}رمزيه3
 ╠ ${prefix}رمزيه4
 ╠ ${prefix}رمزيه5 
 ╠ ${prefix}رمزيه6
