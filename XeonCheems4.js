@@ -1873,7 +1873,7 @@ XeonBotInc.sendMessage(from, { text: `السؤال : هل ${q}\nالاجابه :
 					if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 				if (!text) return replay(`Use Text, مثال : ${prefix + command} he married `)
-					const lel = [`روح اسأل مامتك`,`مدري`,`اسأل عمك رايزل`,`اسأل جدك يافتى`, `لا اعلم يا صاح`, `لا اعلم اذهب لسؤال ابيك`]
+					const lel = [`روح اسأل مامتك`,`مدري`,`اسأل عمك الجزار`,`اسأل جدك يافتى`, `لا اعلم يا صاح`, `لا اعلم اذهب لسؤال ابيك`]
 					const kahk = lel[Math.floor(Math.random() * lel.length)]
 XeonBotInc.sendMessage(from, { text: `السؤال : ماذا ${q}\nالاجابه : ${kahk}` }, { quoted: m })
 
@@ -8756,10 +8756,10 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-case 'sc': case 'script': case 'donate': case 'donate': case 'التسجيل': case 'رايزل': case 'cekbot': case 'جورج': {
+case 'sc': case 'script': case 'donate': case 'donate': case 'التسجيل': case 'الجزار': case 'cekbot': case 'التبرع': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script 」*\n\nيوتيوب: ${global.websitex}\nجروب الدعم: ${global.botscript}\n\nلا تنسى التبرع 🍜`
+teks = `*「 ${global.botname} التبرع 」*\n\nيوتيوب: ${global.websitex}\nجروب الدعم: ${global.botscript}\n\nلا تنسي الاشتراك بقناه اليوتيوب والانضمام الينا ❤️`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'القائمه 🌺'}, type: 1}
 ]
@@ -8874,9 +8874,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "قائمه تصميم لوجو 🌈",
+										"title": "قائمه تصميم لوجو 📸",
 										"description": "يعرض قائمة ميزات صنع الشعار",
-										"rowId": `${prefix}indomenu`
+										"rowId": `${prefix}makermenu`
 									},
 									{
 										"title": "قائمه الصوتيات 🎵",
@@ -8891,7 +8891,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 									{
 										"title": "قائمه الاستيكر 🃏",
 										"description": "يعرض قائمة ميزات الاستيكر",
-										"rowId": `${prefix}indomenu`
+										"rowId": `${prefix}stickermenu`
 									},
 									{
 										"title": "قائمه البحث 🔎",
@@ -8919,7 +8919,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "قائمة الرقص 😀",
+											"title": "قائمة تحويل ايموجي 💥",
 										"description": "يعرض قائمة ميزات التعبيرات",
 										"rowId": `${prefix}emotemenu`
 										},
@@ -8954,13 +8954,13 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": "قائمه هنديه  🦜",
-										"description": "يعرض قائمة الميزات الهندية",
+										"title": "قائمه اولاد 🙎️️",
+										"description": "يعرض قائمة ميزات رمزيات الاولاد",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "قائمة الأبراج 🕊️",
-										"description": "يعرض قائمة ميزات الأبراج",
+											"title": "قائمة رمزيات بنات ️🙎🏻‍♀️",
+										"description": "يعرض قائمة ميزات رمزيات البنات",
 										"rowId": `${prefix}indohoroscopemenu`
 										}
 								]
@@ -9280,9 +9280,11 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}spank
 ╠${prefix}hneko
 ╠${prefix}nwaifu
-╠═══════✪「 قائمه المرح 」
+╠═══════✪「 قائمه التسليه 」
 ╠ ${prefix}زواج
 ╠ ${prefix}زوجني
+╠${prefix}هل
+╠${prefix}ماذا
 ╠ ${prefix}احمق
 ╠ ${prefix}بشع
 ╠ ${prefix}جبان
@@ -9516,7 +9518,6 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}سوره الزمر
 ╠ ${prefix}سوره طه
 ╠ ${prefix}{الشيخ اسلام صبحي}
-╠ ${prefix}سوره ابراهيم
 ╠ ${prefix}سوره الفرقان
 ╠ ${prefix}سوره الملك
 ╠ ${prefix}سوره فصلت
@@ -9541,62 +9542,58 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}listmsg
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
-╠══════✪「 قائمه هنديه 」
-╠ ${prefix}darkjoke
-╠ ${prefix}quotes
-╠ ${prefix}animequotes
-╠${prefix}jalantikus-meme
-╠ ${prefix}merdeka-news 
-╠ ${prefix}kontan-news 
-╠ ${prefix}cnbc-news 
-╠ ${prefix}tribun-news 
-╠ ${prefix}indozone-news 
-╠ ${prefix}kompas-news 
-╠ ${prefix}detik-news 
-╠ ${prefix}daily-news 
-╠ ${prefix}inews-news 
-╠ ${prefix}okezone-news 
-╠ ${prefix}sindo-news 
-╠ ${prefix}tempo-news 
-╠ ${prefix}antara-news 
-╠ ${prefix}cnn-news 
-╠ ${prefix}fajar-news 
-╠${prefix}cinemaschedule
-╠${prefix}wiki
-╠${prefix}covidindo
-╠${prefix}earthquake
-╠${prefix}tvschedule
-╠══════✪「 قائمه ابراج الهند 」
-╠${prefix}nomorhoki
-╠${prefix}artimimpi 
-╠${prefix}artinama 
-╠${prefix}ramaljodoh 
-╠${prefix}ramaljodohbali 
-╠${prefix}suamiistri 
-╠${prefix}ramalcinta 
-╠${prefix}cocoknama 
-╠${prefix}pasangan 
-╠${prefix}jadiannikah 
-╠${prefix}sifatusaha 
-╠${prefix}rezeki 
-╠${prefix}pekerjaan 
-╠${prefix}nasib 
-╠${prefix}penyakit 
-╠${prefix}tarot 
-╠${prefix}fengshui 
-╠${prefix}haribaik 
-╠${prefix}harisangar 
-╠${prefix}harisial
-╠${prefix}nagahari
-╠${prefix}arahrezeki
-╠${prefix}peruntungan 
-╠${prefix}weton 
-╠${prefix}karakter
-╠${prefix}keberuntungan
-╠${prefix}memancing
-╠${prefix}masasubur
-╠${prefix}zodiak
-╠${prefix}shio
+╠══════✪「 قائمه رمزيات اولاد 」
+╠ ${prefix}رمزيه1
+╠ ${prefix}رمزيه2
+╠${prefix}jرمزيه3
+╠ ${prefix}رمزيه4
+╠ ${prefix}رمزيه5 
+╠ ${prefix}رمزيه6
+╠ ${prefix}رمزيه7
+╠ ${prefix}رمزيه8
+╠ ${prefix}رمزيه9
+╠ ${prefix}رمزيه10
+╠ ${prefix}رمزيه11
+╠ ${prefix}رمزيه12
+╠ ${prefix}رمزيه13
+╠ ${prefix}رمزيه14
+╠ ${prefix}رمزيه15
+╠ ${prefix}رمزيه16
+╠ ${prefix}رمزيه17
+╠ ${prefix}رمزيه18
+╠${prefix}رمزيه19
+╠${prefix}رمزيه20
+╠${prefix}رمزيه21
+╠${prefix}رمزيه22
+╠${prefix}رمزيه23
+╠${prefix}رمزيه24
+╠${prefix}رمزيه25
+╠${prefix}رمزيه26
+╠${prefix}رمزيه27
+╠${prefix}رمزيه28
+╠${prefix}رمزيه29
+╠${prefix}رمزيه30
+╠══════✪「 قائمه رمزيات بنات 」
+╠${prefix}رمزيه31
+╠${prefix}رمزيه32
+╠${prefix}رمزيه33 
+╠${prefix}رمزيه34
+╠${prefix}رمزيه35
+╠${prefix}رمزيه36
+╠${prefix}رمزيه37
+╠${prefix}رمزيه38
+╠${prefix}رمزيه39
+╠${prefix}رمزيه40 
+╠${prefix}رمزيه41 
+╠${prefix}رمزيه42
+╠${prefix}رمزيه43 
+╠${prefix}رمزيه44
+╠${prefix}رمزيه45
+╠${prefix}رمزيه46
+╠${prefix}رمزيه47
+╠${prefix}رمزيه48
+╠${prefix}رمزيه49
+╠${prefix}رمزيه50
 ╠══════✪「 قائمه الادمن 」
 ╠ ${prefix}اختفاء
 ╠ ${prefix}المعلومات
@@ -10009,6 +10006,8 @@ var unicorn = await getBuffer(picak+'Fun Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه التسليه 」	
 ╠ ${prefix}زواج
 ╠ ${prefix}زوجني
+╠${prefix}هل
+╠${prefix}ماذا
 ╠ ${prefix}احمق
 ╠ ${prefix}بشع
 ╠ ${prefix}جبان
@@ -10266,7 +10265,6 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}سوره الزمر
 ╠ ${prefix}سوره طه
 ╠ ${prefix}{الشيخ اسلام صبحي}
-╠ ${prefix}سوره ابراهيم
 ╠ ${prefix}سوره الفرقان
 ╠ ${prefix}سوره الملك
 ╠ ${prefix}سوره فصلت
@@ -10303,68 +10301,64 @@ case 'indomenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Indo Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه هنديه 」	
-╠ ${prefix}darkjoke
-╠ ${prefix}quotes
-╠ ${prefix}animequotes
-╠${prefix}jalantikus-meme
-╠ ${prefix}merdeka-news 
-╠ ${prefix}kontan-news 
-╠ ${prefix}cnbc-news 
-╠ ${prefix}tribun-news 
-╠ ${prefix}indozone-news 
-╠ ${prefix}kompas-news 
-╠ ${prefix}detik-news 
-╠ ${prefix}daily-news 
-╠ ${prefix}inews-news 
-╠ ${prefix}okezone-news 
-╠ ${prefix}sindo-news 
-╠ ${prefix}tempo-news 
-╠ ${prefix}antara-news 
-╠ ${prefix}cnn-news 
-╠ ${prefix}fajar-news 
-╠${prefix}cinemaschedule
-╠${prefix}wiki
-╠${prefix}covidindo
-╠${prefix}earthquake
-╠${prefix}tvschedule
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه رمزيات اولاد 」	
+╠ ${prefix}رمزيه1
+╠ ${prefix}رمزيه2
+╠${prefix}jرمزيه3
+╠ ${prefix}رمزيه4
+╠ ${prefix}رمزيه5 
+╠ ${prefix}رمزيه6
+╠ ${prefix}رمزيه7
+╠ ${prefix}رمزيه8
+╠ ${prefix}رمزيه9
+╠ ${prefix}رمزيه10
+╠ ${prefix}رمزيه11
+╠ ${prefix}رمزيه12
+╠ ${prefix}رمزيه13
+╠ ${prefix}رمزيه14
+╠ ${prefix}رمزيه15
+╠ ${prefix}رمزيه16
+╠ ${prefix}رمزيه17
+╠ ${prefix}رمزيه18
+╠${prefix}رمزيه19
+╠${prefix}رمزيه20
+╠${prefix}رمزيه21
+╠${prefix}رمزيه22
+╠${prefix}رمزيه23
+╠${prefix}رمزيه24
+╠${prefix}رمزيه25
+╠${prefix}رمزيه26
+╠${prefix}رمزيه27
+╠${prefix}رمزيه28
+╠${prefix}رمزيه29
+╠${prefix}رمزيه30
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'indohoroscopemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Indo Horoscope Menu')
-await XeonBotInc.send5ButImg(from, `╔═✪「 قائمه ابراج الهند 」	
-╠${prefix}nomorhoki
-╠${prefix}artimimpi 
-╠${prefix}artinama 
-╠${prefix}ramaljodoh 
-╠${prefix}ramaljodohbali 
-╠${prefix}suamiistri 
-╠${prefix}ramalcinta 
-╠${prefix}cocoknama 
-╠${prefix}pasangan 
-╠${prefix}jadiannikah 
-╠${prefix}sifatusaha 
-╠${prefix}rezeki 
-╠${prefix}pekerjaan 
-╠${prefix}nasib 
-╠${prefix}penyakit 
-╠${prefix}tarot 
-╠${prefix}fengshui 
-╠${prefix}haribaik 
-╠${prefix}harisangar 
-╠${prefix}harisial
-╠${prefix}nagahari
-╠${prefix}arahrezeki
-╠${prefix}peruntungan 
-╠${prefix}weton 
-╠${prefix}karakter
-╠${prefix}keberuntungan
-╠${prefix}memancing
-╠${prefix}masasubur
-╠${prefix}zodiak
-╠${prefix}shio
+await XeonBotInc.send5ButImg(from, `╔═✪「 قائمه رمزيات بنات 」	
+╠${prefix}رمزيه31
+╠${prefix}رمزيه32
+╠${prefix}رمزيه33 
+╠${prefix}رمزيه34
+╠${prefix}رمزيه35
+╠${prefix}رمزيه36
+╠${prefix}رمزيه37
+╠${prefix}رمزيه38
+╠${prefix}رمزيه39
+╠${prefix}رمزيه40 
+╠${prefix}رمزيه41 
+╠${prefix}رمزيه42
+╠${prefix}رمزيه43 
+╠${prefix}رمزيه44
+╠${prefix}رمزيه45
+╠${prefix}رمزيه46
+╠${prefix}رمزيه47
+╠${prefix}رمزيه48
+╠${prefix}رمزيه49
+╠${prefix}رمزيه50
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'othermenu':
