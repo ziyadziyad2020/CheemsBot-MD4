@@ -3139,7 +3139,7 @@ await XeonBotInc.updateProfilePicture(botNumber, { url: media }).catch((err) => 
 replay(mess.success)
 }
 break
-            case 'linkgroup': case 'رابط': case 'لينك': case 'grouplink': {
+            case 'linkgroup': case 'linkgc': case 'لينك': case 'grouplink': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -3153,7 +3153,7 @@ if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-                if (!text) return replay(`اكتب فتح للفتح وقفل لاغلاق`)
+                if (!text) return replay(`Enter The enable/disable Values`)
                 if (args[0] === 'فتح') {
                     await XeonBotInc.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'قفل') {
@@ -3207,7 +3207,7 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
                 let { chat, fromMe, id, isBaileys } = m.quoted
-                if (!isBaileys) return replay(`لم يتم إرسال الرسالة من قبل البوت!!`)
+                if (!isBaileys) return replay(`لم يتم إرسال الرسالة من قبل أي روبوت!!`)
                 XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
@@ -3248,7 +3248,7 @@ displayText: 'المطور 🐼🍷 ،',
 id: 'owner'
 }
 }]
-let txt = `*「 ${global.ownername}' شير للكل」*\n\n${text}`
+let txt = `*「 ${global.ownername}'s Broadcast」*\n\n${text}`
 XeonBotInc.send5ButImg(i, txt, `${global.botname}`, log0, btn, thum)
 }
 replay(`تم إرسال البث بنجاح إلى ${anu.length} جروب`)
@@ -3485,7 +3485,7 @@ if (isBanChat) return reply(mess.banChat)
             break
 case 'dogesticker':
 case 'كلب':
-	case 'dog':{
+	case 'doge':{
 	                	            	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var ano = await fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
@@ -3679,7 +3679,7 @@ let bjif = await GIFBufferToVideoBuffer(bjf)
                     return reply('error..')
                                     })
 break
-case 'فيديواباحي': case 'hentaivideo': {
+case 'hentaivid': case 'hentaivideo': {
 	                        	            	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	if (!m.isGroup) return replay(mess.group)
@@ -4597,7 +4597,7 @@ if (isBanChat) return reply(mess.banChat)
                 })
             }
             break
-case 'افكت-سجن': case 'افكت-تشويش': case 'افكت-بلور': case 'ابيض-واسود': case 'triggeredwebp': case 'شيت': case 'افكت-غامق': case 'invert': case 'افكت-جرنان': case 'افكت-وفاه': {
+case 'jail': case 'pixelate': case 'blur': case 'imagesketch': case 'triggeredwebp': case 'shit': case 'burn': case 'invert': case 'wanted': case 'rip': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	            if (!/image/.test(mime)) return reply(`*Send/Reply Image With Caption* ${prefix + command}`)
@@ -4619,7 +4619,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { image: buf, caption: `مصنوع بواسطة ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                 break
-case 'افكت-حذف': {
+case 'deleteeffect': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	            if (!/image/.test(mime)) return reply(`*Send/Reply Image With Caption* ${prefix + command}`)
@@ -4641,7 +4641,7 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { image: buf, caption: `مصنوع بواسطة ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                 break
-case 'افكت-صوره': {
+case 'beautifuleffect': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 	            if (!/image/.test(mime)) return reply(`*Send/Reply Image With Caption* ${prefix + command}`)
@@ -5028,7 +5028,7 @@ maker.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.ht
   .then((data) => XeonBotInc.sendMessage(m.chat, { image: { url: data }, caption: `مصنوع بواسطة ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
-   case 'لوجو6':
+   case 'blackpinkneon':
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if(!q) return reply(`Use ${prefix + command} text`)
@@ -5340,15 +5340,15 @@ maker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html",
    break
  
 case 'لوجو1': case 'christmas': case '3dchristmas': case 'sparklechristmas':
-case 'deepsea': case 'لوجو8': case 'rainbow2': case 'waterpipe': case 'spooky': 
-case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'لوجو9': case 'demon': 
-case 'transformer': case 'لوجو10': case 'thunder': case '.': case '3dstone2': 
+case 'deepsea': case 'scifi': case 'rainbow2': case 'waterpipe': case 'spooky': 
+case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'fiction': case 'demon': 
+case 'transformer': case 'berry': case 'thunder': case '.': case '3dstone2': 
 case 'neonlight': case 'glitch': case 'harrypotter': case 'brokenglass': case 'papercut': 
-case 'watercolor': case 'multicolor': case 'neondevil': case 'لوجو29': case 'graffitibike':
- case 'snow': case 'cloud': case 'honey': case 'ice': case 'لوجو11': case 'لوجو12': case 'لوجو13': 
-case 'لوجو14': case 'strawberry': case 'لوجو15': case 'لوجو16': case 'dropwater': case 'toxic': 
-case 'لوجو26': case 'لوجو27': case 'لوجو28': case 'لوجو17': case 'لوجو19': case 'joker': case 'لوجو18':
- case 'لوجو20': case 'لوجو21': case 'blackpink': case 'لوجو22': case 'لوجو23': case '1917': case 'لوجو24': case 'demon': {
+case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 'graffitibike':
+ case 'snow': case 'cloud': case 'honey': case 'ice': case 'fruitjuice': case 'biscuit': case 'wood': 
+case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
+case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': case 'joker': case 'wicker':
+ case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case 'demon': {
              if (!q) return reply(`مثال : ${prefix + command} ${global.ownername}`) 
                 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -5359,7 +5359,7 @@ if (isBanChat) return reply(mess.banChat)
              if (/3dchristmas/.test(command)) link = 'https://textpro.me/3d-christmas-text-effect-by-name-1055.html'
              if (/sparklechristmas/.test(command)) link = 'https://textpro.me/sparkles-merry-christmas-text-effect-1054.html'
              if (/deepsea/.test(command)) link = 'https://textpro.me/create-3d-deep-sea-metal-text-effect-online-1053.html'
-             if (/لوجو8/.test(command)) link = 'https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html'
+             if (/scifi/.test(command)) link = 'https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html'
              if (/rainbow/.test(command)) link = 'https://textpro.me/3d-rainbow-color-calligraphy-text-effect-1049.html'
              if (/waterpipe/.test(command)) link = 'https://textpro.me/create-3d-water-pipe-text-effects-online-1048.html'
              if (/spooky/.test(command)) link = 'https://textpro.me/create-halloween-skeleton-text-effect-online-1047.html'
@@ -5367,12 +5367,12 @@ if (isBanChat) return reply(mess.banChat)
              if (/circuit/.test(command)) link = 'https://textpro.me/create-blue-circuit-style-text-effect-online-1043.html'
              if (/discovery/.test(command)) link = 'https://textpro.me/create-space-text-effects-online-free-1042.html'
              if (/metalic/.test(command)) link = 'https://textpro.me/creat-glossy-metalic-text-effect-free-online-1040.html'
-             if (/لوجو9/.test(command)) link = 'https://textpro.me/create-science-fiction-text-effect-online-free-1038.html'
+             if (/fiction/.test(command)) link = 'https://textpro.me/create-science-fiction-text-effect-online-free-1038.html'
              if (/demon/.test(command)) link = 'https://textpro.me/create-green-horror-style-text-effect-online-1036.html'
              if (/transformer/.test(command)) link = 'https://textpro.me/create-a-transformer-text-effect-online-1035.html'
-             if (/لوجو10/.test(command)) link = 'https://textpro.me/create-berry-text-effect-online-free-1033.html'
+             if (/berry/.test(command)) link = 'https://textpro.me/create-berry-text-effect-online-free-1033.html'
              if (/thunder/.test(command)) link = 'https://textpro.me/online-thunder-text-effect-generator-1031.html'
-             if (/لوجو25/.test(command)) link = 'https://textpro.me/create-a-magma-hot-text-effect-online-1030.html'
+             if (/magma/.test(command)) link = 'https://textpro.me/create-a-magma-hot-text-effect-online-1030.html'
              if (/3dstone2/.test(command)) link = 'https://textpro.me/create-a-3d-stone-text-effect-online-for-free-1073.html'
              if (/neonlight/.test(command)) link = 'https://textpro.me/create-3d-neon-light-text-effect-online-1028.html'
              if (/glitch/.test(command)) link = 'https://textpro.me/create-impressive-glitch-text-effects-online-1027.html'
@@ -5382,41 +5382,41 @@ if (isBanChat) return reply(mess.banChat)
              if (/watercolor/.test(command)) link = 'https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html'
              if (/multicolor/.test(command)) link = 'https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html'
              if (/neondevil/.test(command)) link = 'https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html'
-             if (/لوجو29/.test(command)) link = 'https://textpro.me/3d-underwater-text-effect-generator-online-1013.html'
+             if (/underwater/.test(command)) link = 'https://textpro.me/3d-underwater-text-effect-generator-online-1013.html'
              if (/graffitibike/.test(command)) link = 'https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html'
              if (/snow/.test(command)) link = 'https://textpro.me/create-snow-text-effects-for-winter-holidays-1005.html'
              if (/cloud/.test(command)) link = 'https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html'
              if (/honey/.test(command)) link = 'https://textpro.me/honey-text-effect-868.html'
              if (/ice/.test(command)) link = 'https://textpro.me/ice-cold-text-effect-862.html'
-             if (/لوجو11/.test(command)) link = 'https://textpro.me/fruit-juice-text-effect-861.html'
-             if (/لوجو12/.test(command)) link = 'https://textpro.me/biscuit-text-effect-858.html'
-             if (/لوجو13/.test(command)) link = 'https://textpro.me/wood-text-effect-856.html'
-             if (/لوجو14/.test(command)) link = 'https://textpro.me/chocolate-cake-text-effect-890.html'
+             if (/fruitjuice/.test(command)) link = 'https://textpro.me/fruit-juice-text-effect-861.html'
+             if (/biscuit/.test(command)) link = 'https://textpro.me/biscuit-text-effect-858.html'
+             if (/wood/.test(command)) link = 'https://textpro.me/wood-text-effect-856.html'
+             if (/chocolate/.test(command)) link = 'https://textpro.me/chocolate-cake-text-effect-890.html'
              if (/strawberry/.test(command)) link = 'https://textpro.me/strawberry-text-effect-online-889.html'
-             if (/لوجو15/.test(command)) link = 'https://textpro.me/matrix-style-text-effect-online-884.html'
-             if (/لوجو16/.test(command)) link = 'https://textpro.me/horror-blood-text-effect-online-883.html'
+             if (/matrix/.test(command)) link = 'https://textpro.me/matrix-style-text-effect-online-884.html'
+             if (/blood/.test(command)) link = 'https://textpro.me/horror-blood-text-effect-online-883.html'
              if (/dropwater/.test(command)) link = 'https://textpro.me/dropwater-text-effect-872.html'
              if (/toxic/.test(command)) link = 'https://textpro.me/toxic-text-effect-online-901.html'
-             if (/لوجو26/.test(command)) link = 'https://textpro.me/lava-text-effect-online-914.html'
-             if (/لوجو27/.test(command)) link = 'https://textpro.me/rock-text-effect-online-915.html'
-             if (/لوجو28/.test(command)) link = 'https://textpro.me/blood-text-on-the-frosted-glass-941.html'
-             if (/لوجو17/.test(command)) link = 'https://textpro.me/halloween-fire-text-effect-940.html'
-             if (/لوجو19/.test(command)) link = 'https://textpro.me/metal-dark-gold-text-effect-online-939.html'
+             if (/lava/.test(command)) link = 'https://textpro.me/lava-text-effect-online-914.html'
+             if (/rock/.test(command)) link = 'https://textpro.me/rock-text-effect-online-915.html'
+             if (/bloodglas/.test(command)) link = 'https://textpro.me/blood-text-on-the-frosted-glass-941.html'
+             if (/halloween/.test(command)) link = 'https://textpro.me/halloween-fire-text-effect-940.html'
+             if (/darkgold/.test(command)) link = 'https://textpro.me/metal-dark-gold-text-effect-online-939.html'
              if (/joker/.test(command)) link = 'https://textpro.me/create-logo-joker-online-934.html'
-             if (/لوجو18/.test(command)) link = 'https://textpro.me/wicker-text-effect-online-932.html'
-             if (/لوجو20/.test(command)) link = 'https://textpro.me/firework-sparkle-text-effect-930.html'
-             if (/لوجو21/.test(command)) link = 'https://textpro.me/skeleton-text-effect-online-929.html'
+             if (/wicker/.test(command)) link = 'https://textpro.me/wicker-text-effect-online-932.html'
+             if (/firework/.test(command)) link = 'https://textpro.me/firework-sparkle-text-effect-930.html'
+             if (/skeleton/.test(command)) link = 'https://textpro.me/skeleton-text-effect-online-929.html'
              if (/blackpink/.test(command)) link = 'https://textpro.me/create-blackpink-logo-style-online-1001.html'
-             if (/لوجو22/.test(command)) link = 'https://textpro.me/write-in-sand-summer-beach-free-online-991.html'
-             if (/لوجو23/.test(command)) link = 'https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html'
+             if (/sand/.test(command)) link = 'https://textpro.me/write-in-sand-summer-beach-free-online-991.html'
+             if (/glue/.test(command)) link = 'https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html'
              if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-online-980.html'
-                if (/لوجو24/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'           
+                if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'           
              let anu = await maker.textpro(link, q)
                 XeonBotInc.sendMessage(m.chat, { image: { url: anu }, caption: `مصنوع بواسطة ${global.botname}` }, { quoted: m })
              }
              break
 
-case 'لوجو30': {
+case 'textmaker': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (args.length < 1) return reply(`مثال :\n${prefix + command} <name>`)
@@ -5434,7 +5434,7 @@ reply(`*Text Maker List :*\n•> glitch\n•> glow`)
 }
 break
 //logo maker
-case 'لوجو4':{
+case 'hoorror':{
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/horror-blood-text-effect-online-883.html`
@@ -5505,7 +5505,7 @@ if (isBanChat) return reply(mess.banChat)
 }
    break
 
-case 'لوجو25':{
+case 'magma':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-magma-hot-text-effect-online-1030.html`
@@ -5515,7 +5515,7 @@ if (isBanChat) return reply(mess.banChat)
     XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
-case 'لوجو22':{
+case 'sand':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/sand-writing-text-effect-online-990.html`
@@ -5575,7 +5575,7 @@ if (isBanChat) return reply(mess.banChat)
     XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
-case 'لوجو29':{
+case 'underwater':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-underwater-text-effect-generator-online-1013.html`
@@ -5625,7 +5625,7 @@ if (isBanChat) return reply(mess.banChat)
     XeonBotInc.sendMessage(from, {image:{url:anui}, caption:"اي خدمه يروحي🌚💕!"}, {quoted:m})
 }
    break
-case 'لوجو26':{
+case 'lava':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/lava-text-effect-online-914.html`
@@ -5849,7 +5849,7 @@ console.log(anu)
 XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
-case 'لوجو5':{
+case 'retro':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
@@ -5863,7 +5863,7 @@ console.log(anu)
 XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
-case 'لوجو3':{
+case 'horror':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
@@ -5877,7 +5877,7 @@ console.log(anu)
 XeonBotInc.sendMessage(from,{image:{url:anu}, caption:"اي خدمه يروحي🌚💕!"},{quoted:m})
 }
 break
-case 'لوجو2':{
+case '8bit':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if(!q) return reply(`مثال: ${prefix + command} ajg | ea`)
@@ -6662,12 +6662,12 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(m.chat, {text:`@${m.sender.split("@")[0]}`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 }
 break
-           case 'هات': case 'جلب':
+           case 'git': case 'gitclone':
            if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 	reply(mess.wait)
             let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-            if (!args[0]) reply(`Use ${prefix}gitclone repo link\nمثال: https://github.com/DMD4`)
+            if (!args[0]) reply(`Use ${prefix}gitclone repo link\nمثال: https://github.com/DGXeon/CheemsBot-MD4`)
     if (!regex1.test(args[0])) return reply(mess.linkm)
     let [, user, repo] = args[0].match(regex1) || []
     repo = repo.replace(/.git$/, '')
@@ -6677,15 +6677,15 @@ break
 			break
 
 case 'لوجو1': case 'christmas': case '3dchristmas': case 'sparklechristmas':
-case 'لوجو7': case 'لوجو8': case 'rainbow': case 'waterpipe': case 'spooky': 
-case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'لوجو9': case 'demon': 
-case 'transformer': case 'لوجو10': case 'thunder': case 'لوجو25': case '3dstone': 
+case 'deepsea': case 'scifi': case 'rainbow': case 'waterpipe': case 'spooky': 
+case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'fiction': case 'demon': 
+case 'transformer': case 'berry': case 'thunder': case 'magma': case '3dstone': 
 case 'neonlight': case 'glitch': case 'harrypotter': case 'brokenglass': case 'papercut': 
-case 'watercolor': case 'multicolor': case 'neondevil': case 'لوجو29': case 'graffitibike':
- case 'snow': case 'cloud': case 'honey': case 'ice': case 'لوجو11': case 'لوجو12': case 'لوجو13': 
-case 'لوجو14': case 'strawberry': case 'لوجو15': case 'لوجو16': case 'dropwater': case 'toxic': 
-case 'لوجو26': case 'لوجو27': case 'لوجو28': case 'hallowen': case 'لوجو19': case 'joker': case 'لوجو18':
- case 'لوجو20': case 'لوجو21': case 'blackpink': case 'لوجو22': case 'لوجو23': case '1917': case 'لوجو24': {
+case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 'graffitibike':
+ case 'snow': case 'cloud': case 'honey': case 'ice': case 'fruitjuice': case 'biscuit': case 'wood': 
+case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
+case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': case 'joker': case 'wicker':
+ case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': {
  	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
               if (!q) return reply(`مثال : ${prefix + command} ${global.ownername}`) 
@@ -6695,8 +6695,8 @@ if (isBanChat) return reply(mess.banChat)
              if (/christmas/.test(command)) link = 'https://textpro.me/christmas-tree-text-effect-online-free-1057.html'
              if (/3dchristmas/.test(command)) link = 'https://textpro.me/3d-christmas-text-effect-by-name-1055.html'
              if (/sparklechristmas/.test(command)) link = 'https://textpro.me/sparkles-merry-christmas-text-effect-1054.html'
-             if (/لوجو7/.test(command)) link = 'https://textpro.me/create-3d-deep-sea-metal-text-effect-online-1053.html'
-             if (/لوجو8/.test(command)) link = 'https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html'
+             if (/deepsea/.test(command)) link = 'https://textpro.me/create-3d-deep-sea-metal-text-effect-online-1053.html'
+             if (/scifi/.test(command)) link = 'https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html'
              if (/rainbow/.test(command)) link = 'https://textpro.me/3d-rainbow-color-calligraphy-text-effect-1049.html'
              if (/waterpipe/.test(command)) link = 'https://textpro.me/create-3d-water-pipe-text-effects-online-1048.html'
              if (/spooky/.test(command)) link = 'https://textpro.me/create-halloween-skeleton-text-effect-online-1047.html'
@@ -6704,12 +6704,12 @@ if (isBanChat) return reply(mess.banChat)
              if (/circuit/.test(command)) link = 'https://textpro.me/create-blue-circuit-style-text-effect-online-1043.html'
              if (/discovery/.test(command)) link = 'https://textpro.me/create-space-text-effects-online-free-1042.html'
              if (/metalic/.test(command)) link = 'https://textpro.me/creat-glossy-metalic-text-effect-free-online-1040.html'
-             if (/لوجو9/.test(command)) link = 'https://textpro.me/create-science-ELGAZAR-text-effect-online-free-1038.html'
+             if (/fiction/.test(command)) link = 'https://textpro.me/create-science-fiction-text-effect-online-free-1038.html'
              if (/demon/.test(command)) link = 'https://textpro.me/create-green-horror-style-text-effect-online-1036.html'
              if (/transformer/.test(command)) link = 'https://textpro.me/create-a-transformer-text-effect-online-1035.html'
-             if (/لوجو10/.test(command)) link = 'https://textpro.me/create-berry-text-effect-online-free-1033.html'
+             if (/berry/.test(command)) link = 'https://textpro.me/create-berry-text-effect-online-free-1033.html'
              if (/thunder/.test(command)) link = 'https://textpro.me/online-thunder-text-effect-generator-1031.html'
-             if (/لوجو25/.test(command)) link = 'https://textpro.me/create-a-magma-hot-text-effect-online-1030.html'
+             if (/magma/.test(command)) link = 'https://textpro.me/create-a-magma-hot-text-effect-online-1030.html'
              if (/3dstone/.test(command)) link = 'https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html'
              if (/neonlight/.test(command)) link = 'https://textpro.me/create-3d-neon-light-text-effect-online-1028.html'
              if (/glitch/.test(command)) link = 'https://textpro.me/create-impressive-glitch-text-effects-online-1027.html'
@@ -6719,35 +6719,35 @@ if (isBanChat) return reply(mess.banChat)
              if (/watercolor/.test(command)) link = 'https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html'
              if (/multicolor/.test(command)) link = 'https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html'
              if (/neondevil/.test(command)) link = 'https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html'
-             if (/لوجو29/.test(command)) link = 'https://textpro.me/3d-underwater-text-effect-generator-online-1013.html'
+             if (/underwater/.test(command)) link = 'https://textpro.me/3d-underwater-text-effect-generator-online-1013.html'
              if (/graffitibike/.test(command)) link = 'https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html'
              if (/snow/.test(command)) link = 'https://textpro.me/create-snow-text-effects-for-winter-holidays-1005.html'
              if (/cloud/.test(command)) link = 'https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html'
              if (/honey/.test(command)) link = 'https://textpro.me/honey-text-effect-868.html'
              if (/ice/.test(command)) link = 'https://textpro.me/ice-cold-text-effect-862.html'
-             if (/لوجو11/.test(command)) link = 'https://textpro.me/fruit-juice-text-effect-861.html'
-             if (/لوجو12/.test(command)) link = 'https://textpro.me/biscuit-text-effect-858.html'
-             if (/لوجو13/.test(command)) link = 'https://textpro.me/wood-text-effect-856.html'
-             if (/لوجو14/.test(command)) link = 'https://textpro.me/chocolate-cake-text-effect-890.html'
+             if (/fruitjuice/.test(command)) link = 'https://textpro.me/fruit-juice-text-effect-861.html'
+             if (/biscuit/.test(command)) link = 'https://textpro.me/biscuit-text-effect-858.html'
+             if (/wood/.test(command)) link = 'https://textpro.me/wood-text-effect-856.html'
+             if (/chocolate/.test(command)) link = 'https://textpro.me/chocolate-cake-text-effect-890.html'
              if (/strawberry/.test(command)) link = 'https://textpro.me/strawberry-text-effect-online-889.html'
-             if (/لوجو15/.test(command)) link = 'https://textpro.me/matrix-style-text-effect-online-884.html'
-             if (/لوجو16/.test(command)) link = 'https://textpro.me/horror-blood-text-effect-online-883.html'
+             if (/matrix/.test(command)) link = 'https://textpro.me/matrix-style-text-effect-online-884.html'
+             if (/blood/.test(command)) link = 'https://textpro.me/horror-blood-text-effect-online-883.html'
              if (/dropwater/.test(command)) link = 'https://textpro.me/dropwater-text-effect-872.html'
              if (/toxic/.test(command)) link = 'https://textpro.me/toxic-text-effect-online-901.html'
-             if (/لوجو26/.test(command)) link = 'https://textpro.me/lava-text-effect-online-914.html'
-             if (/لوجو27/.test(command)) link = 'https://textpro.me/rock-text-effect-online-915.html'
-             if (/لوجو28/.test(command)) link = 'https://textpro.me/blood-text-on-the-frosted-glass-941.html'
+             if (/lava/.test(command)) link = 'https://textpro.me/lava-text-effect-online-914.html'
+             if (/rock/.test(command)) link = 'https://textpro.me/rock-text-effect-online-915.html'
+             if (/bloodglas/.test(command)) link = 'https://textpro.me/blood-text-on-the-frosted-glass-941.html'
              if (/hallowen/.test(command)) link = 'https://textpro.me/halloween-fire-text-effect-940.html'
-             if (/لوجو19/.test(command)) link = 'https://textpro.me/metal-dark-gold-text-effect-online-939.html'
+             if (/darkgold/.test(command)) link = 'https://textpro.me/metal-dark-gold-text-effect-online-939.html'
              if (/joker/.test(command)) link = 'https://textpro.me/create-logo-joker-online-934.html'
-             if (/لوجو18/.test(command)) link = 'https://textpro.me/wicker-text-effect-online-932.html'
-             if (/لوجو20/.test(command)) link = 'https://textpro.me/firework-sparkle-text-effect-930.html'
-             if (/لوجو21/.test(command)) link = 'https://textpro.me/skeleton-text-effect-online-929.html'
+             if (/wicker/.test(command)) link = 'https://textpro.me/wicker-text-effect-online-932.html'
+             if (/firework/.test(command)) link = 'https://textpro.me/firework-sparkle-text-effect-930.html'
+             if (/skeleton/.test(command)) link = 'https://textpro.me/skeleton-text-effect-online-929.html'
              if (/blackpink/.test(command)) link = 'https://textpro.me/create-blackpink-logo-style-online-1001.html'
-             if (/لوجو22/.test(command)) link = 'https://textpro.me/write-in-sand-summer-beach-free-online-991.html'
-             if (/لوجو23/.test(command)) link = 'https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html'
+             if (/sand/.test(command)) link = 'https://textpro.me/write-in-sand-summer-beach-free-online-991.html'
+             if (/glue/.test(command)) link = 'https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html'
              if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-online-980.html'
-                if (/لوجو24/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
+                if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
              let anu = await maker.textpro(link, q)
                 XeonBotInc.sendMessage(m.chat, { image: { url: anu }, caption: `مصنوع بواسطة ${global.botname},For my Darling ` }, { quoted: m })
              }
@@ -9027,36 +9027,109 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}رفع
 ╠${prefix}تنزيل
 ╠═══════✪「 قائمه عمل لوجو 」
-╠${prefix}لوجو1
-╠${prefix}لوجو2
-╠${prefix}لوجو3
-╠${prefix}لوجو4
-╠${prefix}لوجو5
-╠${prefix}لوجو6
-╠${prefix}لوجو7
-╠${prefix}لوجو8
-╠${prefix}لوجو9
-╠${prefix}لوجو10
-╠${prefix}لوجو11
-╠${prefix}لوجو12
-╠${prefix}لوجو13
-╠${prefix}لوجو14
-╠${prefix}لوجو15
-╠${prefix}لوجو16
-╠${prefix}لوجو17
-╠${prefix}لوجو18
-╠${prefix}لوجو19
-╠${prefix}لوجو20
-╠${prefix}لوجو21
-╠${prefix}لوجو22
-╠${prefix}لوجو23
-╠${prefix}لوجو24
-╠${prefix}لوجو25
-╠${prefix}لوجو26
-╠${prefix}لوجو27
-╠${prefix}لوجو28
-╠${prefix}لوجو29
-╠${prefix}لوجو30
+╠${prefix}candy
+╠${prefix}blackpinkneon
+╠${prefix}deepsea
+╠${prefix}scifi
+╠${prefix}fiction
+╠${prefix}berry
+╠${prefix}fruitjuice
+╠${prefix}biscuit
+╠${prefix}wood
+╠${prefix}chocolate
+╠${prefix}matrix
+╠${prefix}blood
+╠${prefix}halloween
+╠${prefix}wicker
+╠${prefix}darkgold
+╠${prefix}firework
+╠${prefix}skeleton
+╠${prefix}sand
+╠${prefix}glue
+╠${prefix}leaves
+╠${prefix}magma
+╠${prefix}lava
+╠${prefix}rock
+╠${prefix}bloodglas
+╠${prefix}underwater
+╠${prefix}textmaker
+╠${prefix}honey
+╠${prefix}ice
+╠${prefix}watercolor
+╠${prefix}multicolor
+╠${prefix}snow
+╠${prefix}harrypot
+╠${prefix}harrypotter
+╠${prefix}brokenglass
+╠${prefix}waterpipe
+╠${prefix}spooky
+╠${prefix}circuit
+╠${prefix}metallic
+╠${prefix}demon
+╠${prefix}sparklechristmas
+╠${prefix}christmas
+╠${prefix}3dchristmas
+╠${prefix}3dbox
+╠${prefix}waterdrop
+╠${prefix}lion2
+╠${prefix}papercut
+╠${prefix}transformer
+╠${prefix}neondevil
+╠${prefix}3davengers
+╠${prefix}3dstone
+╠${prefix}3dstone2
+╠${prefix}summertime
+╠${prefix}thunder
+╠${prefix}window
+╠${prefix}graffiti
+╠${prefix}graffitibike
+╠${prefix}pornhub
+╠${prefix}glitch
+╠${prefix}blackpink
+╠${prefix}glitch2
+╠${prefix}glitch3
+╠${prefix}3dspace
+╠${prefix}lion
+╠${prefix}3dneon
+╠${prefix}greenneon
+╠${prefix}bokeh
+╠${prefix}holographic
+╠${prefix}bear
+╠${prefix}wolf
+╠${prefix}joker
+╠${prefix}dropwater
+╠${prefix}dropwater2
+╠${prefix}thewall
+╠${prefix}neonlight
+╠${prefix}natural
+╠${prefix}carbon
+╠${prefix}pencil
+╠${prefix}blackpink2
+╠${prefix}neon
+╠${prefix}neonlight2
+╠${prefix}toxic
+╠${prefix}strawberry
+╠${prefix}discovery
+╠${prefix}1917
+╠ ${prefix}sci_fi
+╠ ${prefix}ancient
+╠ ${prefix}fabric
+╠ ${prefix}hoorror
+╠ ${prefix}whitebear
+╠ ${prefix}juice
+╠ ${prefix}batman
+╠ ${prefix}multicolor
+╠ ${prefix}collwall
+╠ ${prefix}wonderful
+╠ ${prefix}cool
+╠ ${prefix}sketch
+╠ ${prefix}marvel
+╠ ${prefix}foggy
+╠ ${prefix}writing
+╠ ${prefix}halloweenfire
+╠ ${prefix}halloween
+╠ ${prefix}watercolor
+╠ ${prefix}classic
 ╠═════✪「 قائمه التنزيل 」	
 ╠${prefix}انستجرام
 ╠${prefix}فيسبوك
@@ -9094,17 +9167,20 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}عكس
 ╠${prefix}روبوت
 ╠═══════✪「 قائمه افكتات الصور 」
-╠${prefix}افكت-جرنان
-╠${prefix}افكت-بلور
-╠${prefix}افكت-شاذ
-╠${prefix}ابيض-واسود
-╠${prefix}افكت-غامق
-╠${prefix}شيت
-╠${prefix}افكت-وفاه
-╠${prefix}افكت-سجن
-╠${prefix}افكت-صوره
-╠${prefix}افكت-حذف
-╠${prefix}افكت-تشويش
+╠${prefix}wanted
+╠${prefix}blur
+╠${prefix}framed
+╠${prefix}gayeffect
+╠${prefix}imagesketch
+╠${prefix}invert
+╠${prefix}burn
+╠${prefix}triggeredwebp
+╠${prefix}shit
+╠${prefix}rip
+╠${prefix}jail
+╠${prefix}beautifuleffect
+╠${prefix}deleteeffect
+╠${prefix}pixelate
 ╠═══════✪「 قائمه صور عشوائيه 」
 ╠${prefix}قهوه
 ╠${prefix}doge(صور كلاب)
@@ -9149,8 +9225,37 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}استايل2
 ╠ ${prefix}كلب
 ╠ ${prefix}استيكرحب
+╠════✪「 قائمه استيكرات انمي 」
+╠${prefix}bully
+╠${prefix}cuddle
+╠${prefix}cry
+╠${prefix}hug
+╠${prefix}awoo
+╠${prefix}kiss
+╠${prefix}lick
+╠${prefix}pat
+╠${prefix}smug
+╠${prefix}bonk
+╠${prefix}yeet
+╠${prefix}blush
+╠${prefix}smile
+╠${prefix}wave
+╠${prefix}highfive
+╠${prefix}handhold
+╠${prefix}nom
+╠${prefix}glomp
+╠${prefix}bite
+╠${prefix}slap
+╠${prefix}kill
+╠${prefix}happy
+╠${prefix}wink
+╠${prefix}poke
+╠${prefix}dance
+╠${prefix}cringe
+╠${prefix}neko
+╠${prefix}gura
 ╠═══════✪「 قائمه انمي اباحي 」
-╠${prefix}فيديواباحي
+╠${prefix}hentaivideo
 ╠${prefix}yuri
 ╠${prefix}masturbation
 ╠${prefix}thighs
@@ -9428,11 +9533,15 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}سوره التوبه
 ╠ ${prefix}سوره القصص
 ╠ ${prefix}سوره النور
-╠══════✪「 قائمه التواصل مع المطور 」
-╠ ${prefix}رقم المطور( https://api.whatsapp.com/send?phone=+201098906252 )
-╠ ${prefix}الانستجرام( https://instagram.com/a_d_a_l_l_a_h?igshid=YmMyMTA2M2Y= )
-╠ ${prefix}قناه اليوتيوب( https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g )
-╠ ${prefix}التليجرام( https://t.me/A_M_030 )
+╠══════✪「 قائمه قاعده البيانات 」
+╠ ${prefix}setcmd
+╠ ${prefix}listcmd
+╠ ${prefix}delcmd
+╠ ${prefix}lockcmd
+╠ ${prefix}addmsg
+╠ ${prefix}listmsg
+╠ ${prefix}getmsg
+╠ ${prefix}delmsg
 ╠══════✪「 قائمه رمزيات اولاد 」
 ╠ ${prefix}رمزيه1
 ╠ ${prefix}رمزيه2
@@ -9487,7 +9596,6 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}رمزيه50
 ╠══════✪「 قائمه الادمن 」
 ╠ ${prefix}اختفاء
-╠ ${prefix}جلب
 ╠ ${prefix}المعلومات
 ╠ ${prefix}الاوامر
 ╠ ${prefix}التسجيل
@@ -9570,35 +9678,112 @@ case 'makermenu':
 var unicorn = await getBuffer(picak+'Maker Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه عمل لوجو 」	
 ╠${prefix}لوجو1
-╠${prefix}لوجو2
-╠${prefix}لوجو3
-╠${prefix}لوجو4
-╠${prefix}لوجو5
-╠${prefix}لوجو6
-╠${prefix}لوجو7
-╠${prefix}لوجو8
-╠${prefix}لوجو9
-╠${prefix}لوجو10
-╠${prefix}لوجو11
-╠${prefix}لوجو12
-╠${prefix}لوجو13
-╠${prefix}لوجو14
-╠${prefix}لوجو15
-╠${prefix}لوجو16
-╠${prefix}لوجو17
-╠${prefix}لوجو18
-╠${prefix}لوجو19
-╠${prefix}لوجو20
-╠${prefix}لوجو21
-╠${prefix}لوجو22
-╠${prefix}لوجو23
-╠${prefix}لوجو24
-╠${prefix}لوجو25
-╠${prefix}لوجو26
-╠${prefix}لوجو27
-╠${prefix}لوجو28
-╠${prefix}لوجو29
-╠${prefix}لوجو30
+╠${prefix}8bit
+╠${prefix}horror
+╠${prefix}hoorror
+╠${prefix}retro
+╠${prefix}blackpinkneon
+╠${prefix}deepsea
+╠${prefix}scifi
+╠${prefix}fiction
+╠${prefix}berry
+╠${prefix}fruitjuice
+╠${prefix}biscuit
+╠${prefix}wood
+╠${prefix}chocolate
+╠${prefix}matrix
+╠${prefix}blood
+╠${prefix}halloween
+╠${prefix}wicker
+╠${prefix}darkgold
+╠${prefix}firework
+╠${prefix}skeleton
+╠${prefix}sand
+╠${prefix}glue
+╠${prefix}leaves
+╠${prefix}magma
+╠${prefix}lava
+╠${prefix}rock
+╠${prefix}bloodglas
+╠${prefix}underwater
+╠${prefix}textmaker
+╠${prefix}honey
+╠${prefix}ice
+╠${prefix}watercolor
+╠${prefix}multicolor
+╠${prefix}snow
+╠${prefix}harrypot
+╠${prefix}harrypotter
+╠${prefix}brokenglass
+╠${prefix}waterpipe
+╠${prefix}spooky
+╠${prefix}circuit
+╠${prefix}metallic
+╠${prefix}demon
+╠${prefix}sparklechristmas
+╠${prefix}christmas
+╠${prefix}3dchristmas
+╠${prefix}3dbox
+╠${prefix}waterdrop
+╠${prefix}lion2
+╠${prefix}papercut
+╠${prefix}transformer
+╠${prefix}neondevil
+╠${prefix}3davengers
+╠${prefix}3dstone
+╠${prefix}3dstone2
+╠${prefix}summertime
+╠${prefix}thunder
+╠${prefix}window
+╠${prefix}graffiti
+╠${prefix}graffitibike
+╠${prefix}pornhub
+╠${prefix}glitch
+╠${prefix}blackpink
+╠${prefix}glitch2
+╠${prefix}glitch3
+╠${prefix}3dspace
+╠${prefix}lion
+╠${prefix}3dneon
+╠${prefix}greenneon
+╠${prefix}bokeh
+╠${prefix}holographic
+╠${prefix}bear
+╠${prefix}wolf
+╠${prefix}joker
+╠${prefix}dropwater
+╠${prefix}dropwater2
+╠${prefix}thewall
+╠${prefix}neonlight
+╠${prefix}natural
+╠${prefix}carbon
+╠${prefix}pencil
+╠${prefix}blackpink2
+╠${prefix}neon
+╠${prefix}neonlight2
+╠${prefix}toxic
+╠${prefix}strawberry
+╠${prefix}discovery
+╠${prefix}1917
+╠ ${prefix}sci_fi
+╠ ${prefix}ancient
+╠ ${prefix}fabric
+╠ ${prefix}hoorror
+╠ ${prefix}whitebear
+╠ ${prefix}juice
+╠ ${prefix}batman
+╠ ${prefix}multicolor
+╠ ${prefix}collwall
+╠ ${prefix}wonderful
+╠ ${prefix}cool
+╠ ${prefix}sketch
+╠ ${prefix}marvel
+╠ ${prefix}foggy
+╠ ${prefix}writing
+╠ ${prefix}halloweenfire
+╠ ${prefix}halloween
+╠ ${prefix}watercolor
+╠ ${prefix}classic
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'downloadmenu':
@@ -9609,7 +9794,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠${prefix}انستجرام
 ╠${prefix}فيسبوك
 ╠${prefix}تويتر
-╠${prefix}تيكتوك
+╠${prefix}تيكتوك [url]
 ╠${prefix}ميديافاير
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
@@ -9661,7 +9846,7 @@ case 'randomimagemenu':
 var unicorn = await getBuffer(picak+'Random Image Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه صور عشوائيه 」	
 ╠${prefix}قهوه
-╠${prefix}dog(صور كلاب)
+╠${prefix}doge(صور كلاب)
 ╠${prefix}cat (صور قطط)
 ╠${prefix}chameleon(صور حربايه)
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
@@ -9685,17 +9870,20 @@ case 'imageeffectmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Image Effect Menu')
 await XeonBotInc.send5ButImg(from, `╔═════✪「 قائمه افكتات الصور 」	
-╠${prefix}افكت-جرنان
-╠${prefix}افكت-بلور
-╠${prefix}افكت-شاذ
-╠${prefix}ابيض-واسود
-╠${prefix}افكت-غامق
-╠${prefix}شيت
-╠${prefix}افكت-وفاه
-╠${prefix}افكت-سجن
-╠${prefix}افكت-صوره
-╠${prefix}افكت-حذف
-╠${prefix}افكت-تشويش
+╠${prefix}wanted
+╠${prefix}blur
+╠${prefix}framed
+╠${prefix}gayeffect
+╠${prefix}imagesketch
+╠${prefix}invert
+╠${prefix}burn
+╠${prefix}triggeredwebp
+╠${prefix}shit
+╠${prefix}rip
+╠${prefix}jail
+╠${prefix}beautifuleffect
+╠${prefix}deleteeffect
+╠${prefix}pixelate
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'animemenu':
@@ -9784,7 +9972,7 @@ case 'nsfwmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Nsfw Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه انمي اباحي 」	
-╠${prefix}فيديواباحي
+╠${prefix}hentaivideo
 ╠${prefix}yuri
 ╠${prefix}masturbation
 ╠${prefix}thighs
@@ -10055,11 +10243,11 @@ case 'anonymousmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anonymous Menu')
-await XeonBotInc.send5ButImg(from, `╔═══✪「  قائمه محادثه مجهوله 」	
-╠${prefix}دردشه
-╠${prefix}بدء
-╠${prefix}تخطي
-╠${prefix}مغادره
+await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه شات مجهول 」	
+╠${prefix}anonymous
+╠${prefix}start
+╠${prefix}next
+╠${prefix}leave
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'toolmenu':
@@ -10098,11 +10286,15 @@ case 'databasemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Database Menu')
-await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه التواصل مع المطور 」	
-╠ ${prefix}رقم المطور( https://api.whatsapp.com/send?phone=+201098906252 )
-╠ ${prefix}الانستجرام( https://instagram.com/a_d_a_l_l_a_h?igshid=YmMyMTA2M2Y= )
-╠ ${prefix}قناه اليوتيوب( https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g )
-╠ ${prefix}التليجرام( https://t.me/A_M_030 )
+await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه قاعده البيانات 」	
+╠ ${prefix}setcmd
+╠ ${prefix}listcmd
+╠ ${prefix}delcmd
+╠ ${prefix}lockcmd
+╠ ${prefix}addmsg
+╠ ${prefix}listmsg
+╠ ${prefix}getmsg
+╠ ${prefix}delmsg
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'indomenu':
@@ -10175,7 +10367,6 @@ case 'othermenu':
 var unicorn = await getBuffer(picak+'Other Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه الادمن 」	
 ╠ ${prefix}اختفاء
-╠ ${prefix}جلب
 ╠ ${prefix}المعلومات
 ╠ ${prefix}الاوامر
 ╠ ${prefix}التسجيل
