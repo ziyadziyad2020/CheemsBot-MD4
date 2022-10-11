@@ -5339,7 +5339,7 @@ maker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html",
   .catch((err) => console.log(err));
    break
  
-case 'لوجو1': case 'christmas': case '3dchristmas': case 'sparklechristmas':
+case 'candy': case 'christmas': case '3dchristmas': case 'sparklechristmas':
 case 'deepsea': case 'scifi': case 'rainbow2': case 'waterpipe': case 'spooky': 
 case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'fiction': case 'demon': 
 case 'transformer': case 'berry': case 'thunder': case '.': case '3dstone2': 
@@ -5354,7 +5354,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': c
 if (isBanChat) return reply(mess.banChat)
              reply(mess.wait)
              let link
-             if (/لوجو1/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
+             if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
              if (/christmas/.test(command)) link = 'https://textpro.me/christmas-tree-text-effect-online-free-1057.html'
              if (/3dchristmas/.test(command)) link = 'https://textpro.me/3d-christmas-text-effect-by-name-1055.html'
              if (/sparklechristmas/.test(command)) link = 'https://textpro.me/sparkles-merry-christmas-text-effect-1054.html'
@@ -6676,7 +6676,7 @@ break
     XeonBotInc.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
 			break
 
-case 'لوجو1': case 'christmas': case '3dchristmas': case 'sparklechristmas':
+case 'candy': case 'christmas': case '3dchristmas': case 'sparklechristmas':
 case 'deepsea': case 'scifi': case 'rainbow': case 'waterpipe': case 'spooky': 
 case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'fiction': case 'demon': 
 case 'transformer': case 'berry': case 'thunder': case 'magma': case '3dstone': 
@@ -6691,7 +6691,7 @@ if (isBanChat) return reply(mess.banChat)
               if (!q) return reply(`مثال : ${prefix + command} ${global.ownername}`) 
           
              let link
-             if (/لوجو1/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
+             if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
              if (/christmas/.test(command)) link = 'https://textpro.me/christmas-tree-text-effect-online-free-1057.html'
              if (/3dchristmas/.test(command)) link = 'https://textpro.me/3d-christmas-text-effect-by-name-1055.html'
              if (/sparklechristmas/.test(command)) link = 'https://textpro.me/sparkles-merry-christmas-text-effect-1054.html'
@@ -9677,7 +9677,7 @@ case 'makermenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Maker Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه عمل لوجو 」	
-╠${prefix}لوجو1
+╠${prefix}candy
 ╠${prefix}8bit
 ╠${prefix}horror
 ╠${prefix}hoorror
