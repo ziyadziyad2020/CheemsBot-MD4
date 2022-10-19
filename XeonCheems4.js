@@ -1914,7 +1914,7 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
 
 					break
-case 'beautifulcheck': case 'الجمال':
+case 'جمالي': case 'الجمال':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 				if (!text) return replay(`Tag Someone, مثال : ${prefix + command} @Xeon`)
@@ -8038,7 +8038,11 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `*| تشغيل يوتيوب |*
+caption: `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    ⟮ _*◉بحث في اليوتيوب◉*_ ⟯ 
+   
+0.02━◉━━━━━━━━━━━━3.26
+      🔂   ⏪   ⏸️     ⏩  🎵
 
 ${global.themeemoji} Title : ${anu.title}
 ${global.themeemoji} Ext : Search
@@ -8071,7 +8075,11 @@ if (isBanChat) return reply(mess.banChat)
 if (!args[0]) return reply(mess.linkm)
 try {
 hx.youtube(args[0]).then(async(res) => {
-textyt = `*| تحميل يوتيوب |*
+textyt = `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    ⟮ _*◉بحث في اليوتيوب◉*_ ⟯ 
+   
+0.02━◉━━━━━━━━━━━━3.26
+      🔂   ⏪   ⏸️     ⏩  🎵
 
 ${global.themeemoji} Title : ${res.title}
 ${global.themeemoji} Size : ${res.size}
@@ -8929,7 +8937,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}animestickermenu`
 									     },
 									{
-										"title": "قائمة انمي اباحي 🤓",
+										"title": "قائمه صور ادعيه 🤲",
 										"description": "يعرض قائمة ميزات Nsfe",
 										"rowId": `${prefix}nsfwmenu`
 									     },
@@ -8949,7 +8957,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "قائمه قاعده البيانات ♻️",
+											"title": "قائمه معلومات المطور ♻️",
 										"description": "يعرض قائمة ميزات قاعدة البيانات",
 										"rowId": `${prefix}databasemenu`
 										},
@@ -9225,61 +9233,17 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}استايل2
 ╠ ${prefix}كلب
 ╠ ${prefix}استيكرحب
-╠════✪「 قائمه استيكرات انمي 」
-╠${prefix}bully
-╠${prefix}cuddle
-╠${prefix}cry
-╠${prefix}hug
-╠${prefix}awoo
-╠${prefix}kiss
-╠${prefix}lick
-╠${prefix}pat
-╠${prefix}smug
-╠${prefix}bonk
-╠${prefix}yeet
-╠${prefix}blush
-╠${prefix}smile
-╠${prefix}wave
-╠${prefix}highfive
-╠${prefix}handhold
-╠${prefix}nom
-╠${prefix}glomp
-╠${prefix}bite
-╠${prefix}slap
-╠${prefix}kill
-╠${prefix}happy
-╠${prefix}wink
-╠${prefix}poke
-╠${prefix}dance
-╠${prefix}cringe
-╠${prefix}neko
-╠${prefix}gura
-╠═══════✪「 قائمه انمي اباحي 」
-╠${prefix}hentaivideo
-╠${prefix}yuri
-╠${prefix}masturbation
-╠${prefix}thighs
-╠${prefix}pussy
-╠${prefix}panties
-╠${prefix}orgy
-╠${prefix}ahegao
-╠${prefix}ass
-╠${prefix}bdsm
-╠${prefix}blowjob
-╠${prefix}cuckold
-╠${prefix}ero
-╠${prefix}gasm
-╠${prefix}cum
-╠${prefix}femdom
-╠${prefix}foot
-╠${prefix}gangbang
-╠${prefix}glasses
-╠${prefix}jahy
-╠${prefix}trap
-╠${prefix}blowjobgif
-╠${prefix}spank
-╠${prefix}hneko
-╠${prefix}nwaifu
+╠═══════✪「 قائمه صور ادعيه 」
+╠${prefix}دعاء1
+╠${prefix}دعاء2
+╠${prefix}دعاء3
+╠${prefix}دعاء4
+╠${prefix}دعاء5
+╠${prefix}دعاء6
+╠${prefix}دعاء7
+╠${prefix}دعاء8
+╠${prefix}دعاء9
+╠${prefix}دعاء10
 ╠═══════✪「 قائمه التسليه 」
 ╠ ${prefix}زواج
 ╠ ${prefix}زوجني
@@ -9533,15 +9497,11 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه ا
 ╠ ${prefix}سوره التوبه
 ╠ ${prefix}سوره القصص
 ╠ ${prefix}سوره النور
-╠══════✪「 قائمه قاعده البيانات 」
-╠ ${prefix}setcmd
-╠ ${prefix}listcmd
-╠ ${prefix}delcmd
-╠ ${prefix}lockcmd
-╠ ${prefix}addmsg
-╠ ${prefix}listmsg
-╠ ${prefix}getmsg
-╠ ${prefix}delmsg
+╠══════✪「 قائمه معلومات المطور 」
+╠ ${prefix}رقم المطور/ https://api.whatsapp.com/send?phone=+201098906252
+╠ ${prefix}قناه اليوتيوب/ https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g
+╠ ${prefix}انستجرامي/ https://instagram.com/a_d_a_l_l_a_h?igshid=YmMyMTA2M2Y=
+╠ ${prefix}جروب الدعم/ https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
 ╠══════✪「 قائمه رمزيات اولاد 」
 ╠ ${prefix}رمزيه1
 ╠ ${prefix}رمزيه2
@@ -9615,7 +9575,7 @@ case 'ownermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Owner Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه المالك 」	
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه المطور 」	
 ╠ ${prefix}خاص
 ╠ ${prefix}عام
 ╠ ${prefix}بان
@@ -9971,32 +9931,17 @@ case 'nsfwmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Nsfw Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه انمي اباحي 」	
-╠${prefix}hentaivideo
-╠${prefix}yuri
-╠${prefix}masturbation
-╠${prefix}thighs
-╠${prefix}pussy
-╠${prefix}panties
-╠${prefix}orgy
-╠${prefix}ahegao
-╠${prefix}ass
-╠${prefix}bdsm
-╠${prefix}blowjob
-╠${prefix}cuckold
-╠${prefix}ero
-╠${prefix}gasm
-╠${prefix}cum
-╠${prefix}femdom
-╠${prefix}foot
-╠${prefix}gangbang
-╠${prefix}glasses
-╠${prefix}jahy
-╠${prefix}trap
-╠${prefix}blowjobgif
-╠${prefix}spank
-╠${prefix}hneko
-╠${prefix}nwaifu
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 قائمه صور ادعيه 」	
+╠${prefix}دعاء1
+╠${prefix}دعاء2
+╠${prefix}دعاء3
+╠${prefix}دعاء4
+╠${prefix}دعاء5
+╠${prefix}دعاء6
+╠${prefix}دعاء7
+╠${prefix}دعاء8
+╠${prefix}دعاء9
+╠${prefix}دعاء10
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'funmenu':
@@ -10243,11 +10188,11 @@ case 'anonymousmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Anonymous Menu')
-await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه شات مجهول 」	
-╠${prefix}anonymous
-╠${prefix}start
-╠${prefix}next
-╠${prefix}leave
+await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه محادثه مجهوله 」	
+╠${prefix}دردشه
+╠${prefix}بدء
+╠${prefix}تخطي
+╠${prefix}مغادره
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'toolmenu':
@@ -10286,15 +10231,11 @@ case 'databasemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Database Menu')
-await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه قاعده البيانات 」	
-╠ ${prefix}setcmd
-╠ ${prefix}listcmd
-╠ ${prefix}delcmd
-╠ ${prefix}lockcmd
-╠ ${prefix}addmsg
-╠ ${prefix}listmsg
-╠ ${prefix}getmsg
-╠ ${prefix}delmsg
+await XeonBotInc.send5ButImg(from, `╔═══✪「 قائمه معلومات المطور 」	
+╠ ${prefix}رقم المطور/ https://api.whatsapp.com/send?phone=+201098906252
+╠ ${prefix}قناه اليوتيوب/ https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g
+╠ ${prefix}انستجرامي/ https://instagram.com/a_d_a_l_l_a_h?igshid=YmMyMTA2M2Y=
+╠ ${prefix}جروب الدعم/ https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "يوتيوب 📍","url": `${websitex}`}},{"urlButton": {"displayText": "الدعم🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "تبرع 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور 👤","id": 'owner'}}] )
 break
 case 'indomenu':
